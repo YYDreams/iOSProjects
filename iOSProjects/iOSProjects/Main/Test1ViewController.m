@@ -20,6 +20,8 @@
 
     
     NSLog(@"------有毒----");
+    
+    NSLog(@"我没毒");
     self.view.backgroundColor = [UIColor hh_redomColor];
 }
 
