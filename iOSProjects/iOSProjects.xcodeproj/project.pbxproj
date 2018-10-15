@@ -304,10 +304,17 @@
 		9C032964212EB88F00DDF393 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				F49D064A217479380050CED7 /* UILabel(相关操作) */,
+				9C032965212EB88F00DDF393 /* UILabel(相关操作) */,
 				9C032966212EB88F00DDF393 /* UITextField(相关操作) */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		9C032965212EB88F00DDF393 /* UILabel(相关操作) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "UILabel(相关操作)";
 			sourceTree = "<group>";
 		};
 		9C032966212EB88F00DDF393 /* UITextField(相关操作) */ = {
@@ -327,6 +334,13 @@
 				9C03296B212EB88F00DDF393 /* HHBoxTextField.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9C03296C212EB88F00DDF393 /* NS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NS;
 			sourceTree = "<group>";
 		};
 		9C2B9819212D04C900958545 /* SundryStyleCell(样式Cell) */ = {
@@ -573,6 +587,7 @@
 		9C7E72ED212A906B00479B3D /* BasicSubModule */ = {
 			isa = PBXGroup;
 			children = (
+				9C03296C212EB88F00DDF393 /* NS */,
 				9C032964212EB88F00DDF393 /* UI */,
 			);
 			path = BasicSubModule;
@@ -594,6 +609,20 @@
 				9C7E72F6212A90BD00479B3D /* HHAlgorithmController.m */,
 			);
 			path = "Algorithm(算法)";
+			sourceTree = "<group>";
+		};
+		9C7E72F0212A906C00479B3D /* ThirdPartySubModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdPartySubModule;
+			sourceTree = "<group>";
+		};
+		9C7E72F1212A906C00479B3D /* CtrlEncapSubModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CtrlEncapSubModule;
 			sourceTree = "<group>";
 		};
 		9C7E72FE212AEE5200479B3D /* Other */ = {
@@ -888,12 +917,12 @@
 		9CA0C684212A732F007107E9 /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				F49D0648217478E40050CED7 /* CtrlEncapSubModule */,
-				F49D0647217478BE0050CED7 /* ThirdPartySubModule */,
 				9C7E72ED212A906B00479B3D /* BasicSubModule */,
+				9C7E72F1212A906C00479B3D /* CtrlEncapSubModule */,
 				9C4700E42147914E00112B05 /* InterviewSubModule  */,
 				9C7E72FE212AEE5200479B3D /* Other */,
 				9C7E72EE212A906C00479B3D /* MoreSubModule */,
+				9C7E72F0212A906C00479B3D /* ThirdPartySubModule */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -1033,27 +1062,6 @@
 				293B11C67471E551C0F0F5E9 /* Pods-iOSProjectsUITests.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		F49D0647217478BE0050CED7 /* ThirdPartySubModule */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ThirdPartySubModule;
-			sourceTree = "<group>";
-		};
-		F49D0648217478E40050CED7 /* CtrlEncapSubModule */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CtrlEncapSubModule;
-			sourceTree = "<group>";
-		};
-		F49D064A217479380050CED7 /* UILabel(相关操作) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "UILabel(相关操作)";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
