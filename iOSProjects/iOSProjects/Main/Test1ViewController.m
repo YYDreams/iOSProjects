@@ -18,6 +18,8 @@
     [super viewDidLoad];
 
 
+    
+    NSLog(@"------有毒----");
     self.view.backgroundColor = [UIColor hh_redomColor];
 }
 
