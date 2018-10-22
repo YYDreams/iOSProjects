@@ -20,23 +20,34 @@
 
     
     NSLog(@"我没毒");
+    [self test];
 
     self.view.backgroundColor = [UIColor hh_redomColor];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)test{
+    
+//    1-2-3-null   -> 3-2-1-null
+    
+
+    
+    //1.原始数组
+    
+    NSMutableArray *array = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",nil];
+    
+    //        //exchangeObjectAtIndex:withObjectAtIndex:   (替换两个下标对应元素)
+    //2.倒序的数组
+    NSLog(@"=======%@",[[array reverseObjectEnumerator]allObjects ]);
+    
+    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       
+        NSLog(@" obj = %@ obj = %zd ",obj,idx);
+        
+    }];
+  //
+    
 }
-*/
 
 @end

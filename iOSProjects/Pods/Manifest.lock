@@ -43,7 +43,7 @@ DEPENDENCIES:
   - UMengAnalytics-NO-IDFA
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - DZNEmptyDataSet
     - GHConsole
@@ -73,4 +73,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 38610c23995d5ea6054455813f26aa60a2b84dcb
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

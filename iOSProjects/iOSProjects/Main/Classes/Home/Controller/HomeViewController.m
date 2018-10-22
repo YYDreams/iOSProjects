@@ -29,7 +29,7 @@
                      @"",@"",@"",@"",
                      @"",@"",@"",@""];
     
-    self.classNames = @[@"HHDataStoreController",@"LoginViewController",@"HHMultithreadingController",@"TestViewController",
+    self.classNames = @[@"HHDataStoreController",@"LoginViewController",@"HHMultithreadingController",@"Test1ViewController",
                         @"TestViewController",@"TestViewController",@"TestViewController",@"TestViewController",
                         @"TestViewController",@"TestViewController",@"TestViewController",@"TestViewController",
                         @"TestViewController",@"TestViewController",@"TestViewController",@"TestViewController",

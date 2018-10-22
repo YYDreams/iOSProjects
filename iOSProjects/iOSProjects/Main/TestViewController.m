@@ -41,29 +41,7 @@
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"浮窗" style:0 target:self action:@selector(navRightOnClick)];
     
-    
-//    [MBProgressHUD LY_ShowSuccess:[NSString stringWithFormat:@"token:%@",LH.userInfo.token]];
-//    NSLog(@"------%@",LH.userInfo.token);
-//    
-//    self.titles  = @[@"",@"",@"",@"",
-//                     @"",@"",@"",@"",
-//                     @"",@"",@"",@"",
-//                     @"",@"",@"",@"",
-//                     @"",@"",@"",@"",
-//                     @"",@"",@"",@"",
-//                     @"",@"",@"",@"",
-//                     @"",@"",@"",@"",
-//                     @"",@"",@"",@""];
-//    
-//    self.classNames = @[@"Test1ViewController",@"Test1ViewController",@"Test1ViewController",@"Test1ViewController",
-//                        @"Test1ViewController",@"Test1ViewController",@"Test1ViewController",@"Test1ViewController",
-//                        @"Test1ViewController",@"Test1ViewController",@"Test1ViewController",@"Test1ViewController",
-//                        @"Test1ViewController",@"Test1ViewController",@"Test1ViewController",@"Test1ViewController",
-//                        @"Test1ViewController",@"Test1ViewController",@"Test1ViewController",@"Test1ViewController",
-//                        @"Test1ViewController",@"Test1ViewController",@"Test1ViewController",@"Test1ViewController",
-//                        @"Test1ViewController",@"Test1ViewController",@"Test1ViewController",@"Test1ViewController",
-//                        @"Test1ViewController",@"Test1ViewController",@"Test1ViewController",@"Test1ViewController",
-//                        @"Test1ViewController",@"Test1ViewController",@"Test1ViewController",@"Test1ViewController"];
+
     
 }
 
@@ -71,9 +49,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:animated];
-//    [self test1];
-//    [self test2];
-//    [self test3];
+
     
 }
 
