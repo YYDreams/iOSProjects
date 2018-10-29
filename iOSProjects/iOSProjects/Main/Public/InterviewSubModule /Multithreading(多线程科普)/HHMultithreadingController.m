@@ -188,10 +188,10 @@
     //同步执行:立刻马上执行,如果我没有执行完毕,那么后面的也别想执行
     //异步执行:如果我没有执行完毕,那么后面的也可以执行
     //奔了: Thread 1: EXC_BAD_INSTRUCTION (code=EXC_I386_INVOP, subcode=0x0)
-    dispatch_sync( dispatch_get_main_queue(), ^{
-        NSLog(@"任务1----%@",[NSThread currentThread]);
-    });
-    NSLog(@"end---");
+//    dispatch_sync( dispatch_get_main_queue(), ^{
+//        NSLog(@"任务1----%@",[NSThread currentThread]);
+//    });
+//    NSLog(@"end---");
 }
 /**
  
