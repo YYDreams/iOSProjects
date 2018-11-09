@@ -13,6 +13,63 @@
 # Uncomment the line if you want fastlane to automatically update itself
 # update_fastlane
 
+
+
+lane :adhoc_profile do
+#如果没有在Apple Developer创建证书的话，get_certificates会帮你自动创建证书
+get_certificates
+sigh(
+    username: 'jinyounc@163.com',
+    app_identifier: 'hh2018wb',
+    force: true,
+    provisioning_name: 'ad_hocwb',
+    ignore_profiles_with_different_name: true,
+    adhoc: true
+   )
+end
+
+#注册当个设备
+register_device(
+  name: "yangrong",
+  udid: "9d33569e9444b64421fc3f0b272c05881f95b60a"
+) # Simply provide the name and udid of the device
+
+
+#注册多个设备
+register_devices(
+  devices: {
+    "yanghuaping iPhone 6s" => "dc66071a163751b5a97c65ea8a75220ca02ec98f",
+    "hulin" => "474a5c0277120ad46c67bebded20e7b028afb7e3"
+  }
+) # Simply provide a list of devices as a Hash
+
+
+
+
+lane :add_device do
+        register_devices(
+  #name: yangrong iPhone 6s",
+ # udid: "9d33569e9444b64421fc3f0b272c05881f95b60a",
+         devices_file: "./devices.txt"
+# 如果设备devices列表更新了，就强制更新配置概要文件
+           # match(type: "adhoc", force_for_new_devices: true)
+
+        ) 
+end
+
+#打ad-hoc包
+lane :adhoc do
+        #build_app 是gym的别名，可以换成gym
+        build_app(
+            scheme: "iOSProjectsDev",
+            export_method: "ad-hoc"
+        )
+        
+end
+
+
+
+
 default_platform(:ios)
 
 platform :ios do

@@ -15,6 +15,24 @@ Install _fastlane_ using
 or alternatively using `brew cask install fastlane`
 
 # Available Actions
+### adhoc_profile
+```
+fastlane adhoc_profile
+```
+
+### add_device
+```
+fastlane add_device
+```
+
+### adhoc
+```
+fastlane adhoc
+```
+
+
+----
+
 ## iOS
 ### ios release
 ```
