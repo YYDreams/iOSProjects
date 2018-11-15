@@ -12,6 +12,6 @@
 
 - (void)configConsoleLog{
     
-    [[GHConsole sharedConsole]startPrintLog];
+//    [[GHConsole sharedConsole]startPrintLog];
 }
 @end

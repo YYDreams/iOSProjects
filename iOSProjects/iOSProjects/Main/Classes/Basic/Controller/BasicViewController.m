@@ -102,7 +102,7 @@
 - (NSArray *)uiDataArr{
     
     if (!_uiDataArr) {
-        _uiDataArr = @[@"UILabel",@"UIButton",@"",@"UITextField"];
+        _uiDataArr = @[@"UILabel",@"UIButton",@"",@"UITextField",@"UITextView"];
     }
     
     
@@ -126,7 +126,7 @@
     if (!_viewControllers) {
         _viewControllers = @[
                              @[@"",@"",@""],
-                             @[@"",@"",@"",@"HHTextFieldController"]
+                             @[@"",@"",@"",@"HHTextFieldController",@"HHTextViewController"]
                              ];
     }
     return  _viewControllers;

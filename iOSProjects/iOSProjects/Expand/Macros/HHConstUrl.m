@@ -1,6 +1,10 @@
 
 #import <UIKit/UIKit.h>
 
+/*--------------------------------------------------------------------*/
+//
+NSString  * const kLotteryUrl = @"v2/block/lottery/app/last";
+
 /*----------------------------------登陆注册----------------------------------*/
 //登录
 NSString  * const kLoginUrl = @"user/login";

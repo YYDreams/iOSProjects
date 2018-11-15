@@ -12,13 +12,13 @@ pod 'MJExtension'
 pod 'IQKeyboardManager'
 pod 'SSKeychain'
 pod 'UMengAnalytics-NO-IDFA'
-pod 'MBProgressHUD', '~> 0.9.1'
+pod 'MBProgressHUD'   , '~>1.1.0'
 pod 'DZNEmptyDataSet'
 # 二维码
 pod 'HMQRCodeScanner'
 #显示的控制台打印信息
 pod 'GHConsole'
-
+pod 'YYModel'
 
 target 'iOSProjects' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks

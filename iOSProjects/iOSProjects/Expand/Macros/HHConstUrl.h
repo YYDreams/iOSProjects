@@ -1,6 +1,12 @@
 #import <UIKit/UIKit.h>
 
 
+
+
+/*--------------------------------------------------------------------*/
+//
+UIKIT_EXTERN NSString  * const kLotteryUrl;
+
 /*----------------------------------登陆注册----------------------------------*/
 //登录
 UIKIT_EXTERN NSString  * const kLoginUrl;
