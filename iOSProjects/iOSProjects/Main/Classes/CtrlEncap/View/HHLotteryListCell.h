@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "HHResultView.h"
 #import "HHLotteryListModel.h"
+#import "HHBannerModel.h"
 @interface HHLotteryListCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
@@ -21,4 +22,7 @@
 
 /** <#注释#> */
 @property (nonatomic, strong) HHLotteryListModel *model;
+
+
+//@property (nonatomic, strong) HHBannerModel *model;
 @end

@@ -10,8 +10,8 @@
 
 @interface HHLotteryListModel : BaseModel
 
-@property (nonatomic , assign) NSInteger              id;
-//@property (nonatomic , copy) NSString              * switch;
+///彩票id
+@property (nonatomic, strong) NSNumber * id;
 @property (nonatomic , assign) NSInteger              pid;
 @property (nonatomic , copy) NSString              * name;
 @property (nonatomic , copy) NSString              * img;
@@ -19,6 +19,7 @@
 @property (nonatomic , copy) NSString              * alias;
 @property (nonatomic , copy) NSString              * code;
 @property (nonatomic , copy) NSString              * open_img;
+
 @property (nonatomic , assign) NSInteger              lottery_number;
 @property (nonatomic , copy) NSString              * period_code;
 @property (nonatomic , assign) NSInteger              official_time;

@@ -21,11 +21,16 @@
 
     // Configure the view for the selected state
 }
+//- (void)setModel:(HHBannerModel *)model{
+//        [self.imgView sd_setImageWithURL:[NSURL URLWithString:model.pic] placeholderImage:defaultPlaceholderImage];
+//}
 
 - (void)setModel:(HHLotteryListModel *)model{
     
     _model = model;
     
+
+
     [self.imgView sd_setImageWithURL:[NSURL URLWithString:model.open_img] placeholderImage:defaultPlaceholderImage];
     self.nameLabel.text = model.name;
     self.lottery_numberLabel.text = [NSString stringWithFormat:@"第%zd期",model.lottery_number];

@@ -10,10 +10,12 @@
 #import "CtrlEncapViewController.h"
 #import "HHLotteryListCell.h"
 #import "HHLotteryListModel.h"
+#import "HHDBManager.h"
+#import "HHBannerModel.h"
 @interface CtrlEncapViewController ()
 
 /** <#注释#> */
-@property (nonatomic, strong) NSMutableArray *dataArr;
+@property (nonatomic, strong) NSArray *dataArr;
 @end
 static NSString *const HHLotteryListCellID = @"HHLotteryListCell";
 
@@ -39,11 +41,33 @@ static NSString *const HHLotteryListCellID = @"HHLotteryListCell";
 
 - (void)setupRefresh{
     
+    [self loadCacheData];
+    
+    
     [self setupRefreshTarget:nil];
     
     [self loadListDatilWithPageNo:1 andStatus:3];
+    
 }
 
+- (void)loadCacheData{
+
+    HHDBManager *manager = [[HHDBManager alloc]initWithobjectClass:[HHLotteryListModel class]];
+    NSArray *cacheData = [manager getAllObjects];
+    if (cacheData > 0 ) {
+        self.dataArr = cacheData;
+        [self.tableView reloadData];
+
+    }
+}
+
+- (void)saveLotteryCache:(NSArray *)lotterys{
+    
+    HHDBManager *manager = [[HHDBManager alloc]initWithobjectClass:[HHLotteryListModel class]];
+    
+    [manager insertObjects:lotterys];
+
+}
 
 #pragma mark - loadDataFromNetwork
 - (void)loadListDatilWithPageNo:(int)pageNo andStatus:(int)status{
@@ -52,26 +76,31 @@ static NSString *const HHLotteryListCellID = @"HHLotteryListCell";
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"page"] = @(pageNo);
     param[@"page_size"] = @(20);
-    
+    //@"v2/block/home/app/banner"
     [HTTPRequest GET:kLotteryUrl parameter:param success:^(id resposeObject) {  //农庄认养
         
         if ([resposeObject[@"data"] isKindOfClass:[NSArray class]] && ![resposeObject[@"data"] isEqual:[NSNull class]]) {
 
             NSArray *dataArr = [HHLotteryListModel objectsInArray:resposeObject[@"data"]];
-            [self.dataArr addObjectsFromArray:dataArr];
-            
+//            [self.dataArr addObjectsFromArray:dataArr];
+            self.dataArr = dataArr;
 //            int totalPage = [resposeObject[@"data"][@"pages"] intValue];
 //
-            [weakSelf successEndRefreshStatus:status totalPage:dataArr.count];
-//
+            [weakSelf successEndRefreshStatus:status totalPage:(int)dataArr.count];
+
             dispatch_async(dispatch_get_main_queue(), ^{
                 
                 if (self.dataArr.count >0 && self.dataArr.count<20) {
                     
                     [weakSelf endRefreshWithNoMoreData];
                 }
+                if (dataArr.count >0) {
+                    [weakSelf.tableView reloadData];
+                    
+                    [weakSelf saveLotteryCache:dataArr];
+                }
                 
-                [weakSelf.tableView reloadData];
+                
                 
             });
             
@@ -93,7 +122,7 @@ static NSString *const HHLotteryListCellID = @"HHLotteryListCell";
 }
 - (void)pullDownRefresh:(int)page{
     
-    [self.dataArr  removeAllObjects];
+//    [self.dataArr  removeAllObjects];
     //0 结束头部
     [self loadListDatilWithPageNo:page andStatus:0];
     
@@ -110,8 +139,7 @@ static NSString *const HHLotteryListCellID = @"HHLotteryListCell";
 #pragma mark - <UITableViewDataSource,UITableViewDelegate>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
-    return 11;
-    
+    return self.dataArr.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -125,12 +153,12 @@ static NSString *const HHLotteryListCellID = @"HHLotteryListCell";
     
 }
 #pragma mark - Setter && Getter Methods
-- (NSMutableArray *)dataArr{
-    if (!_dataArr) {
-        _dataArr = [NSMutableArray array];
-   }
-    return _dataArr;
-}
+//- (NSMutableArray *)dataArr{
+//    if (!_dataArr) {
+//        _dataArr = [NSMutableArray array];
+//   }
+//    return _dataArr;
+//}
 
 
 
