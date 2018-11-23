@@ -30,6 +30,7 @@
 #import <MJExtension/MJExtension.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import <Masonry.h>
+#import <YYModel.h>
 
 
 

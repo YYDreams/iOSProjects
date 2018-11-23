@@ -49,10 +49,10 @@
         [manager configSetting];
         
         //申明返回的结果是json类型
-        manager.responseSerializer = [AFJSONResponseSerializer serializer];
-        //申明请求的数据是json类型
-        manager.requestSerializer = [AFJSONRequestSerializer serializer];
-        manager.requestSerializer.HTTPShouldHandleCookies = YES;
+//        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+//        //申明请求的数据是json类型
+//        manager.requestSerializer = [AFJSONRequestSerializer serializer];
+//        manager.requestSerializer.HTTPShouldHandleCookies = YES;
 
         //解决不接受类型为"text/html"
         //如果报接受类型不一致请替换一致text/html或别的
@@ -110,6 +110,20 @@
 + (LYRequestModel *)GET:(NSString *)urlString parameter:(NSDictionary *)parameter success:(requestSuccessCallBack)success failure:(requestErrorCallBack)failue{
     
     AFHTTPSessionManager *manager = [HTTPRequest requestManager];
+    
+    /**
+     错误: HTTPS请求报错Error Code=-999 "cancelled"
+     
+     Printing description of error:
+     Error Domain=NSURLErrorDomain Code=-999 "cancelled" UserInfo={NSErrorFailingURLKey=https://www-api2.tctest2.com/v2/block/condition/capital?type=2, NSLocalizedDescription=cancelled, NSErrorFailingURLStringKey=https://www-api2.tctest2.com/v2/block/condition/capital?type=2}
+     
+     */
+    AFSecurityPolicy *securityPolicy = [AFSecurityPolicy defaultPolicy];
+    securityPolicy.validatesDomainName = NO;
+    securityPolicy.allowInvalidCertificates =  YES;
+    manager.securityPolicy = securityPolicy;
+    
+    
     //设置请求头
 //   [manager.requestSerializer setValue:LH.token forHTTPHeaderField:@"token"];
     [HTTPRequest setCookie];

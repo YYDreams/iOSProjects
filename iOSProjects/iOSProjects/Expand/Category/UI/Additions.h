@@ -18,7 +18,7 @@
 #import "UIView+HHAddition.h"
 #import "UIImage+HH.h"
 #import "UIAlertView+HHAddition.h"
-
+#import "NSDate+HH.h"
 #import "NSString+HH.h"
 #import "NSArray+NSFoundation.h"
 #import "NSDictionary+HHAddition.h"

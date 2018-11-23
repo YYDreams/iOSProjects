@@ -293,4 +293,39 @@
     return  UIGraphicsGetImageFromCurrentImageContext();
 }
 
+
++ (UIImage *)imageWithColor:(UIColor *)color cornerRidus:(CGFloat)cornerRidus rect:(CGRect)rect boardColor:(UIColor*)boardColor
+{
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, [UIScreen mainScreen].scale);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    
+    UIBezierPath *bezier = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(cornerRidus, cornerRidus)];
+    
+    CAShapeLayer *layer = [[CAShapeLayer alloc]init];
+    
+    
+    [layer setAnchorPoint:CGPointMake(0, 0)];
+    
+    
+    
+    layer.bounds = rect;
+    layer.path = bezier.CGPath;
+    layer.fillColor = color.CGColor;
+    layer.strokeColor = boardColor.CGColor;
+    layer.backgroundColor = color.CGColor;
+    
+    if (boardColor) {
+        layer.masksToBounds = YES;
+        layer.cornerRadius = cornerRidus;
+        layer.borderColor = boardColor.CGColor;
+        layer.borderWidth = 1/[UIScreen mainScreen].scale;
+    }
+    [layer renderInContext:context];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
 @end

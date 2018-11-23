@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		03BB13EB70461F3907E7176B /* libPods-iOSProjectsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EF864A1E906D65BCBE80235 /* libPods-iOSProjectsUITests.a */; };
+		313EC15721A3E45D00CD5D30 /* HHDorpDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 313EC15621A3E45D00CD5D30 /* HHDorpDownController.m */; };
+		313EC15B21A3E5C900CD5D30 /* DropDownArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 313EC15821A3E5C900CD5D30 /* DropDownArrow@2x.png */; };
+		313EC15C21A3E5C900CD5D30 /* NLDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 313EC15921A3E5C900CD5D30 /* NLDropDown.m */; };
+		3195366021A67DFD00F6532D /* HHCapitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195365F21A67DFD00F6532D /* HHCapitalViewController.m */; };
+		3195366621A68D4700F6532D /* UICustomDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366421A68D4700F6532D /* UICustomDatePicker.m */; };
+		3195366721A68D4700F6532D /* FTFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366521A68D4700F6532D /* FTFilterView.m */; };
+		3195366A21A6903D00F6532D /* NSDate+HH.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366921A6903D00F6532D /* NSDate+HH.m */; };
+		3195366C21A693FA00F6532D /* UICustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3195366B21A693FA00F6532D /* UICustomDatePicker.xib */; };
 		7814438221A28FA2008B091E /* HHDBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7814438121A28FA2008B091E /* HHDBManager.mm */; };
 		7814438521A2A1D9008B091E /* HHBannerModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7814438421A2A1D9008B091E /* HHBannerModel.mm */; };
 		7849E02F219D22E80062DC3D /* HHResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7849E02E219D22E80062DC3D /* HHResultView.m */; };
@@ -131,6 +139,20 @@
 /* Begin PBXFileReference section */
 		293B11C67471E551C0F0F5E9 /* Pods-iOSProjectsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectsUITests/Pods-iOSProjectsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2F1115CD1249754BCEA1A7BE /* libPods-iOSProjectsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSProjectsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		313EC15521A3E45D00CD5D30 /* HHDorpDownController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDorpDownController.h; sourceTree = "<group>"; };
+		313EC15621A3E45D00CD5D30 /* HHDorpDownController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHDorpDownController.m; sourceTree = "<group>"; };
+		313EC15821A3E5C900CD5D30 /* DropDownArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DropDownArrow@2x.png"; sourceTree = "<group>"; };
+		313EC15921A3E5C900CD5D30 /* NLDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLDropDown.m; sourceTree = "<group>"; };
+		313EC15A21A3E5C900CD5D30 /* NLDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLDropDown.h; sourceTree = "<group>"; };
+		3195365E21A67DFD00F6532D /* HHCapitalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCapitalViewController.h; sourceTree = "<group>"; };
+		3195365F21A67DFD00F6532D /* HHCapitalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCapitalViewController.m; sourceTree = "<group>"; };
+		3195366221A68D4700F6532D /* UICustomDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomDatePicker.h; sourceTree = "<group>"; };
+		3195366321A68D4700F6532D /* FTFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTFilterView.h; sourceTree = "<group>"; };
+		3195366421A68D4700F6532D /* UICustomDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomDatePicker.m; sourceTree = "<group>"; };
+		3195366521A68D4700F6532D /* FTFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTFilterView.m; sourceTree = "<group>"; };
+		3195366821A6903D00F6532D /* NSDate+HH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+HH.h"; sourceTree = "<group>"; };
+		3195366921A6903D00F6532D /* NSDate+HH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HH.m"; sourceTree = "<group>"; };
+		3195366B21A693FA00F6532D /* UICustomDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UICustomDatePicker.xib; sourceTree = "<group>"; };
 		4E7A9CD9799ACA0EF9409440 /* libPods-iOSProjects.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSProjects.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7814438021A28FA2008B091E /* HHDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDBManager.h; sourceTree = "<group>"; };
 		7814438121A28FA2008B091E /* HHDBManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HHDBManager.mm; sourceTree = "<group>"; };
@@ -364,6 +386,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		313EC15021A3E43100CD5D30 /* CtrlEncapSubModule */ = {
+			isa = PBXGroup;
+			children = (
+				3195365A21A67DD000F6532D /* Capital */,
+				313EC15121A3E43100CD5D30 /* DropDown */,
+			);
+			path = CtrlEncapSubModule;
+			sourceTree = "<group>";
+		};
+		313EC15121A3E43100CD5D30 /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				313EC15221A3E43100CD5D30 /* Controller */,
+				313EC15321A3E43100CD5D30 /* Model */,
+				313EC15421A3E43100CD5D30 /* View */,
+			);
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		313EC15221A3E43100CD5D30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				313EC15521A3E45D00CD5D30 /* HHDorpDownController.h */,
+				313EC15621A3E45D00CD5D30 /* HHDorpDownController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		313EC15321A3E43100CD5D30 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		313EC15421A3E43100CD5D30 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				313EC15821A3E5C900CD5D30 /* DropDownArrow@2x.png */,
+				313EC15A21A3E5C900CD5D30 /* NLDropDown.h */,
+				313EC15921A3E5C900CD5D30 /* NLDropDown.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3195365A21A67DD000F6532D /* Capital */ = {
+			isa = PBXGroup;
+			children = (
+				3195365B21A67DD000F6532D /* Controller */,
+				3195365C21A67DD000F6532D /* Model */,
+				3195365D21A67DD000F6532D /* View */,
+			);
+			path = Capital;
+			sourceTree = "<group>";
+		};
+		3195365B21A67DD000F6532D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3195365E21A67DFD00F6532D /* HHCapitalViewController.h */,
+				3195365F21A67DFD00F6532D /* HHCapitalViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3195365C21A67DD000F6532D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3195365D21A67DD000F6532D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3195366121A68D4700F6532D /* FTFilterView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3195366121A68D4700F6532D /* FTFilterView */ = {
+			isa = PBXGroup;
+			children = (
+				3195366B21A693FA00F6532D /* UICustomDatePicker.xib */,
+				3195366221A68D4700F6532D /* UICustomDatePicker.h */,
+				3195366421A68D4700F6532D /* UICustomDatePicker.m */,
+				3195366321A68D4700F6532D /* FTFilterView.h */,
+				3195366521A68D4700F6532D /* FTFilterView.m */,
+			);
+			path = FTFilterView;
+			sourceTree = "<group>";
+		};
 		57394B1DF31F6BC348B5C69A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -736,20 +849,6 @@
 			path = "Algorithm(算法)";
 			sourceTree = "<group>";
 		};
-		9C7E72F0212A906C00479B3D /* ThirdPartySubModule */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ThirdPartySubModule;
-			sourceTree = "<group>";
-		};
-		9C7E72F1212A906C00479B3D /* CtrlEncapSubModule */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CtrlEncapSubModule;
-			sourceTree = "<group>";
-		};
 		9C7E72FE212AEE5200479B3D /* Other */ = {
 			isa = PBXGroup;
 			children = (
@@ -1048,11 +1147,10 @@
 			isa = PBXGroup;
 			children = (
 				9C7E72ED212A906B00479B3D /* BasicSubModule */,
-				9C7E72F1212A906C00479B3D /* CtrlEncapSubModule */,
+				313EC15021A3E43100CD5D30 /* CtrlEncapSubModule */,
 				9C4700E42147914E00112B05 /* InterviewSubModule  */,
 				9C7E72FE212AEE5200479B3D /* Other */,
 				9C7E72EE212A906C00479B3D /* MoreSubModule */,
-				9C7E72F0212A906C00479B3D /* ThirdPartySubModule */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -1106,6 +1204,8 @@
 				9CA0C695212A732F007107E9 /* MBProgressHUD+LYProgressHUD.m */,
 				9CA0C696212A732F007107E9 /* NSDateFormatter+Category.h */,
 				9CA0C697212A732F007107E9 /* NSDateFormatter+Category.m */,
+				3195366821A6903D00F6532D /* NSDate+HH.h */,
+				3195366921A6903D00F6532D /* NSDate+HH.m */,
 				9CA0C698212A732F007107E9 /* NSString+FontSize.h */,
 				9CA0C699212A732F007107E9 /* NSString+FontSize.m */,
 				9CA0C69A212A732F007107E9 /* NSString+HH.h */,
@@ -1402,6 +1502,8 @@
 				78F32C5521955D080013E6EC /* HHLotteryListCell.xib in Resources */,
 				9CA0C6F5212A7330007107E9 /* Assets.xcassets in Resources */,
 				9CA0C6F7212A7330007107E9 /* Main.storyboard in Resources */,
+				313EC15B21A3E5C900CD5D30 /* DropDownArrow@2x.png in Resources */,
+				3195366C21A693FA00F6532D /* UICustomDatePicker.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1535,14 +1637,18 @@
 				9C2B9826212D04CA00958545 /* HHStyleSectionModel.m in Sources */,
 				9C2B9825212D04CA00958545 /* HHStyleModel.m in Sources */,
 				78F32C5B21956D470013E6EC /* HHLotteryListViewModel.m in Sources */,
+				313EC15721A3E45D00CD5D30 /* HHDorpDownController.m in Sources */,
 				9CA0C6D7212A7330007107E9 /* BaseTabBarViewController.m in Sources */,
 				9C7E730C212AEE5200479B3D /* LoginViewController.m in Sources */,
 				9CA0C6D8212A7330007107E9 /* BaseTableViewController+PageStatus.m in Sources */,
+				3195366721A68D4700F6532D /* FTFilterView.m in Sources */,
 				9CA0C6EA212A7330007107E9 /* RMStrikethroughLabel.m in Sources */,
 				9C2B9827212D04CA00958545 /* HHStyleCell.m in Sources */,
 				9CA0C6F2212A7330007107E9 /* UILabel+HHAddition.m in Sources */,
 				9CA0C6DE212A7330007107E9 /* BaseViewModel.m in Sources */,
 				9C2B982B212D058800958545 /* BaseCell.m in Sources */,
+				3195366021A67DFD00F6532D /* HHCapitalViewController.m in Sources */,
+				3195366A21A6903D00F6532D /* NSDate+HH.m in Sources */,
 				9CA0C6EC212A7330007107E9 /* SurePlaceholderView.m in Sources */,
 				788E895C219928B2007E7C74 /* HHTextView.m in Sources */,
 				9CA0C6D6212A7330007107E9 /* BaseNavViewController.m in Sources */,
@@ -1567,6 +1673,7 @@
 				9C7E72E1212A8D1100479B3D /* ThirdPartyViewController.m in Sources */,
 				9CA0C6F4212A7330007107E9 /* UIView+HHAddition.m in Sources */,
 				9CA0C6F1212A7330007107E9 /* UIImage+HH.m in Sources */,
+				313EC15C21A3E5C900CD5D30 /* NLDropDown.m in Sources */,
 				9CA0C6ED212A7330007107E9 /* UIAlertView+HHAddition.m in Sources */,
 				9C904CD0214F78C800914B4F /* HHAnimatorView.m in Sources */,
 				9C2B9828212D04CA00958545 /* HHStyleViewModel.m in Sources */,
@@ -1595,6 +1702,7 @@
 				7849E02F219D22E80062DC3D /* HHResultView.m in Sources */,
 				9CA0C6DF212A7330007107E9 /* HomeViewController.m in Sources */,
 				9CA0C720212A7CCE007107E9 /* HHConst.m in Sources */,
+				3195366621A68D4700F6532D /* UICustomDatePicker.m in Sources */,
 				9C7E72DE212A8D0500479B3D /* MoreViewController.m in Sources */,
 				9CA0C727212A7F70007107E9 /* Test1ViewController.m in Sources */,
 				9CA0C6E2212A7330007107E9 /* NSObject+Runtime.m in Sources */,

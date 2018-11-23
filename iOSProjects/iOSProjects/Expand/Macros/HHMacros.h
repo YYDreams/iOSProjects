@@ -32,11 +32,11 @@
 
 /*----------------------------------URL 相关----------------------------------*/
 
-// 正式环境
+// 正式环境https://www-api2.tctest2.com
 //#define MAIN_URL @"http://api.front.jinyoufarm.com/api"
 //测试环境
 //#define MAIN_URL @"http://www.mocky.io/v2"
-#define MAIN_URL @"https://www-api2.tctest0.com"
+#define MAIN_URL @"https://www-api2.tctest2.com"
 
 //https://www-api2.tctest0.com/v2/block/lottery/app/last?page=1&page_size=20
 

@@ -21,6 +21,8 @@
     [[UITextView appearance]setTintColor:kThemeColor];
     UINavigationBar *bar = [UINavigationBar appearance];
 
+        bar.tintColor =kThemeColor;
+        bar.barTintColor = kThemeColor;
     //设置title
     [bar setTitleTextAttributes:@{NSFontAttributeName:kFont(15),NSForegroundColorAttributeName:[UIColor blackColor]}] ;
     // 设置item

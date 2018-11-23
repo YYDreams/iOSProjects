@@ -5,9 +5,13 @@
 //
 NSString  * const kLotteryUrl = @"v2/block/lottery/app/last";
 
+NSString * const  kCapitalUrl = @"v2/block/condition/capital";
+
+
 /*----------------------------------登陆注册----------------------------------*/
 //登录
 NSString  * const kLoginUrl = @"user/login";
+
 
 //注册
 NSString  * const kRegistUrl = @"user/regist";

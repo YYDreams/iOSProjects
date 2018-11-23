@@ -12,6 +12,8 @@
 #import "HHLotteryListModel.h"
 #import "HHDBManager.h"
 #import "HHBannerModel.h"
+#import "HHDorpDownController.h"
+#import "HHCapitalViewController.h"
 @interface CtrlEncapViewController ()
 
 /** <#注释#> */
@@ -24,12 +26,27 @@ static NSString *const HHLotteryListCellID = @"HHLotteryListCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupNav];
+    
     [self setupTableView];
     
     [self setupRefresh];
     
 }
 #pragma mark - setupNav
+
+- (void)setupNav{
+    
+    self.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:@"navigationbar_back" highImage:@"navigationbar_back" target:self action:@selector(navRightOnClick)];
+    
+    
+}
+- (void)navRightOnClick{
+    
+    
+    [self.navigationController pushViewController:[HHCapitalViewController new] animated:YES];
+}
+
 #pragma mark - setupTableView
 - (void)setupTableView{
     
@@ -73,11 +90,13 @@ static NSString *const HHLotteryListCellID = @"HHLotteryListCell";
 - (void)loadListDatilWithPageNo:(int)pageNo andStatus:(int)status{
     
     WeakSelf;
+    NSString *page_size = @"20";
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"page"] = @(pageNo);
-    param[@"page_size"] = @(20);
+    param[@"page_size"] = page_size?:@"";
+    
     //@"v2/block/home/app/banner"
-    [HTTPRequest GET:kLotteryUrl parameter:param success:^(id resposeObject) {  //农庄认养
+    [HTTPRequest GET:kLotteryUrl parameter:param success:^(id resposeObject) {  //
         
         if ([resposeObject[@"data"] isKindOfClass:[NSArray class]] && ![resposeObject[@"data"] isEqual:[NSNull class]]) {
 
@@ -150,6 +169,12 @@ static NSString *const HHLotteryListCellID = @"HHLotteryListCell";
     
     return cell;
     
+    
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    [self.navigationController pushViewController:[HHDorpDownController new] animated:YES];
     
 }
 #pragma mark - Setter && Getter Methods

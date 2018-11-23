@@ -95,4 +95,15 @@
 + (UIImage *)dashLineImageWithImageView:(UIImageView *)imageView;
 
 
+/**
+ 画带圆角和边框的纯色背景图片
+ 
+ @param color 填充颜色
+ @param cornerRidus 圆角大小
+ @param rect 范围
+ @param boardColor 边线颜色
+ @return 图片
+ */
++ (UIImage *)imageWithColor:(UIColor *)color cornerRidus:(CGFloat)cornerRidus rect:(CGRect)rect boardColor:(UIColor*)boardColor;
+
 @end
