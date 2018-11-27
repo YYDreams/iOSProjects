@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03BB13EB70461F3907E7176B /* libPods-iOSProjectsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EF864A1E906D65BCBE80235 /* libPods-iOSProjectsUITests.a */; };
+		313C5D5D21AD450000B392BF /* HHDropDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 313C5D5C21AD450000B392BF /* HHDropDownView.m */; };
 		313EC15721A3E45D00CD5D30 /* HHDorpDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 313EC15621A3E45D00CD5D30 /* HHDorpDownController.m */; };
 		313EC15B21A3E5C900CD5D30 /* DropDownArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 313EC15821A3E5C900CD5D30 /* DropDownArrow@2x.png */; };
 		313EC15C21A3E5C900CD5D30 /* NLDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 313EC15921A3E5C900CD5D30 /* NLDropDown.m */; };
@@ -16,6 +17,7 @@
 		3195366721A68D4700F6532D /* FTFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366521A68D4700F6532D /* FTFilterView.m */; };
 		3195366A21A6903D00F6532D /* NSDate+HH.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366921A6903D00F6532D /* NSDate+HH.m */; };
 		3195366C21A693FA00F6532D /* UICustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3195366B21A693FA00F6532D /* UICustomDatePicker.xib */; };
+		31D7EBB221AD291A00B57F10 /* HHNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D7EBB121AD291A00B57F10 /* HHNavTitleView.m */; };
 		7814438221A28FA2008B091E /* HHDBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7814438121A28FA2008B091E /* HHDBManager.mm */; };
 		7814438521A2A1D9008B091E /* HHBannerModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7814438421A2A1D9008B091E /* HHBannerModel.mm */; };
 		7849E02F219D22E80062DC3D /* HHResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7849E02E219D22E80062DC3D /* HHResultView.m */; };
@@ -139,6 +141,8 @@
 /* Begin PBXFileReference section */
 		293B11C67471E551C0F0F5E9 /* Pods-iOSProjectsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectsUITests/Pods-iOSProjectsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2F1115CD1249754BCEA1A7BE /* libPods-iOSProjectsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSProjectsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		313C5D5B21AD450000B392BF /* HHDropDownView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDropDownView.h; sourceTree = "<group>"; };
+		313C5D5C21AD450000B392BF /* HHDropDownView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHDropDownView.m; sourceTree = "<group>"; };
 		313EC15521A3E45D00CD5D30 /* HHDorpDownController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDorpDownController.h; sourceTree = "<group>"; };
 		313EC15621A3E45D00CD5D30 /* HHDorpDownController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHDorpDownController.m; sourceTree = "<group>"; };
 		313EC15821A3E5C900CD5D30 /* DropDownArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DropDownArrow@2x.png"; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 		3195366821A6903D00F6532D /* NSDate+HH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+HH.h"; sourceTree = "<group>"; };
 		3195366921A6903D00F6532D /* NSDate+HH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HH.m"; sourceTree = "<group>"; };
 		3195366B21A693FA00F6532D /* UICustomDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UICustomDatePicker.xib; sourceTree = "<group>"; };
+		31D7EBB021AD291A00B57F10 /* HHNavTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNavTitleView.h; sourceTree = "<group>"; };
+		31D7EBB121AD291A00B57F10 /* HHNavTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNavTitleView.m; sourceTree = "<group>"; };
 		4E7A9CD9799ACA0EF9409440 /* libPods-iOSProjects.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSProjects.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7814438021A28FA2008B091E /* HHDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDBManager.h; sourceTree = "<group>"; };
 		7814438121A28FA2008B091E /* HHDBManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HHDBManager.mm; sourceTree = "<group>"; };
@@ -427,6 +433,10 @@
 				313EC15821A3E5C900CD5D30 /* DropDownArrow@2x.png */,
 				313EC15A21A3E5C900CD5D30 /* NLDropDown.h */,
 				313EC15921A3E5C900CD5D30 /* NLDropDown.m */,
+				31D7EBB021AD291A00B57F10 /* HHNavTitleView.h */,
+				31D7EBB121AD291A00B57F10 /* HHNavTitleView.m */,
+				313C5D5B21AD450000B392BF /* HHDropDownView.h */,
+				313C5D5C21AD450000B392BF /* HHDropDownView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1647,11 +1657,13 @@
 				9CA0C6F2212A7330007107E9 /* UILabel+HHAddition.m in Sources */,
 				9CA0C6DE212A7330007107E9 /* BaseViewModel.m in Sources */,
 				9C2B982B212D058800958545 /* BaseCell.m in Sources */,
+				313C5D5D21AD450000B392BF /* HHDropDownView.m in Sources */,
 				3195366021A67DFD00F6532D /* HHCapitalViewController.m in Sources */,
 				3195366A21A6903D00F6532D /* NSDate+HH.m in Sources */,
 				9CA0C6EC212A7330007107E9 /* SurePlaceholderView.m in Sources */,
 				788E895C219928B2007E7C74 /* HHTextView.m in Sources */,
 				9CA0C6D6212A7330007107E9 /* BaseNavViewController.m in Sources */,
+				31D7EBB221AD291A00B57F10 /* HHNavTitleView.m in Sources */,
 				9CA0C6F3212A7330007107E9 /* UITableView+LYRefresh.m in Sources */,
 				9C4700F82147AC5500112B05 /* SqliteTool.m in Sources */,
 				9CA0C6BD212A7330007107E9 /* Reachability.m in Sources */,
