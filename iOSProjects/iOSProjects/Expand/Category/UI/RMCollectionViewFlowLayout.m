@@ -50,7 +50,7 @@
     /** 重写layout中的方法 首先必须调用父类 */
     [super prepareLayout];
     
-    self.viewWidth = Screen_Width - self.itemInset.left - self.itemInset.right;
+    self.viewWidth =   Screen_Width - self.itemInset.left - self.itemInset.right;
     //所有内容的布局属性数组
     self.attributesArray = [NSMutableArray array];
     

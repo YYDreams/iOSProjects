@@ -28,27 +28,37 @@
     
     self.navigationItem.titleView = self.titleView;
     
-    
     [self.view addSubview:self.dropDownView];
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [self.titleView setType:HHNavTitleViewTypeNormal title:@"哈哈哈哈哈"];
     
-        [self.titleView setType:HHNavTitleViewTypePlayFast title:@"哈哈哈哈哈"];
-        
-//    });
-//    [self.dropDownMenue setDropDownWithNavigation:self.navigationController title:nil titlesArr:@[@"基本走势",@"前五走势",@"后五走势",@"龙虎斗"]];
-
+    //    [self.dropDownMenue setDropDownWithNavigation:self.navigationController title:nil titlesArr:@[@"基本走势",@"前五走势",@"后五走势",@"龙虎斗"] sectionTitles:@[@"dda",@"dada"]];
+    
+    //    [self.dropDownMenue setDropDownWithNavigation:self.navigationController title:nil titlesArr:@[@"基本走势",@"前五走势",@"后五走势",@"龙虎斗"]];
+    
 }
 
 - (HHNavTitleView *)titleView{
     if (!_titleView) {
         WeakSelf;
         _titleView = [[HHNavTitleView alloc]initWithFrame:CGRectMake(0, 0, 200, 44)];
-        _titleView.handlerTitleOnClick = ^(HHNavTitleView * _Nonnull titleView) {
-          
-            self.dropDownView.isShow ? [self.dropDownView  close] : [self.dropDownView show];
-
+        
+        _titleView.handlerTitleOnClick = ^(BOOL isSelected ) {
             
-            NSLog(@"-----------------");
+            NSLog(@"%d------------",isSelected);
+            weakSelf.titleView.isSelected = !isSelected;
+            
+            !isSelected ?  [weakSelf.dropDownView show]: [weakSelf.dropDownView  close];
+            
+//             [weakSelf.dropDownView setdataArr:nil standardArray:nil fastArray:nil];
+            [weakSelf.dropDownView setdataArr:@[@"基本走势",@"前五走势",@"后五走势",@"xxx",@"DDAD"] standardArray:nil fastArray:nil];
+            
+//            [weakSelf.dropDownView setdataArr:nil standardArray:@[@"基本走势",@"前五走势",@"后五走势",@"xxx",@"DDAD"] fastArray:nil];
+//            [weakSelf.dropDownView setdataArr:nil standardArray:nil fastArray:@[@"基本走势",@"前五走势",@"后五走势"]];
+//             [weakSelf.dropDownView setdataArr:nil standardArray:@[@"基本走势",@"前五走势",@"后五走势",@"大大大",@"dadae",@"dadafsdff",@"dsfsdf"] fastArray:@[@"xx",@"xxx",@"xxxx",@"xxxxxxx",@"dadadweeeeweweew"]];
+
+//            
+//            [weakSelf.dropDownView setStandardMehtods:@[@"基本走势",@"前五走势",@"后五走势",@"龙虎斗",@"基本走势",@"前五走势",@"后五走势",@"龙虎斗",@"基本走势",@"前五走势",@"后五走势",@"龙虎斗",@"基本走势",@"前五走势",@"后五走势",@"龙虎斗"] fastMethods:nil];
+//            
             
         };
     }
@@ -56,25 +66,13 @@
     
 }
 
-
-
 -(HHDropDownView *)dropDownView{
     if (!_dropDownView) {
-        _dropDownView = [[HHDropDownView alloc]initWithFrame:self.view.bounds];
-
+        _dropDownView = [[HHDropDownView alloc]initWithFrame:self.view.bounds rootView:self.view];
+        [self.view addSubview:_dropDownView];
     }
     return _dropDownView;
 }
-
-
-
-
-
-
-
-
-
-
 
 - (NLDropDown *)dropDownMenue{
     if (!_dropDownMenue) {
@@ -93,7 +91,7 @@
 
 - (void)dropDownMenuedidSelectedItemAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    
     NSLog(@"%zd-----------%zd",indexPath.section,indexPath.row);
 }
 #pragma mark - setupNav

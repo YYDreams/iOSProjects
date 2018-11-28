@@ -17,6 +17,14 @@
 		3195366721A68D4700F6532D /* FTFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366521A68D4700F6532D /* FTFilterView.m */; };
 		3195366A21A6903D00F6532D /* NSDate+HH.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366921A6903D00F6532D /* NSDate+HH.m */; };
 		3195366C21A693FA00F6532D /* UICustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3195366B21A693FA00F6532D /* UICustomDatePicker.xib */; };
+		31C2883021AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2882F21AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.m */; };
+		31C2883421AE941300AF7EA8 /* FTBuyLotteryLobbyHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2883321AE941300AF7EA8 /* FTBuyLotteryLobbyHeadView.m */; };
+		31C2883821AE968E00AF7EA8 /* FTLottertCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2883721AE968E00AF7EA8 /* FTLottertCategory.m */; };
+		31C2883B21AE998800AF7EA8 /* SSCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2883A21AE998800AF7EA8 /* SSCViewController.m */; };
+		31C2884121AEA0B200AF7EA8 /* SSCNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2884021AEA0B200AF7EA8 /* SSCNavTitleView.m */; };
+		31C2884521AEA2C400AF7EA8 /* SSCStructChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2884421AEA2C400AF7EA8 /* SSCStructChildView.m */; };
+		31C2884821AEA2D300AF7EA8 /* SSCStructSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2884721AEA2D300AF7EA8 /* SSCStructSuperView.m */; };
+		31C2884C21AEA3E700AF7EA8 /* SSCStructModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2884B21AEA3E700AF7EA8 /* SSCStructModel.m */; };
 		31D7EBB221AD291A00B57F10 /* HHNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D7EBB121AD291A00B57F10 /* HHNavTitleView.m */; };
 		7814438221A28FA2008B091E /* HHDBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7814438121A28FA2008B091E /* HHDBManager.mm */; };
 		7814438521A2A1D9008B091E /* HHBannerModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7814438421A2A1D9008B091E /* HHBannerModel.mm */; };
@@ -157,6 +165,22 @@
 		3195366821A6903D00F6532D /* NSDate+HH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+HH.h"; sourceTree = "<group>"; };
 		3195366921A6903D00F6532D /* NSDate+HH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HH.m"; sourceTree = "<group>"; };
 		3195366B21A693FA00F6532D /* UICustomDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UICustomDatePicker.xib; sourceTree = "<group>"; };
+		31C2882E21AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBuyLotteryLobbyViewController.h; sourceTree = "<group>"; };
+		31C2882F21AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBuyLotteryLobbyViewController.m; sourceTree = "<group>"; };
+		31C2883221AE941200AF7EA8 /* FTBuyLotteryLobbyHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBuyLotteryLobbyHeadView.h; sourceTree = "<group>"; };
+		31C2883321AE941300AF7EA8 /* FTBuyLotteryLobbyHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBuyLotteryLobbyHeadView.m; sourceTree = "<group>"; };
+		31C2883621AE968E00AF7EA8 /* FTLottertCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTLottertCategory.h; sourceTree = "<group>"; };
+		31C2883721AE968E00AF7EA8 /* FTLottertCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLottertCategory.m; sourceTree = "<group>"; };
+		31C2883921AE998800AF7EA8 /* SSCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCViewController.h; sourceTree = "<group>"; };
+		31C2883A21AE998800AF7EA8 /* SSCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCViewController.m; sourceTree = "<group>"; };
+		31C2883F21AEA0B200AF7EA8 /* SSCNavTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCNavTitleView.h; sourceTree = "<group>"; };
+		31C2884021AEA0B200AF7EA8 /* SSCNavTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCNavTitleView.m; sourceTree = "<group>"; };
+		31C2884321AEA2C400AF7EA8 /* SSCStructChildView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCStructChildView.h; sourceTree = "<group>"; };
+		31C2884421AEA2C400AF7EA8 /* SSCStructChildView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCStructChildView.m; sourceTree = "<group>"; };
+		31C2884621AEA2D300AF7EA8 /* SSCStructSuperView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCStructSuperView.h; sourceTree = "<group>"; };
+		31C2884721AEA2D300AF7EA8 /* SSCStructSuperView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCStructSuperView.m; sourceTree = "<group>"; };
+		31C2884A21AEA3E700AF7EA8 /* SSCStructModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCStructModel.h; sourceTree = "<group>"; };
+		31C2884B21AEA3E700AF7EA8 /* SSCStructModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCStructModel.m; sourceTree = "<group>"; };
 		31D7EBB021AD291A00B57F10 /* HHNavTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNavTitleView.h; sourceTree = "<group>"; };
 		31D7EBB121AD291A00B57F10 /* HHNavTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNavTitleView.m; sourceTree = "<group>"; };
 		4E7A9CD9799ACA0EF9409440 /* libPods-iOSProjects.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSProjects.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -487,6 +511,48 @@
 			path = FTFilterView;
 			sourceTree = "<group>";
 		};
+		31C2883121AE93EE00AF7EA8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31C2884221AEA2AE00AF7EA8 /* PlayMethod */,
+				31C2883221AE941200AF7EA8 /* FTBuyLotteryLobbyHeadView.h */,
+				31C2883321AE941300AF7EA8 /* FTBuyLotteryLobbyHeadView.m */,
+				31C2883F21AEA0B200AF7EA8 /* SSCNavTitleView.h */,
+				31C2884021AEA0B200AF7EA8 /* SSCNavTitleView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31C2883521AE968000AF7EA8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31C2884921AEA3D500AF7EA8 /* PlayMethod */,
+				31C2883621AE968E00AF7EA8 /* FTLottertCategory.h */,
+				31C2883721AE968E00AF7EA8 /* FTLottertCategory.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		31C2884221AEA2AE00AF7EA8 /* PlayMethod */ = {
+			isa = PBXGroup;
+			children = (
+				31C2884321AEA2C400AF7EA8 /* SSCStructChildView.h */,
+				31C2884421AEA2C400AF7EA8 /* SSCStructChildView.m */,
+				31C2884621AEA2D300AF7EA8 /* SSCStructSuperView.h */,
+				31C2884721AEA2D300AF7EA8 /* SSCStructSuperView.m */,
+			);
+			path = PlayMethod;
+			sourceTree = "<group>";
+		};
+		31C2884921AEA3D500AF7EA8 /* PlayMethod */ = {
+			isa = PBXGroup;
+			children = (
+				31C2884A21AEA3E700AF7EA8 /* SSCStructModel.h */,
+				31C2884B21AEA3E700AF7EA8 /* SSCStructModel.m */,
+			);
+			path = PlayMethod;
+			sourceTree = "<group>";
+		};
 		57394B1DF31F6BC348B5C69A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -794,10 +860,9 @@
 		9C7E72D1212A8CCF00479B3D /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				31C2883521AE968000AF7EA8 /* Model */,
+				31C2883121AE93EE00AF7EA8 /* View */,
 				9C7E72D2212A8CCF00479B3D /* Controller */,
-				9C7E72D3212A8CCF00479B3D /* Model */,
-				9C7E72D4212A8CCF00479B3D /* View */,
-				9C7E72D5212A8CCF00479B3D /* ViewModel */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -807,29 +872,12 @@
 			children = (
 				9C7E72DF212A8D1100479B3D /* ThirdPartyViewController.h */,
 				9C7E72E0212A8D1100479B3D /* ThirdPartyViewController.m */,
+				31C2882E21AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.h */,
+				31C2882F21AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.m */,
+				31C2883921AE998800AF7EA8 /* SSCViewController.h */,
+				31C2883A21AE998800AF7EA8 /* SSCViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		9C7E72D3212A8CCF00479B3D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		9C7E72D4212A8CCF00479B3D /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		9C7E72D5212A8CCF00479B3D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9C7E72ED212A906B00479B3D /* BasicSubModule */ = {
@@ -1652,6 +1700,7 @@
 				9C7E730C212AEE5200479B3D /* LoginViewController.m in Sources */,
 				9CA0C6D8212A7330007107E9 /* BaseTableViewController+PageStatus.m in Sources */,
 				3195366721A68D4700F6532D /* FTFilterView.m in Sources */,
+				31C2883021AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.m in Sources */,
 				9CA0C6EA212A7330007107E9 /* RMStrikethroughLabel.m in Sources */,
 				9C2B9827212D04CA00958545 /* HHStyleCell.m in Sources */,
 				9CA0C6F2212A7330007107E9 /* UILabel+HHAddition.m in Sources */,
@@ -1671,6 +1720,7 @@
 				9CA0C6EE212A7330007107E9 /* UIBarButtonItem+HHAddition.m in Sources */,
 				7814438521A2A1D9008B091E /* HHBannerModel.mm in Sources */,
 				9C7E730D212AEE5200479B3D /* LoginHandle.m in Sources */,
+				31C2883B21AE998800AF7EA8 /* SSCViewController.m in Sources */,
 				9C904CCA214E7DCE00914B4F /* HHWeChatFloatingBtn.m in Sources */,
 				9CA0C71A212A7BC8007107E9 /* HHRefreshFactory.m in Sources */,
 				9CA0C6E5212A7330007107E9 /* MBProgressHUD+LYProgressHUD.m in Sources */,
@@ -1683,6 +1733,7 @@
 				9C7E72FD212AB7E600479B3D /* UITextField+Category.m in Sources */,
 				9CA0C6E1212A7330007107E9 /* NSDictionary+HHAddition.m in Sources */,
 				9C7E72E1212A8D1100479B3D /* ThirdPartyViewController.m in Sources */,
+				31C2883421AE941300AF7EA8 /* FTBuyLotteryLobbyHeadView.m in Sources */,
 				9CA0C6F4212A7330007107E9 /* UIView+HHAddition.m in Sources */,
 				9CA0C6F1212A7330007107E9 /* UIImage+HH.m in Sources */,
 				313EC15C21A3E5C900CD5D30 /* NLDropDown.m in Sources */,
@@ -1694,6 +1745,7 @@
 				9CA0C6F0212A7330007107E9 /* UIColor+HHAddition.m in Sources */,
 				9CA0C6DA212A7330007107E9 /* BaseUIViewController.m in Sources */,
 				9CA0C6E4212A7330007107E9 /* HHTextField.m in Sources */,
+				31C2883821AE968E00AF7EA8 /* FTLottertCategory.m in Sources */,
 				9CA0C6E0212A7330007107E9 /* NSArray+NSFoundation.m in Sources */,
 				788E895F219928BF007E7C74 /* HHTextViewController.m in Sources */,
 				9CA0C6D9212A7330007107E9 /* BaseTableViewController.m in Sources */,
@@ -1701,6 +1753,7 @@
 				9CA0C6E6212A7330007107E9 /* NSDateFormatter+Category.m in Sources */,
 				9C7E730E212AEE5200479B3D /* UserModel.m in Sources */,
 				9C03296D212EB88F00DDF393 /* HHTextFieldController.m in Sources */,
+				31C2884821AEA2D300AF7EA8 /* SSCStructSuperView.m in Sources */,
 				788E896221997020007E7C74 /* FSTextView.m in Sources */,
 				9CA0C724212A7D35007107E9 /* TestViewController.m in Sources */,
 				9C7E730F212AEE5200479B3D /* HHLoginView.m in Sources */,
@@ -1718,6 +1771,9 @@
 				9C7E72DE212A8D0500479B3D /* MoreViewController.m in Sources */,
 				9CA0C727212A7F70007107E9 /* Test1ViewController.m in Sources */,
 				9CA0C6E2212A7330007107E9 /* NSObject+Runtime.m in Sources */,
+				31C2884521AEA2C400AF7EA8 /* SSCStructChildView.m in Sources */,
+				31C2884C21AEA3E700AF7EA8 /* SSCStructModel.m in Sources */,
+				31C2884121AEA0B200AF7EA8 /* SSCNavTitleView.m in Sources */,
 				78F32C5421955D080013E6EC /* HHLotteryListCell.m in Sources */,
 				9CA0C721212A7CCE007107E9 /* HHConstUrl.m in Sources */,
 				7814438221A28FA2008B091E /* HHDBManager.mm in Sources */,

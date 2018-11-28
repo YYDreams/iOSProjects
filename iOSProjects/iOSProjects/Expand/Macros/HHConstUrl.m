@@ -8,6 +8,10 @@ NSString  * const kLotteryUrl = @"v2/block/lottery/app/last";
 NSString * const  kCapitalUrl = @"v2/block/condition/capital";
 
 
+NSString * const  kGameLotteryUrl = @"v2/game/lottery";
+
+//https://www-api2.tctest2.com/v2/game/lottery
+//
 /*----------------------------------登陆注册----------------------------------*/
 //登录
 NSString  * const kLoginUrl = @"user/login";

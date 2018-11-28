@@ -26,7 +26,7 @@
 - (void)setupControllers{
     //控制器的名字HomeViewController  TestViewController
     
-    NSArray *ControllerViews = @[@"BasicViewController",@"CtrlEncapViewController",@"ThirdPartyViewController",@"HomeViewController",@"MoreViewController"];
+    NSArray *ControllerViews = @[@"BasicViewController",@"CtrlEncapViewController",@"FTBuyLotteryLobbyViewController",@"HomeViewController",@"MoreViewController"];
     //TabBar图片
     NSArray *normalImageNames = @[@"home_nav_home_click", @"home_nav_farm_click", @"home_nav_bazaar_click", @"home_nav_treasure_click",@"home_nav_kits_click"];
     //TabBar选中的图片
