@@ -8,7 +8,6 @@
 
 #import "HHDropDownView.h"
 #import "RMCollectionViewFlowLayout.h"
-
 typedef NS_ENUM(NSInteger,HHDropDownCellStyle){
     HHDropDownCellStyleDefault,       //无SectionHeader
     HHDropDownCellStyleValue1,
@@ -18,7 +17,7 @@ typedef NS_ENUM(NSInteger,HHDropDownCellStyle){
 
 NSInteger const itemHeight = 40;
 NSInteger const sectionHeaderHeight = 40;
-NSInteger const row = 3;
+NSInteger const row = 4;
 
 @interface HHDropDownView()<UICollectionViewDataSource,UICollectionViewDelegate>
 @property (nonatomic,strong)UIView *rootView;
@@ -42,6 +41,8 @@ NSInteger const row = 3;
 
 @property (nonatomic,assign)HHDropDownCellStyle style;
 
+
+
 @end
 @implementation HHDropDownView
 
@@ -51,12 +52,29 @@ NSInteger const row = 3;
         
         self.rootView = rootView;
 
-        [self setupSubView];
-
 
         
     }
     return self;
+}
+- (void)recoveryLastSuperModel{
+    
+    
+    SSCSuperModel *model  = [self getDefaultPlayMethod];
+    
+  
+}
+
+- (SSCSuperModel *)getDefaultPlayMethod{
+    
+    
+    if (self.standardArray.count > 0) {
+        
+        return self.standardArray.firstObject;
+    }
+    else{
+        return self.fastArray.firstObject;
+    }
 }
 - (void)setdataArr:(NSArray *)dataArr standardArray:(NSArray *)standardArray fastArray:(NSArray *)fastArray{
     
@@ -66,12 +84,17 @@ NSInteger const row = 3;
     _dataArr = dataArr;
     _standardArray = standardArray;
     _fastArray = fastArray;
+    HHNavTitleViewType type =  HHNavTitleViewTypeNormal;
     
+    
+    type  = _standardArray.count>0? HHNavTitleViewTypePlayStandard : HHNavTitleViewTypePlayFast;
     if (_dataArr.count > 0 ) {
         _style = HHDropDownCellStyleDefault;
     }
     if ((_standardArray.count >0 || _fastArray.count >0) ) {
         _style = HHDropDownCellStyleValue1;
+        
+      
      
     }
     if ((_standardArray.count >0 && _fastArray.count >0) ) {
@@ -81,7 +104,10 @@ NSInteger const row = 3;
       
     }
     self.collectionView.height = self.cellHeight;
+
     [self.collectionView reloadData];
+
+
 }
 
 - (CGFloat)cellHeight{
@@ -124,27 +150,16 @@ NSInteger const row = 3;
 }
 
 
-- (void)setupSubView{
+- (SSCChildModel *)getDefaultPlay{
+
+    if (self.standardArray.count >0) {
+        
+        return self.standardArray.firstObject;
+    }else{
+        return self.fastArray.firstObject;
+    }
     
-    UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
-    layout.itemSize = CGSizeMake((Screen_Width - 5 * margin )/4, itemHeight);
-    layout.minimumLineSpacing = margin; //行间隙
-    layout.minimumInteritemSpacing = margin; //列间隙
-    layout.sectionInset = UIEdgeInsetsMake(0, margin, 0, margin);
-    layout.footerReferenceSize = CGSizeMake(Screen_Width, margin);
-
-    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:layout];
-    collectionView.backgroundColor = [UIColor whiteColor];
-    [collectionView registerClass:[HHDropDownCell class] forCellWithReuseIdentifier:@"HHDropDownCellID"];
-    [collectionView registerClass:[HHDropDownSectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HHDropDownSectionHeaderViewID"];
-    [collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"ReusableFooter"];
-
-    collectionView.dataSource = self;
-    collectionView.delegate = self;
     
-    self.collectionView = collectionView;
-    [self addSubview:collectionView];
-
     
 }
 #pragma mark - <UICollectionViewDataSource,UICollectionViewDelegate>
@@ -232,20 +247,53 @@ NSInteger const row = 3;
             [cell.button setTitle:_dataArr[indexPath.row] forState:UIControlStateNormal];
 
             break;
-        case HHDropDownCellStyleValue1:
-            
-            [cell.button setTitle:_standardArray.count> 0 ? _standardArray[indexPath.row]: _fastArray[indexPath.row] forState:UIControlStateNormal];
+        case HHDropDownCellStyleValue1:{
+            SSCSuperModel *model =  _standardArray.count> 0?_standardArray[indexPath.row]: _fastArray[indexPath.row];
+            [cell.button setTitle:model.nm forState:UIControlStateNormal];
 
+        }
             break;
-        case HHDropDownCellStyleValue2:
-            [cell.button setTitle:_standardAndFastArr[indexPath.section][indexPath.row] forState:UIControlStateNormal];
+        case HHDropDownCellStyleValue2:{
+            SSCSuperModel *model = _standardAndFastArr[indexPath.section][indexPath.row];
+            [cell.button setTitle:model.nm forState:UIControlStateNormal];
 
+        }
+       
             break;
         default:
             break;
     }
     
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    HHNavTitleViewType _type = 0;
+    SSCSuperModel *model;
+    switch (_style) {
+        case HHDropDownCellStyleValue1:{
+            model =  _standardArray.count> 0?_standardArray[indexPath.row]: _fastArray[indexPath.row];
+
+            _type = (_standardArray.count >0) ? HHNavTitleViewTypePlayStandard : HHNavTitleViewTypePlayFast;
+            
+        }
+            break;
+        case HHDropDownCellStyleValue2:{
+            
+            model = _standardAndFastArr[indexPath.section][indexPath.row];
+        }
+            
+            break;
+        default:
+            break;
+    }
+    if (_handlerDropDownDidSelectCallBack) {
+        _handlerDropDownDidSelectCallBack(_type, model);
+    }
+    
+    [self close];
 }
 
 
@@ -260,11 +308,39 @@ NSInteger const row = 3;
     return _backGroundView;
 }
 
+- (UICollectionView *)collectionView{
+    
+    if (!_collectionView) {
+        
+        UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
+        layout.itemSize = CGSizeMake((Screen_Width - 5 * margin )/4, itemHeight);
+        layout.minimumLineSpacing = margin; //行间隙
+        layout.minimumInteritemSpacing = margin; //列间隙
+        layout.sectionInset = UIEdgeInsetsMake(0, margin, 0, margin);
+        layout.footerReferenceSize = CGSizeMake(Screen_Width, margin);
+        
+        UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:self.bounds collectionViewLayout:layout];
+        collectionView.backgroundColor = [UIColor whiteColor];
+        [collectionView registerClass:[HHDropDownCell class] forCellWithReuseIdentifier:@"HHDropDownCellID"];
+        [collectionView registerClass:[HHDropDownSectionHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HHDropDownSectionHeaderViewID"];
+        [collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"ReusableFooter"];
+        
+        collectionView.dataSource = self;
+        collectionView.delegate = self;
+        
+        _collectionView = collectionView;
+
+    }
+    return _collectionView;
+}
+
 #pragma mark - Actions
 
 - (void)show{
     [self.rootView addSubview:self.backGroundView];
     [self.rootView addSubview:self];
+    [self.rootView addSubview:self.collectionView];
+
     self.backGroundView.alpha = 0;
     
     [UIView animateWithDuration:0.25 animations:^{
@@ -279,6 +355,7 @@ NSInteger const row = 3;
     }completion:^(BOOL finished) {
         [self removeFromSuperview];
         [self.backGroundView removeFromSuperview];
+        [self.collectionView removeFromSuperview];
     }];
 }
 - (NSMutableArray *)standardAndFastArr{

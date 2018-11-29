@@ -8,7 +8,12 @@ NSString  * const kLotteryUrl = @"v2/block/lottery/app/last";
 NSString * const  kCapitalUrl = @"v2/block/condition/capital";
 
 
+//购票大厅列表
 NSString * const  kGameLotteryUrl = @"v2/game/lottery";
+
+//彩票详情数据
+NSString * const  kLotteryStructUrl = @"v2/game/lottery/struct";
+
 
 //https://www-api2.tctest2.com/v2/game/lottery
 //

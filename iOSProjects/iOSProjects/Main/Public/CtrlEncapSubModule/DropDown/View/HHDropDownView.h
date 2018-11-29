@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
-
-
-
+#import "SSCStructModel.h"
+#import "HHNavTitleView.h"
 @interface HHDropDownView : UIView
 
+
+@property(nonatomic,copy)void(^handlerDropDownDidSelectCallBack)(HHNavTitleViewType type,SSCSuperModel *model);
 
 - (instancetype)initWithFrame:(CGRect)frame rootView:(UIView *)rootView;
 
@@ -21,11 +21,16 @@
 - (void)close;
 
 
+
 //设置数据源 dataArr 不显示（ 标准、快捷 ） standardArray:标准  fastArray:快捷
 
 - (void)setdataArr:(NSArray *)dataArr standardArray:(NSArray *)standardArray fastArray:(NSArray *)fastArray;
 
-//- (void)setStandardMehtods:(NSArray *)standardArray fastMethods:(NSArray *)fastArray;
+
+//恢复上次的设置
+- (void)recoveryLastSuperModel;
+
+
 @end
 
 

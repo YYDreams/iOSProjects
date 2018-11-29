@@ -7,16 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SSCStructModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSInteger,HHNavTitleViewType){
-    
-    HHNavTitleViewTypeNormal, //默认 （不显示标准和快捷）
-    HHNavTitleViewTypePlayFast, //标准
-    HHNavTitleViewTypePlayStandard, //快捷
-    
-};
+
 @interface HHNavTitleView : UIView
 
 /** title */
@@ -40,7 +34,7 @@ typedef NS_ENUM(NSInteger,HHNavTitleViewType){
 
 - (void)setType:(HHNavTitleViewType)type title:(NSString *)title;
 
-//- (instancetype)initWithFrame:(CGRect)frame type:(HHNavTitleViewType)type title:(NSString *)title 
+- (void)defalutTitleModel:(SSCStructModel *)titModel;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,5 +9,34 @@
 #import "SSCStructModel.h"
 
 @implementation SSCStructModel
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{
+             @"standard" : @"SSCSuperModel",
+             @"fast" : @"SSCSuperModel"
+             };
+}
+@end
+
+@implementation SSCSuperModel
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{
+             @"child" : @"SSCChildModel",
+             };
+}
+@end
+
+@implementation SSCChildModel
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{
+             @"tags" : @"SSCTagsModel",
+             };
+}
+@end
+
+@implementation SSCTagsModel
 
 @end
+@implementation SSCPlayTypeModel
+
+@end
+

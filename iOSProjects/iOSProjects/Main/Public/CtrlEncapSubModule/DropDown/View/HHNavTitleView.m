@@ -48,7 +48,18 @@
     _font = [UIFont systemFontOfSize:17];
     
 }
-
+- (void)defalutTitleModel:(SSCStructModel *)titModel{
+    
+    if (titModel.standard.count >0) {
+        
+        [self setType:HHNavTitleViewTypePlayStandard title:titModel.standard.firstObject.nm];
+        
+    }else{
+        [self setType:HHNavTitleViewTypePlayFast title:titModel.fast.firstObject.nm];
+    }
+    
+    
+}
 - (void)setType:(HHNavTitleViewType)type title:(NSString *)title{
     
     self.titleLabel.text = title;

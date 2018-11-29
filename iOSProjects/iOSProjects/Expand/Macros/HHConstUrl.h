@@ -8,7 +8,11 @@
 UIKIT_EXTERN NSString  * const kLotteryUrl;
 UIKIT_EXTERN NSString * const  kCapitalUrl;
 
+//购票大厅列表
 UIKIT_EXTERN NSString * const  kGameLotteryUrl;
+
+//彩票详情数据
+UIKIT_EXTERN NSString * const  kLotteryStructUrl;
 /*----------------------------------登陆注册----------------------------------*/
 //登录
 UIKIT_EXTERN NSString  * const kLoginUrl;

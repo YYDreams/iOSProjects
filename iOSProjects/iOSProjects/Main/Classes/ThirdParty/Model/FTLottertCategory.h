@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FTLottertCategory : BaseModel
 
-//@property (nonatomic , assign) NSInteger              id;
+@property (nonatomic , assign) NSInteger              id;
 @property (nonatomic , assign) NSInteger              pid;
 @property (nonatomic , copy) NSString              * name;
 @property (nonatomic , copy) NSString              * alias;

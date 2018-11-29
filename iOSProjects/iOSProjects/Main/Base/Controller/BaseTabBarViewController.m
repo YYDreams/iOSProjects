@@ -55,7 +55,7 @@
         
     }
     //默认选中第一个
-    self.selectedIndex = 1;
+    self.selectedIndex = 2;
     
     
     
