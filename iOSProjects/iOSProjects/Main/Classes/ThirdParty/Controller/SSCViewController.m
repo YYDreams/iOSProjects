@@ -12,7 +12,9 @@
 #import "SSCStructChildView.h"
 #import "SSCStructModel.h"
 #import "HHDropDownView.h"
-
+#import "SSCHeaderView.h"
+#import "SSCLatestPeriodsView.h"
+#import "HHHistoryTableView.h"
 @interface SSCViewController ()
 @property(nonatomic,strong)HHNavTitleView *titleView;
 
@@ -22,6 +24,15 @@
 @property(nonatomic,strong)SSCStructSuperView *structSuperView;
 
 @property (nonatomic,strong)HHDropDownView *dropDownView;
+
+
+@property(nonatomic,strong)SSCHeaderView *headerView;
+
+
+@property(nonatomic,strong)SSCLatestPeriodsView *latestView;
+
+
+@property(nonatomic,strong)HHHistoryTableView *historyView;
 
 @end
 
@@ -49,7 +60,9 @@
     self.navigationItem.titleView = self.titleView;
     
     [self.view addSubview:self.structChildView];
-    
+    [self.view addSubview:self.headerView];
+
+    [self.view addSubview:self.latestView];
 //    [self.view addSubview:self.structSuperView];
     
     [self.view addSubview:self.dropDownView];
@@ -84,6 +97,19 @@
        
     }];
 }
+
+-(void)showHistoryView:(BOOL)show{
+    
+    
+    if (show) {
+        
+    }else{
+        
+        
+    }
+    
+}
+
 #pragma mark - <UITableViewDataSource,UITableViewDelegate>
 
 #pragma mark - Setter && Getter Methods
@@ -113,11 +139,35 @@
     }
     return _structChildView;
 }
+
+-(SSCHeaderView *)headerView{
+    if (!_headerView) {
+        _headerView = [[SSCHeaderView alloc]initWithFrame:CGRectMake(0, self.structChildView.bottom, self.view.width, 60)];
+        _headerView.backgroundColor = [UIColor hh_redomColor];
+    }
+    return _headerView;
+}
+-(SSCLatestPeriodsView *)latestView{
+    if (!_latestView) {
+        _latestView = [[SSCLatestPeriodsView alloc] initWithFrame:CGRectMake(0, self.headerView.bottom, self.view.width, 35)];
+        _latestView.backgroundColor = [UIColor hh_redomColor];
+
+    }
+    return _latestView;
+}
+
+-(HHHistoryTableView *)historyView{
+    if (!_historyView) {
+        _historyView =  [[HHHistoryTableView alloc]initWithFrame:CGRectMake(0, self.latestView.bottom, self.view.bounds.size.width, 200)];
+        _historyView.backgroundColor = [UIColor hh_redomColor];
+
+    }
+    return _historyView;
+}
 -(HHDropDownView *)dropDownView{
     if (!_dropDownView) {
         _dropDownView = [[HHDropDownView alloc]initWithFrame:self.view.bounds rootView:self.view];
  
-        [self.view addSubview:_dropDownView];
     }
     return _dropDownView;
 }

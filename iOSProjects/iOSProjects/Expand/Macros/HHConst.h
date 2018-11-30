@@ -77,6 +77,15 @@ typedef NS_ENUM(NSInteger,HHNavTitleViewType){
     
 };
 
+//历史彩票类型
+typedef NS_ENUM(NSInteger,LotteryHistoryTableType){
+    
+    LotteryHistoryTableTypeNormal,
+    LotteryHistoryTableTypeK3,
+    LotteryHistoryTableTypeLucky28,
+    LotteryHistoryTableTypeMarkSix,
+};
+
 
 typedef NS_ENUM(NSInteger,JYOrderType) {
     JYOrderType_all = 0, // 全部
