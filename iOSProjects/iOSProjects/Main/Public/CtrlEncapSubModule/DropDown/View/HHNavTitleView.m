@@ -46,18 +46,7 @@
     self.imageView.image = [UIImage imageNamed:@"ssc_arrow_up_white"];
     
     _font = [UIFont systemFontOfSize:17];
-    
-}
-- (void)defalutTitleModel:(SSCStructModel *)titModel{
-    
-    if (titModel.standard.count >0) {
-        
-        [self setType:HHNavTitleViewTypePlayStandard title:titModel.standard.firstObject.nm];
-        
-    }else{
-        [self setType:HHNavTitleViewTypePlayFast title:titModel.fast.firstObject.nm];
-    }
-    
+
     
 }
 - (void)setType:(HHNavTitleViewType)type title:(NSString *)title{
@@ -88,13 +77,16 @@
     
     self.typeLabel.right = self.titleLabel.left - 2;
     self.typeLabel.centerY = self.titleLabel.centerY;
-    
+    _imageView.hidden = false;
     self.imageView.centerY = self.titleLabel.centerY;
     self.imageView.left = self.titleLabel.right + 5;
-    
+    self.arrowType = SSCArrowType_Down;
+
 }
 
 - (void)btnOnClick:(UIButton *)sender{
+    self.arrowType = SSCArrowType_Up;
+
     _selectBtn.selected = !sender.selected;
     if (self.handlerTitleOnClick != nil) {
         self.handlerTitleOnClick(sender.selected);
@@ -105,9 +97,23 @@
     
     [UIView animateWithDuration:0.25 animations:^{
         
-        self.imageView.transform =  CGAffineTransformMakeRotation(isSelected ? M_PI: 0);
+        self.imageView.transform =  CGAffineTransformMakeRotation(!isSelected ? M_PI: 0);
         
     }];
+}
+-(void)setArrowType:(SSCArrowType )arrowType{
+    _arrowType = arrowType;
+    
+    if (arrowType == SSCArrowType_Up) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.imageView.transform = CGAffineTransformMakeRotation(M_PI);
+        }];
+    }
+    else{
+        [UIView animateWithDuration:0.25 animations:^{
+            self.imageView.transform = CGAffineTransformMakeRotation(0);
+        }];
+    }
 }
 #pragma mark - Setter && Getter Methods
 - (void)setFont:(UIFont *)font{
@@ -134,6 +140,7 @@
         _imageView.size = CGSizeMake(10, 10);
         _imageView.left = 0;
         _imageView.top = 0;
+        _imageView.hidden = true;
     }
     return _imageView;
 }
@@ -164,7 +171,7 @@
     
     if (!_selectBtn) {
         _selectBtn = [[UIButton alloc]initWithFrame:self.bounds];
-        _selectBtn.selected = YES;
+//        _selectBtn.selected = YES;
         [_selectBtn addTarget:self action:@selector(btnOnClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _selectBtn;

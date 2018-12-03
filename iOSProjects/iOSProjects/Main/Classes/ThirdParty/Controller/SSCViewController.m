@@ -15,16 +15,12 @@
 #import "SSCHeaderView.h"
 #import "SSCLatestPeriodsView.h"
 #import "HHHistoryTableView.h"
-@interface SSCViewController ()
+@interface SSCViewController ()<SSCStructSuperViewDelegate>
 @property(nonatomic,strong)HHNavTitleView *titleView;
 
 @property(nonatomic,strong)SSCStructChildView *structChildView;
 
-
 @property(nonatomic,strong)SSCStructSuperView *structSuperView;
-
-@property (nonatomic,strong)HHDropDownView *dropDownView;
-
 
 @property(nonatomic,strong)SSCHeaderView *headerView;
 
@@ -34,6 +30,7 @@
 
 @property(nonatomic,strong)HHHistoryTableView *historyView;
 
+
 @end
 
 @implementation SSCViewController
@@ -42,32 +39,38 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-
-    [self setupSubView];
-    
     [self loadDataFromNetwork];
 
+    [self setupNav];
+    
+    [self setupSubView];
+    
+
 }
-
-
-
 #pragma mark - setupNav
+- (void)setupNav{
+    
+    self.view.backgroundColor  = [UIColor whiteColor];
+    self.navigationItem.titleView = self.titleView;
+}
 
 #pragma mark - setupSubView
 - (void)setupSubView{
     
-    self.view.backgroundColor  = [UIColor whiteColor];
-    self.navigationItem.titleView = self.titleView;
-    
     [self.view addSubview:self.structChildView];
     [self.view addSubview:self.headerView];
-
     [self.view addSubview:self.latestView];
-//    [self.view addSubview:self.structSuperView];
     
-    [self.view addSubview:self.dropDownView];
+    [self.view addSubview:self.historyView];
+    
 
     
+}
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.historyView.top = self.latestView.bottom;
+
 }
 #pragma mark - loadDataFromNetwork
 - (void)loadDataFromNetwork{
@@ -79,17 +82,8 @@
             
             SSCStructModel *structModel = [SSCStructModel yy_modelWithDictionary:resposeObject[@"data"]];
             
-            [weakSelf.dropDownView setdataArr:nil standardArray:structModel.standard fastArray:structModel.fast];
+            [weakSelf.structSuperView setStandardMehtods:structModel.standard fastMethods:structModel.fast];
             
-            [weakSelf.titleView defalutTitleModel:structModel];
- 
-            weakSelf.dropDownView.handlerDropDownDidSelectCallBack = ^(HHNavTitleViewType type, SSCSuperModel *model) {
-                
-                [weakSelf.titleView setType:type title:model.nm];
-                
-                self.structChildView.dataArr = model.child;
-                
-            };
         }
         
         
@@ -97,6 +91,15 @@
        
     }];
 }
+
+#pragma mark - <SSCStructSuperViewDelegate>
+- (void)structSuperView:(SSCStructSuperView *)view didSelectType:(SSCPlayType)type SuperModel:(SSCSuperModel *)model{
+    
+  [self.titleView setType:(HHNavTitleViewType)type title:model.nm];
+    self.structChildView.dataArr = model.child;
+    
+}
+
 
 -(void)showHistoryView:(BOOL)show{
     
@@ -118,14 +121,28 @@
     if (!_titleView) {
         WeakSelf;
         _titleView = [[HHNavTitleView alloc]initWithFrame:CGRectMake(0, 0, 200, 44)];
-
+        
         _titleView.handlerTitleOnClick = ^(BOOL isSelected ) {
             
             NSLog(@"%d------------",isSelected);
-            weakSelf.titleView.isSelected = !isSelected;
-            !isSelected ?  [weakSelf.dropDownView show]: [weakSelf.dropDownView  close];
             
-
+            weakSelf.titleView.isSelected = !isSelected;
+            
+            if (isSelected) {
+                
+                if (weakSelf.structSuperView.superview != self.view) {
+                    [weakSelf.structSuperView showInView:weakSelf.view];
+                }
+                
+            }else{
+                [weakSelf.structSuperView removeFromSuperview];
+                
+            }
+//            isSelected ?  [weakSelf.structSuperView showInView:weakSelf.view]: [weakSelf.structSuperView removeFromSuperview];
+            
+            //            !isSelected ?  [weakSelf.dropDownView show]: [weakSelf.dropDownView  close];
+            
+            
         };
     }
     return _titleView;
@@ -136,6 +153,8 @@
     
     if (!_structChildView) {
         _structChildView = [[SSCStructChildView alloc]initWithFrame:CGRectMake(0, 0, Screen_Width, 35)];
+        _structChildView.lotteryId = [NSString stringWithFormat:@"%ld",_model.id];
+        
     }
     return _structChildView;
 }
@@ -151,7 +170,7 @@
     if (!_latestView) {
         _latestView = [[SSCLatestPeriodsView alloc] initWithFrame:CGRectMake(0, self.headerView.bottom, self.view.width, 35)];
         _latestView.backgroundColor = [UIColor hh_redomColor];
-
+        
     }
     return _latestView;
 }
@@ -160,28 +179,29 @@
     if (!_historyView) {
         _historyView =  [[HHHistoryTableView alloc]initWithFrame:CGRectMake(0, self.latestView.bottom, self.view.bounds.size.width, 200)];
         _historyView.backgroundColor = [UIColor hh_redomColor];
-
+        
     }
     return _historyView;
 }
--(HHDropDownView *)dropDownView{
-    if (!_dropDownView) {
-        _dropDownView = [[HHDropDownView alloc]initWithFrame:self.view.bounds rootView:self.view];
- 
-    }
-    return _dropDownView;
-}
+
+
 
 -(SSCStructSuperView *)structSuperView{
     if (!_structSuperView) {
-        _structSuperView = [[SSCStructSuperView alloc]initWithFrame:self.view.bounds rootView:self.view];
-  
+        _structSuperView = [[SSCStructSuperView alloc]initWithFrame:self.view.bounds];
+        _structSuperView.lotteryId = [NSString stringWithFormat:@"%ld",_model.id];
+        _structSuperView.delegate = self;
+        WeakSelf;
+        _structSuperView.handlerStructSuperBgCallBack = ^{
+          
+            weakSelf.titleView.arrowType = SSCArrowType_Down;
+        };
+        
+        
+        
     }
     return _structSuperView;
 }
-
-
-
 
 
 @end

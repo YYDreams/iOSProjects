@@ -7,6 +7,7 @@
 //
 
 #import "SSCStructChildView.h"
+#import "NSUserDefaults+SSC.h"
 @interface SSCStructChildView()
 
 @property(nonatomic,strong)UIScrollView  *scrollView;
@@ -24,10 +25,21 @@
     return self;
     
 }
-- (void)defalutChild:(SSCStructModel *)structModel{
-    
-    self.dataArr =  structModel.standard.count > 0 ?structModel.standard.firstObject.child :structModel.fast.firstObject.child;
 
+//设置默认为选中第一个
+- (SSCChildModel *)getDefaultPlaySon{
+    
+    NSString *playSonId = [NSUserDefaults sscPlaySonIdByLotteryId:self.lotteryId];
+    
+    
+    for (SSCChildModel *model in self.dataArr) {
+        
+        if ([model.plid isEqualToString:playSonId]) {
+            
+            return model;
+        }
+    }
+    return self.dataArr.firstObject;
 }
 
 - (void)setDataArr:(NSArray *)dataArr{
@@ -41,8 +53,8 @@
             [view removeFromSuperview];
         }
     }
-    SSCChildModel *defaultModel = dataArr.firstObject;
-    
+    SSCChildModel *defaultModel = [self getDefaultPlaySon];
+
     SSCPlaySonButton *defaultButton;
 
     
@@ -59,14 +71,13 @@
         
         [self.scrollView addSubview:btn];
         
-        
         if (model == defaultModel) {
             btn.selected = true;
             defaultButton = btn;
         }
-        
+    }
         self.scrollView.contentSize = CGSizeMake(self.dataArr.count * w, self.height);
-
+        
         CGSize size = [defaultButton.titleLabel.text sizeWithAttributes:@{NSFontAttributeName:defaultButton.titleLabel.font}];
         
         self.lineView.frame = CGRectMake(defaultButton.center.x - size.width/2 , self.scrollView.bounds.size.height - 2, size.width, 2);
@@ -74,7 +85,6 @@
         [self btnAction:defaultButton];
 
 
-    }
    
     
 }
@@ -112,6 +122,9 @@
     if (_handlerChildSelectCallBack) {
         _handlerChildSelectCallBack(_childModel);
     }
+    
+    [NSUserDefaults sscSavePlaySonId:self.childModel.plid byLotteryId:self.lotteryId];
+
     
     
 }

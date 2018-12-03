@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "SSCStructModel.h"
 NS_ASSUME_NONNULL_BEGIN
-
+typedef NS_ENUM(NSInteger,SSCArrowType) {
+    SSCArrowType_Up,
+    SSCArrowType_Down,
+};
 
 @interface HHNavTitleView : UIView
 
@@ -22,8 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
 /** 字体颜色 默认白色*/
 @property (nonatomic,copy) UIColor *textColor;
 
-/** accow的图片名称*/
-@property (nonatomic, copy)NSString *arrowImage;
+@property (nonatomic,copy) NSString *arrowImage;
+
+
+@property (nonatomic,assign)SSCArrowType arrowType;//箭头类型
+
 
 /** */
 @property (nonatomic, assign)BOOL isSelected;
@@ -34,7 +40,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setType:(HHNavTitleViewType)type title:(NSString *)title;
 
-- (void)defalutTitleModel:(SSCStructModel *)titModel;
 @end
 
 NS_ASSUME_NONNULL_END

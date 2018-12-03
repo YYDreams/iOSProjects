@@ -10,4 +10,8 @@
 
 @implementation SSCHistoryModel
 
+-(BOOL)hasBall{
+    NSArray *numArr = [self.period_code componentsSeparatedByString:@","];
+    return numArr.count > 0;
+}
 @end

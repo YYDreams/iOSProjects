@@ -43,8 +43,7 @@
  @param color 颜色
  @return 图片
  */
-- (UIImage *)imageWithColor:(UIColor *)color;
-
++ (UIImage *)imageWithColor:(UIColor *)color;
 /**
  根据图片url获取图片尺寸
 

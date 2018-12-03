@@ -18,11 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property(nonatomic,strong)NSArray<SSCChildModel *> *dataArr;
 
+@property (nonatomic,strong)NSString *lotteryId;//彩种id
+
 
 @property(nonatomic,copy)void(^handlerChildSelectCallBack)(SSCChildModel *model);
 
-//设置默认为选中第一个
-- (void)defalutChild:(SSCStructModel *)structModel;
+
 @end
 
 

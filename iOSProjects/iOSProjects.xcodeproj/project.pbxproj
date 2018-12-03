@@ -17,6 +17,7 @@
 		3195366721A68D4700F6532D /* FTFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366521A68D4700F6532D /* FTFilterView.m */; };
 		3195366A21A6903D00F6532D /* NSDate+HH.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366921A6903D00F6532D /* NSDate+HH.m */; };
 		3195366C21A693FA00F6532D /* UICustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3195366B21A693FA00F6532D /* UICustomDatePicker.xib */; };
+		31AA4AC021B4CE7E00EE5302 /* NSUserDefaults+SSC.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AA4ABF21B4CE7E00EE5302 /* NSUserDefaults+SSC.m */; };
 		31C2883021AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2882F21AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.m */; };
 		31C2883421AE941300AF7EA8 /* FTBuyLotteryLobbyHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2883321AE941300AF7EA8 /* FTBuyLotteryLobbyHeadView.m */; };
 		31C2883821AE968E00AF7EA8 /* FTLottertCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2883721AE968E00AF7EA8 /* FTLottertCategory.m */; };
@@ -170,6 +171,8 @@
 		3195366821A6903D00F6532D /* NSDate+HH.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+HH.h"; sourceTree = "<group>"; };
 		3195366921A6903D00F6532D /* NSDate+HH.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+HH.m"; sourceTree = "<group>"; };
 		3195366B21A693FA00F6532D /* UICustomDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UICustomDatePicker.xib; sourceTree = "<group>"; };
+		31AA4ABE21B4CE7E00EE5302 /* NSUserDefaults+SSC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+SSC.h"; sourceTree = "<group>"; };
+		31AA4ABF21B4CE7E00EE5302 /* NSUserDefaults+SSC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+SSC.m"; sourceTree = "<group>"; };
 		31C2882E21AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBuyLotteryLobbyViewController.h; sourceTree = "<group>"; };
 		31C2882F21AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBuyLotteryLobbyViewController.m; sourceTree = "<group>"; };
 		31C2883221AE941200AF7EA8 /* FTBuyLotteryLobbyHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBuyLotteryLobbyHeadView.h; sourceTree = "<group>"; };
@@ -554,6 +557,8 @@
 				31C2883721AE968E00AF7EA8 /* FTLottertCategory.m */,
 				31D2C40A21B0D69500D9D8B9 /* SSCHistoryModel.h */,
 				31D2C40B21B0D69500D9D8B9 /* SSCHistoryModel.m */,
+				31AA4ABE21B4CE7E00EE5302 /* NSUserDefaults+SSC.h */,
+				31AA4ABF21B4CE7E00EE5302 /* NSUserDefaults+SSC.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1750,6 +1755,7 @@
 				9C7E730D212AEE5200479B3D /* LoginHandle.m in Sources */,
 				31C2883B21AE998800AF7EA8 /* SSCViewController.m in Sources */,
 				9C904CCA214E7DCE00914B4F /* HHWeChatFloatingBtn.m in Sources */,
+				31AA4AC021B4CE7E00EE5302 /* NSUserDefaults+SSC.m in Sources */,
 				9CA0C71A212A7BC8007107E9 /* HHRefreshFactory.m in Sources */,
 				9CA0C6E5212A7330007107E9 /* MBProgressHUD+LYProgressHUD.m in Sources */,
 				9C904CD3214F790200914B4F /* HHAnimator.m in Sources */,

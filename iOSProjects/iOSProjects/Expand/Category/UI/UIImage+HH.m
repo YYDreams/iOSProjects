@@ -41,21 +41,21 @@
 }
 
 #pragma mark - 将图片渲染成指定颜色
-- (UIImage *)imageWithColor:(UIColor *)color
++ (UIImage *)imageWithColor:(UIColor *)color
 {
-    UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
+    CGRect rect = (CGRect){CGPointZero,CGSizeMake(1.0, 1.0)};
+    UIGraphicsBeginImageContext(rect.size);
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextTranslateCTM(context, 0, self.size.height);
-    CGContextScaleCTM(context, 1.0, -1.0);
-    CGContextSetBlendMode(context, kCGBlendModeNormal);
-    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
-    CGContextClipToMask(context, rect, self.CGImage);
-    [color setFill];
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
     CGContextFillRect(context, rect);
-    UIImage*newImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    return newImage;
+    
+    return image;
 }
+
 
 #pragma mark - 根据图片url获取图片尺寸
 + (CGSize)getImageSizeWithURL:(id)imageURL
