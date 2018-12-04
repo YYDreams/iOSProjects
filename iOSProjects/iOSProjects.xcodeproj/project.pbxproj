@@ -18,16 +18,22 @@
 		3195366A21A6903D00F6532D /* NSDate+HH.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366921A6903D00F6532D /* NSDate+HH.m */; };
 		3195366C21A693FA00F6532D /* UICustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3195366B21A693FA00F6532D /* UICustomDatePicker.xib */; };
 		31AA4AC021B4CE7E00EE5302 /* NSUserDefaults+SSC.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AA4ABF21B4CE7E00EE5302 /* NSUserDefaults+SSC.m */; };
+		31BA1E8A21B6500E00317918 /* HHHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BA1E8221B6500E00317918 /* HHHistoryTableViewCell.m */; };
+		31BA1E8B21B6500E00317918 /* SSCNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BA1E8521B6500E00317918 /* SSCNavTitleView.m */; };
+		31BA1E8C21B6500E00317918 /* SSCStandardBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BA1E8921B6500E00317918 /* SSCStandardBottomView.m */; };
+		31BA1E8F21B6503900317918 /* SSCBallsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BA1E8E21B6503900317918 /* SSCBallsView.m */; };
+		31BA1E9221B6652600317918 /* SSCBallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BA1E9121B6652600317918 /* SSCBallCell.m */; };
+		31BA1E9621B66FE200317918 /* SSCRandomManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BA1E9521B66FE200317918 /* SSCRandomManager.m */; };
+		31BA1E9A21B6713800317918 /* SSCBallViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BA1E9921B6713800317918 /* SSCBallViewModel.m */; };
+		31BA1E9D21B672DB00317918 /* SSCBallCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BA1E9C21B672DB00317918 /* SSCBallCellModel.m */; };
 		31C2883021AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2882F21AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.m */; };
 		31C2883421AE941300AF7EA8 /* FTBuyLotteryLobbyHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2883321AE941300AF7EA8 /* FTBuyLotteryLobbyHeadView.m */; };
 		31C2883821AE968E00AF7EA8 /* FTLottertCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2883721AE968E00AF7EA8 /* FTLottertCategory.m */; };
 		31C2883B21AE998800AF7EA8 /* SSCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2883A21AE998800AF7EA8 /* SSCViewController.m */; };
-		31C2884121AEA0B200AF7EA8 /* SSCNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2884021AEA0B200AF7EA8 /* SSCNavTitleView.m */; };
 		31C2884521AEA2C400AF7EA8 /* SSCStructChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2884421AEA2C400AF7EA8 /* SSCStructChildView.m */; };
 		31C2884821AEA2D300AF7EA8 /* SSCStructSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2884721AEA2D300AF7EA8 /* SSCStructSuperView.m */; };
 		31C2884C21AEA3E700AF7EA8 /* SSCStructModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2884B21AEA3E700AF7EA8 /* SSCStructModel.m */; };
 		31D2C40621B0CF3600D9D8B9 /* HHHistoryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40521B0CF3600D9D8B9 /* HHHistoryTableView.m */; };
-		31D2C40921B0D40F00D9D8B9 /* HHHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40821B0D40F00D9D8B9 /* HHHistoryTableViewCell.m */; };
 		31D2C40C21B0D69500D9D8B9 /* SSCHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40B21B0D69500D9D8B9 /* SSCHistoryModel.m */; };
 		31D2C40F21B0D83100D9D8B9 /* SSCHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40E21B0D83100D9D8B9 /* SSCHeaderView.m */; };
 		31D2C41221B0E15F00D9D8B9 /* SSCLatestPeriodsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C41121B0E15F00D9D8B9 /* SSCLatestPeriodsView.m */; };
@@ -173,6 +179,22 @@
 		3195366B21A693FA00F6532D /* UICustomDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UICustomDatePicker.xib; sourceTree = "<group>"; };
 		31AA4ABE21B4CE7E00EE5302 /* NSUserDefaults+SSC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+SSC.h"; sourceTree = "<group>"; };
 		31AA4ABF21B4CE7E00EE5302 /* NSUserDefaults+SSC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+SSC.m"; sourceTree = "<group>"; };
+		31BA1E8121B6500E00317918 /* HHHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHHistoryTableViewCell.h; sourceTree = "<group>"; };
+		31BA1E8221B6500E00317918 /* HHHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHHistoryTableViewCell.m; sourceTree = "<group>"; };
+		31BA1E8421B6500E00317918 /* SSCNavTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCNavTitleView.h; sourceTree = "<group>"; };
+		31BA1E8521B6500E00317918 /* SSCNavTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCNavTitleView.m; sourceTree = "<group>"; };
+		31BA1E8821B6500E00317918 /* SSCStandardBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCStandardBottomView.h; sourceTree = "<group>"; };
+		31BA1E8921B6500E00317918 /* SSCStandardBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSCStandardBottomView.m; sourceTree = "<group>"; };
+		31BA1E8D21B6503900317918 /* SSCBallsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCBallsView.h; sourceTree = "<group>"; };
+		31BA1E8E21B6503900317918 /* SSCBallsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCBallsView.m; sourceTree = "<group>"; };
+		31BA1E9021B6652600317918 /* SSCBallCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCBallCell.h; sourceTree = "<group>"; };
+		31BA1E9121B6652600317918 /* SSCBallCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCBallCell.m; sourceTree = "<group>"; };
+		31BA1E9421B66FE200317918 /* SSCRandomManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCRandomManager.h; sourceTree = "<group>"; };
+		31BA1E9521B66FE200317918 /* SSCRandomManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCRandomManager.m; sourceTree = "<group>"; };
+		31BA1E9821B6713800317918 /* SSCBallViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCBallViewModel.h; sourceTree = "<group>"; };
+		31BA1E9921B6713800317918 /* SSCBallViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCBallViewModel.m; sourceTree = "<group>"; };
+		31BA1E9B21B672DB00317918 /* SSCBallCellModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCBallCellModel.h; sourceTree = "<group>"; };
+		31BA1E9C21B672DB00317918 /* SSCBallCellModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCBallCellModel.m; sourceTree = "<group>"; };
 		31C2882E21AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBuyLotteryLobbyViewController.h; sourceTree = "<group>"; };
 		31C2882F21AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTBuyLotteryLobbyViewController.m; sourceTree = "<group>"; };
 		31C2883221AE941200AF7EA8 /* FTBuyLotteryLobbyHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTBuyLotteryLobbyHeadView.h; sourceTree = "<group>"; };
@@ -181,8 +203,6 @@
 		31C2883721AE968E00AF7EA8 /* FTLottertCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTLottertCategory.m; sourceTree = "<group>"; };
 		31C2883921AE998800AF7EA8 /* SSCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCViewController.h; sourceTree = "<group>"; };
 		31C2883A21AE998800AF7EA8 /* SSCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCViewController.m; sourceTree = "<group>"; };
-		31C2883F21AEA0B200AF7EA8 /* SSCNavTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCNavTitleView.h; sourceTree = "<group>"; };
-		31C2884021AEA0B200AF7EA8 /* SSCNavTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCNavTitleView.m; sourceTree = "<group>"; };
 		31C2884321AEA2C400AF7EA8 /* SSCStructChildView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCStructChildView.h; sourceTree = "<group>"; };
 		31C2884421AEA2C400AF7EA8 /* SSCStructChildView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCStructChildView.m; sourceTree = "<group>"; };
 		31C2884621AEA2D300AF7EA8 /* SSCStructSuperView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCStructSuperView.h; sourceTree = "<group>"; };
@@ -191,8 +211,6 @@
 		31C2884B21AEA3E700AF7EA8 /* SSCStructModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCStructModel.m; sourceTree = "<group>"; };
 		31D2C40421B0CF3600D9D8B9 /* HHHistoryTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHistoryTableView.h; sourceTree = "<group>"; };
 		31D2C40521B0CF3600D9D8B9 /* HHHistoryTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHistoryTableView.m; sourceTree = "<group>"; };
-		31D2C40721B0D40F00D9D8B9 /* HHHistoryTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHistoryTableViewCell.h; sourceTree = "<group>"; };
-		31D2C40821B0D40F00D9D8B9 /* HHHistoryTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHistoryTableViewCell.m; sourceTree = "<group>"; };
 		31D2C40A21B0D69500D9D8B9 /* SSCHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCHistoryModel.h; sourceTree = "<group>"; };
 		31D2C40B21B0D69500D9D8B9 /* SSCHistoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCHistoryModel.m; sourceTree = "<group>"; };
 		31D2C40D21B0D83100D9D8B9 /* SSCHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCHeaderView.h; sourceTree = "<group>"; };
@@ -529,18 +547,76 @@
 			path = FTFilterView;
 			sourceTree = "<group>";
 		};
+		31BA1E8021B6500E00317918 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				31BA1E8121B6500E00317918 /* HHHistoryTableViewCell.h */,
+				31BA1E8221B6500E00317918 /* HHHistoryTableViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		31BA1E8321B6500E00317918 /* Nav */ = {
+			isa = PBXGroup;
+			children = (
+				31BA1E8421B6500E00317918 /* SSCNavTitleView.h */,
+				31BA1E8521B6500E00317918 /* SSCNavTitleView.m */,
+			);
+			path = Nav;
+			sourceTree = "<group>";
+		};
+		31BA1E8621B6500E00317918 /* BallList */ = {
+			isa = PBXGroup;
+			children = (
+				31BA1E8D21B6503900317918 /* SSCBallsView.h */,
+				31BA1E8E21B6503900317918 /* SSCBallsView.m */,
+				31BA1E9021B6652600317918 /* SSCBallCell.h */,
+				31BA1E9121B6652600317918 /* SSCBallCell.m */,
+			);
+			path = BallList;
+			sourceTree = "<group>";
+		};
+		31BA1E8721B6500E00317918 /* BottomView */ = {
+			isa = PBXGroup;
+			children = (
+				31BA1E8821B6500E00317918 /* SSCStandardBottomView.h */,
+				31BA1E8921B6500E00317918 /* SSCStandardBottomView.m */,
+			);
+			path = BottomView;
+			sourceTree = "<group>";
+		};
+		31BA1E9321B66FD600317918 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				31BA1E9421B66FE200317918 /* SSCRandomManager.h */,
+				31BA1E9521B66FE200317918 /* SSCRandomManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		31BA1E9721B6712B00317918 /* BallList */ = {
+			isa = PBXGroup;
+			children = (
+				31BA1E9821B6713800317918 /* SSCBallViewModel.h */,
+				31BA1E9921B6713800317918 /* SSCBallViewModel.m */,
+				31BA1E9B21B672DB00317918 /* SSCBallCellModel.h */,
+				31BA1E9C21B672DB00317918 /* SSCBallCellModel.m */,
+			);
+			path = BallList;
+			sourceTree = "<group>";
+		};
 		31C2883121AE93EE00AF7EA8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				31BA1E8621B6500E00317918 /* BallList */,
+				31BA1E8721B6500E00317918 /* BottomView */,
+				31BA1E8021B6500E00317918 /* Cell */,
+				31BA1E8321B6500E00317918 /* Nav */,
 				31C2884221AEA2AE00AF7EA8 /* PlayMethod */,
 				31C2883221AE941200AF7EA8 /* FTBuyLotteryLobbyHeadView.h */,
 				31C2883321AE941300AF7EA8 /* FTBuyLotteryLobbyHeadView.m */,
-				31C2883F21AEA0B200AF7EA8 /* SSCNavTitleView.h */,
-				31C2884021AEA0B200AF7EA8 /* SSCNavTitleView.m */,
 				31D2C40421B0CF3600D9D8B9 /* HHHistoryTableView.h */,
 				31D2C40521B0CF3600D9D8B9 /* HHHistoryTableView.m */,
-				31D2C40721B0D40F00D9D8B9 /* HHHistoryTableViewCell.h */,
-				31D2C40821B0D40F00D9D8B9 /* HHHistoryTableViewCell.m */,
 				31D2C40D21B0D83100D9D8B9 /* SSCHeaderView.h */,
 				31D2C40E21B0D83100D9D8B9 /* SSCHeaderView.m */,
 				31D2C41021B0E15F00D9D8B9 /* SSCLatestPeriodsView.h */,
@@ -552,6 +628,7 @@
 		31C2883521AE968000AF7EA8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				31BA1E9721B6712B00317918 /* BallList */,
 				31C2884921AEA3D500AF7EA8 /* PlayMethod */,
 				31C2883621AE968E00AF7EA8 /* FTLottertCategory.h */,
 				31C2883721AE968E00AF7EA8 /* FTLottertCategory.m */,
@@ -890,6 +967,7 @@
 		9C7E72D1212A8CCF00479B3D /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				31BA1E9321B66FD600317918 /* Tools */,
 				31C2883521AE968000AF7EA8 /* Model */,
 				31C2883121AE93EE00AF7EA8 /* View */,
 				9C7E72D2212A8CCF00479B3D /* Controller */,
@@ -1754,7 +1832,9 @@
 				7814438521A2A1D9008B091E /* HHBannerModel.mm in Sources */,
 				9C7E730D212AEE5200479B3D /* LoginHandle.m in Sources */,
 				31C2883B21AE998800AF7EA8 /* SSCViewController.m in Sources */,
+				31BA1E9D21B672DB00317918 /* SSCBallCellModel.m in Sources */,
 				9C904CCA214E7DCE00914B4F /* HHWeChatFloatingBtn.m in Sources */,
+				31BA1E8F21B6503900317918 /* SSCBallsView.m in Sources */,
 				31AA4AC021B4CE7E00EE5302 /* NSUserDefaults+SSC.m in Sources */,
 				9CA0C71A212A7BC8007107E9 /* HHRefreshFactory.m in Sources */,
 				9CA0C6E5212A7330007107E9 /* MBProgressHUD+LYProgressHUD.m in Sources */,
@@ -1775,12 +1855,13 @@
 				9C904CD0214F78C800914B4F /* HHAnimatorView.m in Sources */,
 				9C2B9828212D04CA00958545 /* HHStyleViewModel.m in Sources */,
 				9C904CC1214E21E300914B4F /* HHPrintLog.m in Sources */,
+				31BA1E8A21B6500E00317918 /* HHHistoryTableViewCell.m in Sources */,
+				31BA1E9A21B6713800317918 /* SSCBallViewModel.m in Sources */,
 				9C03296E212EB88F00DDF393 /* HHBoxTextField.m in Sources */,
 				9CA0C6F0212A7330007107E9 /* UIColor+HHAddition.m in Sources */,
 				9CA0C6DA212A7330007107E9 /* BaseUIViewController.m in Sources */,
 				9CA0C6E4212A7330007107E9 /* HHTextField.m in Sources */,
 				31D2C40C21B0D69500D9D8B9 /* SSCHistoryModel.m in Sources */,
-				31D2C40921B0D40F00D9D8B9 /* HHHistoryTableViewCell.m in Sources */,
 				31C2883821AE968E00AF7EA8 /* FTLottertCategory.m in Sources */,
 				9CA0C6E0212A7330007107E9 /* NSArray+NSFoundation.m in Sources */,
 				788E895F219928BF007E7C74 /* HHTextViewController.m in Sources */,
@@ -1805,19 +1886,22 @@
 				9CA0C720212A7CCE007107E9 /* HHConst.m in Sources */,
 				3195366621A68D4700F6532D /* UICustomDatePicker.m in Sources */,
 				9C7E72DE212A8D0500479B3D /* MoreViewController.m in Sources */,
+				31BA1E9221B6652600317918 /* SSCBallCell.m in Sources */,
 				9CA0C727212A7F70007107E9 /* Test1ViewController.m in Sources */,
 				9CA0C6E2212A7330007107E9 /* NSObject+Runtime.m in Sources */,
 				31C2884521AEA2C400AF7EA8 /* SSCStructChildView.m in Sources */,
 				31C2884C21AEA3E700AF7EA8 /* SSCStructModel.m in Sources */,
-				31C2884121AEA0B200AF7EA8 /* SSCNavTitleView.m in Sources */,
 				78F32C5421955D080013E6EC /* HHLotteryListCell.m in Sources */,
 				9CA0C721212A7CCE007107E9 /* HHConstUrl.m in Sources */,
+				31BA1E8B21B6500E00317918 /* SSCNavTitleView.m in Sources */,
 				7814438221A28FA2008B091E /* HHDBManager.mm in Sources */,
 				9CA0C6E9212A7330007107E9 /* RMCollectionViewFlowLayout.m in Sources */,
+				31BA1E9621B66FE200317918 /* SSCRandomManager.m in Sources */,
 				9CA0C70F212A77F8007107E9 /* AFHTTPSessionManager+Config.m in Sources */,
 				9CA0C710212A77F8007107E9 /* HTTPRequest+NotLogin.m in Sources */,
 				9C4700F32147A70F00112B05 /* HHDataStoreController.m in Sources */,
 				9C7E72DB212A8CF900479B3D /* CtrlEncapViewController.m in Sources */,
+				31BA1E8C21B6500E00317918 /* SSCStandardBottomView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,8 @@
 #import "SSCHeaderView.h"
 #import "SSCLatestPeriodsView.h"
 #import "HHHistoryTableView.h"
+#import "SSCStandardBottomView.h"
+#import "SSCBallsView.h"
 @interface SSCViewController ()<SSCStructSuperViewDelegate>
 @property(nonatomic,strong)HHNavTitleView *titleView;
 
@@ -31,6 +33,9 @@
 @property(nonatomic,strong)HHHistoryTableView *historyView;
 
 
+@property(nonatomic,strong)SSCStandardBottomView *standardBottomView;
+
+@property(nonatomic,strong)SSCBallsView *ballsView;
 @end
 
 @implementation SSCViewController
@@ -63,6 +68,13 @@
     
     [self.view addSubview:self.historyView];
     
+    [self.view addSubview:self.ballsView];
+    
+    
+    [self.view addSubview:self.standardBottomView];
+
+    
+    
 
     
 }
@@ -70,6 +82,8 @@
     [super viewDidLayoutSubviews];
     
     self.historyView.top = self.latestView.bottom;
+
+    self.ballsView.top = self.latestView.bottom;
 
 }
 #pragma mark - loadDataFromNetwork
@@ -154,6 +168,10 @@
     if (!_structChildView) {
         _structChildView = [[SSCStructChildView alloc]initWithFrame:CGRectMake(0, 0, Screen_Width, 35)];
         _structChildView.lotteryId = [NSString stringWithFormat:@"%ld",_model.id];
+        _structChildView.handlerChildSelectCallBack = ^(SSCChildModel * _Nonnull model) {
+          
+            NSLog(@"====model====%@", model);
+        };
         
     }
     return _structChildView;
@@ -201,6 +219,23 @@
         
     }
     return _structSuperView;
+}
+
+-(SSCBallsView *)ballsView{
+    if (!_ballsView) {
+        _ballsView = [[SSCBallsView alloc]initWithFrame:CGRectMake(0, self.latestView.bottom, self.view.width, self.standardBottomView.top - self.latestView.bottom)];
+        _ballsView.backgroundColor = [UIColor redColor];
+//        _ballsView.deleagte = self;
+    }
+    return _ballsView;
+}
+
+-(SSCStandardBottomView *)standardBottomView{
+    if (!_standardBottomView) {
+        _standardBottomView = [[SSCStandardBottomView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, iPhoneX ? 110 : 90)];
+        _standardBottomView.bottom = self.view.height - [UIApplication sharedApplication].statusBarFrame.size.height - self.navigationController.navigationBar.bounds.size.height ;
+    }
+    return _standardBottomView;
 }
 
 
