@@ -118,11 +118,15 @@
         self.lineView.frame = frame;
     }];
     
-    
+
     if (_handlerChildSelectCallBack) {
         _handlerChildSelectCallBack(_childModel);
     }
     
+    //调用代理
+    if (self.delegate && [self.delegate respondsToSelector:@selector(structChildView:didSelect:)]){
+        [self.delegate structChildView:self didSelect:self.childModel];
+    }
     [NSUserDefaults sscSavePlaySonId:self.childModel.plid byLotteryId:self.lotteryId];
 
     

@@ -17,7 +17,7 @@
 #import "HHHistoryTableView.h"
 #import "SSCStandardBottomView.h"
 #import "SSCBallsView.h"
-@interface SSCViewController ()<SSCStructSuperViewDelegate>
+@interface SSCViewController ()<SSCStructSuperViewDelegate,SSCStructChildViewDelegate>
 @property(nonatomic,strong)HHNavTitleView *titleView;
 
 @property(nonatomic,strong)SSCStructChildView *structChildView;
@@ -106,6 +106,13 @@
     }];
 }
 
+#pragma mark - <SSCStructChildViewDelegate>
+-(void)structChildView:(SSCStructChildView *)view didSelect:(SSCChildModel *)model{
+    
+    self.ballsView.childModel = model;
+}
+
+
 #pragma mark - <SSCStructSuperViewDelegate>
 - (void)structSuperView:(SSCStructSuperView *)view didSelectType:(SSCPlayType)type SuperModel:(SSCSuperModel *)model{
     
@@ -168,11 +175,7 @@
     if (!_structChildView) {
         _structChildView = [[SSCStructChildView alloc]initWithFrame:CGRectMake(0, 0, Screen_Width, 35)];
         _structChildView.lotteryId = [NSString stringWithFormat:@"%ld",_model.id];
-        _structChildView.handlerChildSelectCallBack = ^(SSCChildModel * _Nonnull model) {
-          
-            NSLog(@"====model====%@", model);
-        };
-        
+        _structChildView.delegate = self;
     }
     return _structChildView;
 }
@@ -234,6 +237,7 @@
     if (!_standardBottomView) {
         _standardBottomView = [[SSCStandardBottomView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, iPhoneX ? 110 : 90)];
         _standardBottomView.bottom = self.view.height - [UIApplication sharedApplication].statusBarFrame.size.height - self.navigationController.navigationBar.bounds.size.height ;
+        _standardBottomView.backgroundColor = [UIColor hh_redomColor];
     }
     return _standardBottomView;
 }

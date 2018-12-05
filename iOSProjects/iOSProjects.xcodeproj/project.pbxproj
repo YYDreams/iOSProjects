@@ -33,6 +33,10 @@
 		31C2884521AEA2C400AF7EA8 /* SSCStructChildView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2884421AEA2C400AF7EA8 /* SSCStructChildView.m */; };
 		31C2884821AEA2D300AF7EA8 /* SSCStructSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2884721AEA2D300AF7EA8 /* SSCStructSuperView.m */; };
 		31C2884C21AEA3E700AF7EA8 /* SSCStructModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C2884B21AEA3E700AF7EA8 /* SSCStructModel.m */; };
+		31C6F57C21B76C2C00788F0D /* SSCCellContentView3.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C6F57B21B76C2C00788F0D /* SSCCellContentView3.m */; };
+		31C6F57F21B76DAB00788F0D /* SSCBallView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C6F57E21B76DAB00788F0D /* SSCBallView1.m */; };
+		31C6F58221B7D7B600788F0D /* SSCCellContentView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C6F58121B7D7B600788F0D /* SSCCellContentView1.m */; };
+		31C6F58521B7D7C600788F0D /* SSCCellContentView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 31C6F58421B7D7C600788F0D /* SSCCellContentView2.m */; };
 		31D2C40621B0CF3600D9D8B9 /* HHHistoryTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40521B0CF3600D9D8B9 /* HHHistoryTableView.m */; };
 		31D2C40C21B0D69500D9D8B9 /* SSCHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40B21B0D69500D9D8B9 /* SSCHistoryModel.m */; };
 		31D2C40F21B0D83100D9D8B9 /* SSCHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40E21B0D83100D9D8B9 /* SSCHeaderView.m */; };
@@ -209,6 +213,14 @@
 		31C2884721AEA2D300AF7EA8 /* SSCStructSuperView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCStructSuperView.m; sourceTree = "<group>"; };
 		31C2884A21AEA3E700AF7EA8 /* SSCStructModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCStructModel.h; sourceTree = "<group>"; };
 		31C2884B21AEA3E700AF7EA8 /* SSCStructModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCStructModel.m; sourceTree = "<group>"; };
+		31C6F57A21B76C2C00788F0D /* SSCCellContentView3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCCellContentView3.h; sourceTree = "<group>"; };
+		31C6F57B21B76C2C00788F0D /* SSCCellContentView3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCCellContentView3.m; sourceTree = "<group>"; };
+		31C6F57D21B76DAB00788F0D /* SSCBallView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCBallView1.h; sourceTree = "<group>"; };
+		31C6F57E21B76DAB00788F0D /* SSCBallView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCBallView1.m; sourceTree = "<group>"; };
+		31C6F58021B7D7B600788F0D /* SSCCellContentView1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCCellContentView1.h; sourceTree = "<group>"; };
+		31C6F58121B7D7B600788F0D /* SSCCellContentView1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCCellContentView1.m; sourceTree = "<group>"; };
+		31C6F58321B7D7C600788F0D /* SSCCellContentView2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCCellContentView2.h; sourceTree = "<group>"; };
+		31C6F58421B7D7C600788F0D /* SSCCellContentView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCCellContentView2.m; sourceTree = "<group>"; };
 		31D2C40421B0CF3600D9D8B9 /* HHHistoryTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHHistoryTableView.h; sourceTree = "<group>"; };
 		31D2C40521B0CF3600D9D8B9 /* HHHistoryTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHHistoryTableView.m; sourceTree = "<group>"; };
 		31D2C40A21B0D69500D9D8B9 /* SSCHistoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCHistoryModel.h; sourceTree = "<group>"; };
@@ -570,8 +582,16 @@
 			children = (
 				31BA1E8D21B6503900317918 /* SSCBallsView.h */,
 				31BA1E8E21B6503900317918 /* SSCBallsView.m */,
+				31C6F57D21B76DAB00788F0D /* SSCBallView1.h */,
+				31C6F57E21B76DAB00788F0D /* SSCBallView1.m */,
 				31BA1E9021B6652600317918 /* SSCBallCell.h */,
 				31BA1E9121B6652600317918 /* SSCBallCell.m */,
+				31C6F58021B7D7B600788F0D /* SSCCellContentView1.h */,
+				31C6F58121B7D7B600788F0D /* SSCCellContentView1.m */,
+				31C6F58321B7D7C600788F0D /* SSCCellContentView2.h */,
+				31C6F58421B7D7C600788F0D /* SSCCellContentView2.m */,
+				31C6F57A21B76C2C00788F0D /* SSCCellContentView3.h */,
+				31C6F57B21B76C2C00788F0D /* SSCCellContentView3.m */,
 			);
 			path = BallList;
 			sourceTree = "<group>";
@@ -1843,6 +1863,7 @@
 				9CA0C6DB212A7330007107E9 /* BaseViewController.m in Sources */,
 				9CA0C6DC212A7330007107E9 /* BaseModel.m in Sources */,
 				9C4700ED21479CE300112B05 /* HHMultithreadingController.m in Sources */,
+				31C6F57F21B76DAB00788F0D /* SSCBallView1.m in Sources */,
 				78F32C5821956D350013E6EC /* HHLotteryListModel.mm in Sources */,
 				9C7E72FD212AB7E600479B3D /* UITextField+Category.m in Sources */,
 				9CA0C6E1212A7330007107E9 /* NSDictionary+HHAddition.m in Sources */,
@@ -1852,6 +1873,7 @@
 				9CA0C6F1212A7330007107E9 /* UIImage+HH.m in Sources */,
 				313EC15C21A3E5C900CD5D30 /* NLDropDown.m in Sources */,
 				9CA0C6ED212A7330007107E9 /* UIAlertView+HHAddition.m in Sources */,
+				31C6F58221B7D7B600788F0D /* SSCCellContentView1.m in Sources */,
 				9C904CD0214F78C800914B4F /* HHAnimatorView.m in Sources */,
 				9C2B9828212D04CA00958545 /* HHStyleViewModel.m in Sources */,
 				9C904CC1214E21E300914B4F /* HHPrintLog.m in Sources */,
@@ -1869,6 +1891,7 @@
 				9CA0C6EF212A7330007107E9 /* UIButton+HHAddition.m in Sources */,
 				9CA0C6E6212A7330007107E9 /* NSDateFormatter+Category.m in Sources */,
 				9C7E730E212AEE5200479B3D /* UserModel.m in Sources */,
+				31C6F58521B7D7C600788F0D /* SSCCellContentView2.m in Sources */,
 				9C03296D212EB88F00DDF393 /* HHTextFieldController.m in Sources */,
 				31C2884821AEA2D300AF7EA8 /* SSCStructSuperView.m in Sources */,
 				788E896221997020007E7C74 /* FSTextView.m in Sources */,
@@ -1877,6 +1900,7 @@
 				9CA0C6D5212A7330007107E9 /* AppDelegate.m in Sources */,
 				9CA0C6E3212A7330007107E9 /* HHTableView.m in Sources */,
 				9C7E72F7212A90BD00479B3D /* HHAlgorithmController.m in Sources */,
+				31C6F57C21B76C2C00788F0D /* SSCCellContentView3.m in Sources */,
 				9C904CCD214E7DEF00914B4F /* HHSemCircleView.m in Sources */,
 				9CA0C6E8212A7330007107E9 /* NSString+HH.m in Sources */,
 				9CA0C5F0212A70D8007107E9 /* main.m in Sources */,
