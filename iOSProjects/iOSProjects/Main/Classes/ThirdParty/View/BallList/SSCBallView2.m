@@ -1,34 +1,38 @@
 //
-//  SSCCellContentView1.m
+//  SSCBallView2.m
 //  iOSProjects
 //
-//  Created by funtSui on 2018/12/5.
+//  Created by funtSui on 2018/12/6.
 //  Copyright © 2018年 flowerflower. All rights reserved.
 //
 
-#import "SSCCellContentView1.h"
+#import "SSCBallView2.h"
 
-@implementation SSCCellContentView1
-
+@implementation SSCBallView2
 
 - (instancetype)initWithFrame:(CGRect)frame{
     
     if (self = [super initWithFrame:frame]) {
         
         [self setupSubView];
-        
     }
     return self;
+}
+
+- (void)setModel:(SSCBallViewModel *)model{
+    
+    _model = model;
     
 }
-- (void)setupSubView{
+- (void)setIsSelected:(BOOL)isSelected{
+    
     
 }
 
-+ (CGFloat)getHeight :(SSCBallCellModel *)model{
+- (void)setupSubView{
     
- 
-    return 50;
+    
+    
 }
 
 @end

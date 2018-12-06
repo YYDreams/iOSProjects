@@ -21,6 +21,8 @@
 @property (nonatomic,strong)NSString *def_plid;//默认玩法id
 @property (nonatomic,strong)NSString *struct_ver;//结构版本
 
+//通过plist设置cell类型
+-(void)setChildPlayType;
 @end
 
 /****************************************************************/

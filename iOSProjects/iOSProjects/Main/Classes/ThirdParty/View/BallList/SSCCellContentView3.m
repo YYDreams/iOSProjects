@@ -114,11 +114,14 @@
     
     
     for (int i = 0; i < 50; i ++ ) {
+        
+        WeakSelf;
         //        __weak typeof(self) weakSelf = self;
         SSCBallView1 *ball = [[SSCBallView1 alloc]initWithFrame:CGRectZero];
+        
         ball.didChangeStatus = ^(BOOL isSelect){
             NSLog(@"isSelect=========%d",isSelect);
-            //            [weakSelf seletectBallDidChange];
+                [weakSelf seletectBallDidChange];
         };
         ball.tag = kTagZone3 + i;
         ball.hidden = true;
@@ -129,7 +132,24 @@
     
     
 }
+- (void)seletectBallDidChange{
+    
+    NSMutableArray *arr = [NSMutableArray array];
+    
 
+    for (UIView *view  in self.subviews) {
+        if ([view isKindOfClass:[SSCBallView1 class]] && view.hidden == false) {
+            SSCBallView1 *ballView1 = (SSCBallView1 *)view;
+            if (ballView1.isSelect) {
+                
+                [arr addObject:ballView1.model.commit];
+            }
+        }
+    }
+    
+    self.didChangeSelectBall(arr);
+    
+}
 
 + (CGFloat)getHeight :(SSCBallCellModel *)model{
     
@@ -141,4 +161,6 @@
     }
     return totalHeight;
 }
+
+
 @end

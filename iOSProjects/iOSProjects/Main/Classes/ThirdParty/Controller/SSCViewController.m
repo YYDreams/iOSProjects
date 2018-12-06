@@ -17,7 +17,11 @@
 #import "HHHistoryTableView.h"
 #import "SSCStandardBottomView.h"
 #import "SSCBallsView.h"
-@interface SSCViewController ()<SSCStructSuperViewDelegate,SSCStructChildViewDelegate>
+#import "SSCCacheManager.h"
+@interface SSCViewController ()<SSCStructSuperViewDelegate,SSCStructChildViewDelegate>{
+    
+    NSString *lottery_id;
+}
 @property(nonatomic,strong)HHNavTitleView *titleView;
 
 @property(nonatomic,strong)SSCStructChildView *structChildView;
@@ -44,12 +48,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
  
-    [self loadDataFromNetwork];
 
     [self setupNav];
     
     [self setupSubView];
     
+
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self loadDataFromNetwork];
 
 }
 #pragma mark - setupNav
@@ -90,11 +98,17 @@
 - (void)loadDataFromNetwork{
     
     WeakSelf;
-    [HTTPRequest GET:kLotteryStructUrl parameter:@{@"lottery_id":@(_model.id)} success:^(id resposeObject) {
+    lottery_id = [NSString stringWithFormat:@"%ld",_model.id];
+    
+    [HTTPRequest GET:kLotteryStructUrl parameter:@{@"lottery_id":lottery_id} success:^(id resposeObject) {
        
         if (![resposeObject[@"data"] isKindOfClass:[NSNull class]]) {
             
             SSCStructModel *structModel = [SSCStructModel yy_modelWithDictionary:resposeObject[@"data"]];
+            [structModel setChildPlayType];
+            
+            [SSCCacheManager saveStructModel:structModel lotteryId:lottery_id];
+            
             
             [weakSelf.structSuperView setStandardMehtods:structModel.standard fastMethods:structModel.fast];
             
@@ -103,8 +117,19 @@
         
     } failure:^(NSError *error) {
        
+        [self loadCacheData];
+        
     }];
 }
+
+- (void)loadCacheData{
+    
+   SSCStructModel *structModel  = [SSCCacheManager getStructLotteryId:lottery_id];
+    
+    [self.structSuperView setStandardMehtods:structModel.standard fastMethods:structModel.fast];
+
+}
+
 
 #pragma mark - <SSCStructChildViewDelegate>
 -(void)structChildView:(SSCStructChildView *)view didSelect:(SSCChildModel *)model{

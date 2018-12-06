@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		03BB13EB70461F3907E7176B /* libPods-iOSProjectsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EF864A1E906D65BCBE80235 /* libPods-iOSProjectsUITests.a */; };
+		31072A5C21B8C35F0086F4A5 /* SSCCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31072A5B21B8C35F0086F4A5 /* SSCCacheManager.m */; };
+		31072A5F21B8CC960086F4A5 /* PlayType.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31072A5E21B8CC950086F4A5 /* PlayType.plist */; };
 		313C5D5D21AD450000B392BF /* HHDropDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 313C5D5C21AD450000B392BF /* HHDropDownView.m */; };
 		313EC15721A3E45D00CD5D30 /* HHDorpDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 313EC15621A3E45D00CD5D30 /* HHDorpDownController.m */; };
 		313EC15B21A3E5C900CD5D30 /* DropDownArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 313EC15821A3E5C900CD5D30 /* DropDownArrow@2x.png */; };
@@ -18,6 +20,7 @@
 		3195366A21A6903D00F6532D /* NSDate+HH.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366921A6903D00F6532D /* NSDate+HH.m */; };
 		3195366C21A693FA00F6532D /* UICustomDatePicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3195366B21A693FA00F6532D /* UICustomDatePicker.xib */; };
 		31AA4AC021B4CE7E00EE5302 /* NSUserDefaults+SSC.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AA4ABF21B4CE7E00EE5302 /* NSUserDefaults+SSC.m */; };
+		31B9262221B91C300005F730 /* SSCBallView2.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B9262121B91C300005F730 /* SSCBallView2.m */; };
 		31BA1E8A21B6500E00317918 /* HHHistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BA1E8221B6500E00317918 /* HHHistoryTableViewCell.m */; };
 		31BA1E8B21B6500E00317918 /* SSCNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BA1E8521B6500E00317918 /* SSCNavTitleView.m */; };
 		31BA1E8C21B6500E00317918 /* SSCStandardBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31BA1E8921B6500E00317918 /* SSCStandardBottomView.m */; };
@@ -165,6 +168,9 @@
 /* Begin PBXFileReference section */
 		293B11C67471E551C0F0F5E9 /* Pods-iOSProjectsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectsUITests/Pods-iOSProjectsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2F1115CD1249754BCEA1A7BE /* libPods-iOSProjectsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSProjectsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31072A5A21B8C35F0086F4A5 /* SSCCacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCCacheManager.h; sourceTree = "<group>"; };
+		31072A5B21B8C35F0086F4A5 /* SSCCacheManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCCacheManager.m; sourceTree = "<group>"; };
+		31072A5E21B8CC950086F4A5 /* PlayType.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PlayType.plist; sourceTree = "<group>"; };
 		313C5D5B21AD450000B392BF /* HHDropDownView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDropDownView.h; sourceTree = "<group>"; };
 		313C5D5C21AD450000B392BF /* HHDropDownView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHDropDownView.m; sourceTree = "<group>"; };
 		313EC15521A3E45D00CD5D30 /* HHDorpDownController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDorpDownController.h; sourceTree = "<group>"; };
@@ -183,6 +189,8 @@
 		3195366B21A693FA00F6532D /* UICustomDatePicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UICustomDatePicker.xib; sourceTree = "<group>"; };
 		31AA4ABE21B4CE7E00EE5302 /* NSUserDefaults+SSC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+SSC.h"; sourceTree = "<group>"; };
 		31AA4ABF21B4CE7E00EE5302 /* NSUserDefaults+SSC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+SSC.m"; sourceTree = "<group>"; };
+		31B9262021B91C300005F730 /* SSCBallView2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCBallView2.h; sourceTree = "<group>"; };
+		31B9262121B91C300005F730 /* SSCBallView2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCBallView2.m; sourceTree = "<group>"; };
 		31BA1E8121B6500E00317918 /* HHHistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHHistoryTableViewCell.h; sourceTree = "<group>"; };
 		31BA1E8221B6500E00317918 /* HHHistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHHistoryTableViewCell.m; sourceTree = "<group>"; };
 		31BA1E8421B6500E00317918 /* SSCNavTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSCNavTitleView.h; sourceTree = "<group>"; };
@@ -464,6 +472,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31072A5D21B8CC950086F4A5 /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				31072A5E21B8CC950086F4A5 /* PlayType.plist */,
+			);
+			path = Resourse;
+			sourceTree = "<group>";
+		};
 		313EC15021A3E43100CD5D30 /* CtrlEncapSubModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -584,6 +600,8 @@
 				31BA1E8E21B6503900317918 /* SSCBallsView.m */,
 				31C6F57D21B76DAB00788F0D /* SSCBallView1.h */,
 				31C6F57E21B76DAB00788F0D /* SSCBallView1.m */,
+				31B9262021B91C300005F730 /* SSCBallView2.h */,
+				31B9262121B91C300005F730 /* SSCBallView2.m */,
 				31BA1E9021B6652600317918 /* SSCBallCell.h */,
 				31BA1E9121B6652600317918 /* SSCBallCell.m */,
 				31C6F58021B7D7B600788F0D /* SSCCellContentView1.h */,
@@ -610,6 +628,8 @@
 			children = (
 				31BA1E9421B66FE200317918 /* SSCRandomManager.h */,
 				31BA1E9521B66FE200317918 /* SSCRandomManager.m */,
+				31072A5A21B8C35F0086F4A5 /* SSCCacheManager.h */,
+				31072A5B21B8C35F0086F4A5 /* SSCCacheManager.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -987,6 +1007,7 @@
 		9C7E72D1212A8CCF00479B3D /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				31072A5D21B8CC950086F4A5 /* Resourse */,
 				31BA1E9321B66FD600317918 /* Tools */,
 				31C2883521AE968000AF7EA8 /* Model */,
 				31C2883121AE93EE00AF7EA8 /* View */,
@@ -1620,7 +1641,7 @@
 					};
 					9CA0C5DC212A70D8007107E9 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 					9CA0C5F4212A70D8007107E9 = {
 						CreatedOnToolsVersion = 9.2;
@@ -1683,6 +1704,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31072A5F21B8CC960086F4A5 /* PlayType.plist in Resources */,
 				9CA0C6F6212A7330007107E9 /* LaunchScreen.storyboard in Resources */,
 				9C4700F42147A70F00112B05 /* HHDataStoreController.xib in Resources */,
 				78F32C5521955D080013E6EC /* HHLotteryListCell.xib in Resources */,
@@ -1896,7 +1918,9 @@
 				31C2884821AEA2D300AF7EA8 /* SSCStructSuperView.m in Sources */,
 				788E896221997020007E7C74 /* FSTextView.m in Sources */,
 				9CA0C724212A7D35007107E9 /* TestViewController.m in Sources */,
+				31072A5C21B8C35F0086F4A5 /* SSCCacheManager.m in Sources */,
 				9C7E730F212AEE5200479B3D /* HHLoginView.m in Sources */,
+				31B9262221B91C300005F730 /* SSCBallView2.m in Sources */,
 				9CA0C6D5212A7330007107E9 /* AppDelegate.m in Sources */,
 				9CA0C6E3212A7330007107E9 /* HHTableView.m in Sources */,
 				9C7E72F7212A90BD00479B3D /* HHAlgorithmController.m in Sources */,
@@ -2209,17 +2233,17 @@
 			baseConfigurationReference = 85ACD4CEFE0457CE4A4C020C /* Pods-iOSProjects.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = WWTFB24CDL;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5K6L588PAE;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSProjects/PrefixHeader.pch";
 				INFOPLIST_FILE = iOSProjects/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hh2018wb;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.xx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9f40d881-2877-473e-a509-62119eac76de";
-				PROVISIONING_PROFILE_SPECIFIER = "ad_hocwb 1540883836";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2229,17 +2253,17 @@
 			baseConfigurationReference = C3A83CFB5D86683E5B8F5BC2 /* Pods-iOSProjects.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = WWTFB24CDL;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5K6L588PAE;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSProjects/PrefixHeader.pch";
 				INFOPLIST_FILE = iOSProjects/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = hh2018wb;
+				PRODUCT_BUNDLE_IDENTIFIER = "-.xx";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9f40d881-2877-473e-a509-62119eac76de";
-				PROVISIONING_PROFILE_SPECIFIER = "ad_hocwb 1540883836";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

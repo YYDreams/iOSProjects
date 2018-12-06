@@ -15,6 +15,27 @@
              @"fast" : @"SSCSuperModel"
              };
 }
+
+-(void)setChildPlayType{
+    NSString * path  = [[NSBundle mainBundle] pathForResource:@"PlayType.plist" ofType:nil];
+    NSDictionary *root = [[NSDictionary alloc] initWithContentsOfFile:path];
+    for (SSCSuperModel *sup in self.standard) {
+        for (SSCChildModel *chi in sup.child) {
+            chi.type = [SSCPlayTypeModel yy_modelWithDictionary:root[chi.plid]];
+            if(!chi.type){
+                chi.type = [SSCPlayTypeModel yy_modelWithDictionary:root[@"0"]];
+            }
+        }
+    }
+    for (SSCSuperModel *sup in self.fast) {
+        for (SSCChildModel *chi in sup.child) {
+            chi.type = [SSCPlayTypeModel yy_modelWithDictionary:root[chi.plid]];
+            if(!chi.type){
+                chi.type = [SSCPlayTypeModel yy_modelWithDictionary:root[@"0"]];
+            }
+        }
+    }
+}
 @end
 
 @implementation SSCSuperModel

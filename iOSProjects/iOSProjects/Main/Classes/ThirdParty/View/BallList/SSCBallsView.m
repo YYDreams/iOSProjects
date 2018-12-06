@@ -99,7 +99,7 @@
     
     
     NSLog(@" type ==== %@  cell_type========%ld========",self.childModel.type,self.childModel.type.cell_type.integerValue);
-    self.cellType = self.childModel.type ? self.childModel.type.cell_type.integerValue:UITableViewCell_Type3;
+    self.cellType = self.childModel.type ? self.childModel.type.cell_type.integerValue + 1 :UITableViewCell_Type3;
 
     
     [self.tableView reloadData];
@@ -165,11 +165,12 @@
     __weak typeof(self) weakSelf = self;
 
     __weak SSCBallCell *weakCell = cell;
+    cell.model = self.dataArray[indexPath.row];
+
     cell.didChangeSelectBall = ^(NSArray *selectBalls) {
         [weakSelf ballCell:weakCell didChangeSeletBall:selectBalls];
     };
     cell.indexPath = indexPath;
-    cell.model = self.dataArray[indexPath.row];
     
     return cell;
     
@@ -179,13 +180,12 @@
 -(void)ballCell:(SSCBallCell *)cell didChangeSeletBall:(NSArray *)selectArray{
     if (cell.indexPath.row == 0 && cell.model.max > 0 && selectArray.count > cell.model.max) {
         [MBProgressHUD LY_ShowMessage:[NSString stringWithFormat:@"最多只能选择%ld个%@",cell.model.max,cell.model.title]];
-//        [FTHUDMamager showTipMessageInWindow:[NSString stringWithFormat:@"最多只能选择%ld个%@",cell.model.max,cell.model.title]];
         [self.tableView reloadData];
         return;
     }
     if (cell.model.buy_ball_num > 0 && selectArray.count > cell.model.buy_ball_num) {
-        [MBProgressHUD LY_ShowMessage:[NSString stringWithFormat:@"最多只能选择%ld个号码进行投注",cell.model.buy_ball_num]];
-//        [FTHUDMamager showTipMessageInWindow:[NSString stringWithFormat:@"最多只能选择%ld个号码进行投注",cell.model.buy_ball_num]];
+        [MBProgressHUD showTipMessageInWindow:[NSString stringWithFormat:@"最多只能选择%ld个号码进行投注",cell.model.buy_ball_num]];
+        
         [self.tableView reloadData];
         return;
     }
@@ -193,15 +193,13 @@
     if (selectArray.count > 0) {
         //添加到已经选好的集合
         NSMutableSet *value = [[NSMutableSet alloc] initWithArray:selectArray];
-        //        SSCTagsModel * model = self.childModel.tags[cell.indexPath.row];
-        //        NSString *key = model.nm;
+   
         NSString *key = [NSString stringWithFormat:@"%ld",cell.indexPath.row];
         [self.selectBallDict setObject:value forKey:key];
     }
     else{
         //如果没有选中的球，就移除
-        //        SSCTagsModel * model = self.childModel.tags[cell.indexPath.row];
-        //        NSString *key = model.nm;
+
         NSString *key = [NSString stringWithFormat:@"%ld",cell.indexPath.row];
         [self.selectBallDict removeObjectForKey:key];
     }

@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "SSCBallCellModel.h"
 @interface SSCCellContentView1 : UIView
+
+@property(nonatomic,strong)SSCBallCellModel *model;
+
+
++ (CGFloat)getHeight :(SSCBallCellModel *)model;
 
 @end
