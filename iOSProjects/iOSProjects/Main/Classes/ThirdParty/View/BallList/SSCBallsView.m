@@ -99,7 +99,7 @@
     
     
     NSLog(@" type ==== %@  cell_type========%ld========",self.childModel.type,self.childModel.type.cell_type.integerValue);
-    self.cellType = self.childModel.type ? self.childModel.type.cell_type.integerValue + 1 :UITableViewCell_Type3;
+    self.cellType = self.childModel.type ? self.childModel.type.cell_type.integerValue :UITableViewCell_Type3;
 
     
     [self.tableView reloadData];
@@ -211,11 +211,6 @@
             if (key.integerValue == cell.indexPath.row) {
                 continue;
             }
-            //            SSCTagsModel * model = self.childModel.tags[cell.indexPath.row];
-            //            if ([key isEqualToString:model.nm]) {
-            //                continue;
-            //            }
-            
             NSMutableSet *set = self.selectBallDict[key];
             for(NSString *number in selectArray){
                 if ([set containsObject:number]) {

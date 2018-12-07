@@ -152,7 +152,9 @@
 }
 
 + (CGFloat)getHeight :(SSCBallCellModel *)model{
-    
+//    
+//        CGFloat row = ((model.ballArray.count - 1)/4 + 1);
+//        CGFloat totalHeight = row * 55;
     CGFloat totalHeight = (model.ballArray.count /6 + 1) * 55 + 40;
     
     if (model.ballArray.count % 6 == 0 ) {

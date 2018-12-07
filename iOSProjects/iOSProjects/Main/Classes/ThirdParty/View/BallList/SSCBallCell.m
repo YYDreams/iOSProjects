@@ -84,11 +84,10 @@
 //    if (self.cellType == UITableViewCell_Type1) {
 //        self.view1.didChangeSelectBall = didChangeSelectBall;
 //    }
-//    else if (self.cellType == UITableViewCell_Type2) {
-//        self.view2.didChangeSelectBall = didChangeSelectBall;
-//    }
 //    else
-        if (self.cellType == UITableViewCell_Type3) {
+        if (self.cellType == UITableViewCell_Type2) {
+        self.view2.didChangeSelectBall = didChangeSelectBall;
+    } else   if (self.cellType == UITableViewCell_Type3) {
             
             self.view3.didChangeSelectBall = didChangeSelectBall;
             

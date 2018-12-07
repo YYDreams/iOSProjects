@@ -13,6 +13,9 @@
 @property(nonatomic,strong)SSCBallCellModel *model;
 
 
+@property(nonatomic,copy)void(^didChangeSelectBall)(NSArray *selectBalls);
+
+
 + (CGFloat)getHeight :(SSCBallCellModel *)model;
 
 @end
