@@ -26,7 +26,7 @@
 - (void)setupControllers{
     //控制器的名字HomeViewController  TestViewController
     
-    NSArray *ControllerViews = @[@"BasicViewController",@"CtrlEncapViewController",@"FTBuyLotteryLobbyViewController",@"HomeViewController",@"MoreViewController"];
+    NSArray *ControllerViews = @[@"Test2ViewController",@"CtrlEncapViewController",@"FTBuyLotteryLobbyViewController",@"HomeViewController",@"MoreViewController"];
     //TabBar图片
     NSArray *normalImageNames = @[@"home_nav_home_click", @"home_nav_farm_click", @"home_nav_bazaar_click", @"home_nav_treasure_click",@"home_nav_kits_click"];
     //TabBar选中的图片
@@ -55,7 +55,7 @@
         
     }
     //默认选中第一个
-    self.selectedIndex = 2;
+    self.selectedIndex = 0;
     
     
     

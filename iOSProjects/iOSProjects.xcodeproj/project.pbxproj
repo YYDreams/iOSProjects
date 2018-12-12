@@ -14,6 +14,12 @@
 		313EC15721A3E45D00CD5D30 /* HHDorpDownController.m in Sources */ = {isa = PBXBuildFile; fileRef = 313EC15621A3E45D00CD5D30 /* HHDorpDownController.m */; };
 		313EC15B21A3E5C900CD5D30 /* DropDownArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 313EC15821A3E5C900CD5D30 /* DropDownArrow@2x.png */; };
 		313EC15C21A3E5C900CD5D30 /* NLDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 313EC15921A3E5C900CD5D30 /* NLDropDown.m */; };
+		314E3DA421BF85C0009F0BFA /* KZWSuspensionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 314E3DA321BF85C0009F0BFA /* KZWSuspensionButton.m */; };
+		3163171321C0DCA00032E4D3 /* HHNumbersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3163171221C0DCA00032E4D3 /* HHNumbersController.m */; };
+		3163171621C0DDDB0032E4D3 /* HHNumbersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3163171521C0DDDB0032E4D3 /* HHNumbersCell.m */; };
+		3163171921C0E0110032E4D3 /* HHOptionSwithView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3163171821C0E0110032E4D3 /* HHOptionSwithView.m */; };
+		3163171C21C0F4550032E4D3 /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3163171B21C0F4550032E4D3 /* Test2ViewController.m */; };
+		3163171F21C0FFF60032E4D3 /* HHSelectNumbersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3163171E21C0FFF60032E4D3 /* HHSelectNumbersView.m */; };
 		3195366021A67DFD00F6532D /* HHCapitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195365F21A67DFD00F6532D /* HHCapitalViewController.m */; };
 		3195366621A68D4700F6532D /* UICustomDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366421A68D4700F6532D /* UICustomDatePicker.m */; };
 		3195366721A68D4700F6532D /* FTFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366521A68D4700F6532D /* FTFilterView.m */; };
@@ -45,6 +51,7 @@
 		31D2C40F21B0D83100D9D8B9 /* SSCHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40E21B0D83100D9D8B9 /* SSCHeaderView.m */; };
 		31D2C41221B0E15F00D9D8B9 /* SSCLatestPeriodsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C41121B0E15F00D9D8B9 /* SSCLatestPeriodsView.m */; };
 		31D7EBB221AD291A00B57F10 /* HHNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D7EBB121AD291A00B57F10 /* HHNavTitleView.m */; };
+		31DE1D9121BE4255004F2615 /* SSCFastBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE1D9021BE4255004F2615 /* SSCFastBottomView.m */; };
 		7814438221A28FA2008B091E /* HHDBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7814438121A28FA2008B091E /* HHDBManager.mm */; };
 		7814438521A2A1D9008B091E /* HHBannerModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7814438421A2A1D9008B091E /* HHBannerModel.mm */; };
 		7849E02F219D22E80062DC3D /* HHResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7849E02E219D22E80062DC3D /* HHResultView.m */; };
@@ -178,6 +185,18 @@
 		313EC15821A3E5C900CD5D30 /* DropDownArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DropDownArrow@2x.png"; sourceTree = "<group>"; };
 		313EC15921A3E5C900CD5D30 /* NLDropDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLDropDown.m; sourceTree = "<group>"; };
 		313EC15A21A3E5C900CD5D30 /* NLDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLDropDown.h; sourceTree = "<group>"; };
+		314E3DA221BF85C0009F0BFA /* KZWSuspensionButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZWSuspensionButton.h; sourceTree = "<group>"; };
+		314E3DA321BF85C0009F0BFA /* KZWSuspensionButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KZWSuspensionButton.m; sourceTree = "<group>"; };
+		3163171121C0DCA00032E4D3 /* HHNumbersController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNumbersController.h; sourceTree = "<group>"; };
+		3163171221C0DCA00032E4D3 /* HHNumbersController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNumbersController.m; sourceTree = "<group>"; };
+		3163171421C0DDDB0032E4D3 /* HHNumbersCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNumbersCell.h; sourceTree = "<group>"; };
+		3163171521C0DDDB0032E4D3 /* HHNumbersCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNumbersCell.m; sourceTree = "<group>"; };
+		3163171721C0E0110032E4D3 /* HHOptionSwithView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHOptionSwithView.h; sourceTree = "<group>"; };
+		3163171821C0E0110032E4D3 /* HHOptionSwithView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHOptionSwithView.m; sourceTree = "<group>"; };
+		3163171A21C0F4550032E4D3 /* Test2ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test2ViewController.h; sourceTree = "<group>"; };
+		3163171B21C0F4550032E4D3 /* Test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
+		3163171D21C0FFF60032E4D3 /* HHSelectNumbersView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHSelectNumbersView.h; sourceTree = "<group>"; };
+		3163171E21C0FFF60032E4D3 /* HHSelectNumbersView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHSelectNumbersView.m; sourceTree = "<group>"; };
 		3195365E21A67DFD00F6532D /* HHCapitalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCapitalViewController.h; sourceTree = "<group>"; };
 		3195365F21A67DFD00F6532D /* HHCapitalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCapitalViewController.m; sourceTree = "<group>"; };
 		3195366221A68D4700F6532D /* UICustomDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomDatePicker.h; sourceTree = "<group>"; };
@@ -239,6 +258,8 @@
 		31D2C41121B0E15F00D9D8B9 /* SSCLatestPeriodsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCLatestPeriodsView.m; sourceTree = "<group>"; };
 		31D7EBB021AD291A00B57F10 /* HHNavTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNavTitleView.h; sourceTree = "<group>"; };
 		31D7EBB121AD291A00B57F10 /* HHNavTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNavTitleView.m; sourceTree = "<group>"; };
+		31DE1D8F21BE4255004F2615 /* SSCFastBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCFastBottomView.h; sourceTree = "<group>"; };
+		31DE1D9021BE4255004F2615 /* SSCFastBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCFastBottomView.m; sourceTree = "<group>"; };
 		4E7A9CD9799ACA0EF9409440 /* libPods-iOSProjects.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSProjects.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7814438021A28FA2008B091E /* HHDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDBManager.h; sourceTree = "<group>"; };
 		7814438121A28FA2008B091E /* HHDBManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HHDBManager.mm; sourceTree = "<group>"; };
@@ -529,6 +550,45 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		3163170D21C0DC810032E4D3 /* Numbers */ = {
+			isa = PBXGroup;
+			children = (
+				3163170E21C0DC810032E4D3 /* Controller */,
+				3163170F21C0DC810032E4D3 /* Model */,
+				3163171021C0DC810032E4D3 /* View */,
+			);
+			path = Numbers;
+			sourceTree = "<group>";
+		};
+		3163170E21C0DC810032E4D3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3163171121C0DCA00032E4D3 /* HHNumbersController.h */,
+				3163171221C0DCA00032E4D3 /* HHNumbersController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3163170F21C0DC810032E4D3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3163171021C0DC810032E4D3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3163171421C0DDDB0032E4D3 /* HHNumbersCell.h */,
+				3163171521C0DDDB0032E4D3 /* HHNumbersCell.m */,
+				3163171721C0E0110032E4D3 /* HHOptionSwithView.h */,
+				3163171821C0E0110032E4D3 /* HHOptionSwithView.m */,
+				3163171D21C0FFF60032E4D3 /* HHSelectNumbersView.h */,
+				3163171E21C0FFF60032E4D3 /* HHSelectNumbersView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3195365A21A67DD000F6532D /* Capital */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,6 +679,8 @@
 			children = (
 				31BA1E8821B6500E00317918 /* SSCStandardBottomView.h */,
 				31BA1E8921B6500E00317918 /* SSCStandardBottomView.m */,
+				31DE1D8F21BE4255004F2615 /* SSCFastBottomView.h */,
+				31DE1D9021BE4255004F2615 /* SSCFastBottomView.m */,
 			);
 			path = BottomView;
 			sourceTree = "<group>";
@@ -1223,6 +1285,8 @@
 				9CA0C723212A7D35007107E9 /* TestViewController.m */,
 				9CA0C725212A7F70007107E9 /* Test1ViewController.h */,
 				9CA0C726212A7F70007107E9 /* Test1ViewController.m */,
+				3163171A21C0F4550032E4D3 /* Test2ViewController.h */,
+				3163171B21C0F4550032E4D3 /* Test2ViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1353,11 +1417,14 @@
 		9CA0C684212A732F007107E9 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				3163170D21C0DC810032E4D3 /* Numbers */,
 				9C7E72ED212A906B00479B3D /* BasicSubModule */,
 				313EC15021A3E43100CD5D30 /* CtrlEncapSubModule */,
 				9C4700E42147914E00112B05 /* InterviewSubModule  */,
 				9C7E72FE212AEE5200479B3D /* Other */,
 				9C7E72EE212A906C00479B3D /* MoreSubModule */,
+				314E3DA221BF85C0009F0BFA /* KZWSuspensionButton.h */,
+				314E3DA321BF85C0009F0BFA /* KZWSuspensionButton.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -1850,6 +1917,7 @@
 				9C7E730C212AEE5200479B3D /* LoginViewController.m in Sources */,
 				31D2C41221B0E15F00D9D8B9 /* SSCLatestPeriodsView.m in Sources */,
 				9CA0C6D8212A7330007107E9 /* BaseTableViewController+PageStatus.m in Sources */,
+				3163171321C0DCA00032E4D3 /* HHNumbersController.m in Sources */,
 				3195366721A68D4700F6532D /* FTFilterView.m in Sources */,
 				31C2883021AE928300AF7EA8 /* FTBuyLotteryLobbyViewController.m in Sources */,
 				9CA0C6EA212A7330007107E9 /* RMStrikethroughLabel.m in Sources */,
@@ -1860,6 +1928,7 @@
 				313C5D5D21AD450000B392BF /* HHDropDownView.m in Sources */,
 				3195366021A67DFD00F6532D /* HHCapitalViewController.m in Sources */,
 				3195366A21A6903D00F6532D /* NSDate+HH.m in Sources */,
+				3163171F21C0FFF60032E4D3 /* HHSelectNumbersView.m in Sources */,
 				9CA0C6EC212A7330007107E9 /* SurePlaceholderView.m in Sources */,
 				788E895C219928B2007E7C74 /* HHTextView.m in Sources */,
 				9CA0C6D6212A7330007107E9 /* BaseNavViewController.m in Sources */,
@@ -1892,12 +1961,16 @@
 				9C7E72E1212A8D1100479B3D /* ThirdPartyViewController.m in Sources */,
 				31C2883421AE941300AF7EA8 /* FTBuyLotteryLobbyHeadView.m in Sources */,
 				9CA0C6F4212A7330007107E9 /* UIView+HHAddition.m in Sources */,
+				3163171C21C0F4550032E4D3 /* Test2ViewController.m in Sources */,
+				31DE1D9121BE4255004F2615 /* SSCFastBottomView.m in Sources */,
 				9CA0C6F1212A7330007107E9 /* UIImage+HH.m in Sources */,
 				313EC15C21A3E5C900CD5D30 /* NLDropDown.m in Sources */,
 				9CA0C6ED212A7330007107E9 /* UIAlertView+HHAddition.m in Sources */,
+				3163171921C0E0110032E4D3 /* HHOptionSwithView.m in Sources */,
 				31C6F58221B7D7B600788F0D /* SSCCellContentView1.m in Sources */,
 				9C904CD0214F78C800914B4F /* HHAnimatorView.m in Sources */,
 				9C2B9828212D04CA00958545 /* HHStyleViewModel.m in Sources */,
+				3163171621C0DDDB0032E4D3 /* HHNumbersCell.m in Sources */,
 				9C904CC1214E21E300914B4F /* HHPrintLog.m in Sources */,
 				31BA1E8A21B6500E00317918 /* HHHistoryTableViewCell.m in Sources */,
 				31BA1E9A21B6713800317918 /* SSCBallViewModel.m in Sources */,
@@ -1950,6 +2023,7 @@
 				9C4700F32147A70F00112B05 /* HHDataStoreController.m in Sources */,
 				9C7E72DB212A8CF900479B3D /* CtrlEncapViewController.m in Sources */,
 				31BA1E8C21B6500E00317918 /* SSCStandardBottomView.m in Sources */,
+				314E3DA421BF85C0009F0BFA /* KZWSuspensionButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

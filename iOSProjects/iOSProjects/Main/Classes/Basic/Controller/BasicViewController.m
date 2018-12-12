@@ -8,6 +8,7 @@
 
 #import "BasicViewController.h"
 #import "BaseCell.h"
+#import "KZWSuspensionButton.h"
 @interface BasicViewController ()
 
 @property(nonatomic,strong)NSArray *nsDataArr;
@@ -43,6 +44,9 @@
     [super viewDidLoad];
     self.tableView.rowHeight = kTableView_rowHeight;
     
+    KZWSuspensionButton *btn = [[KZWSuspensionButton alloc]initWithFrame:CGRectMake(200, 0, 40, 40)];
+    btn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn];
 
 }
 
