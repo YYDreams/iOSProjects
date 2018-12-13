@@ -11,6 +11,10 @@
 @interface HHSelectNumbersView : UIView
 
 
+
+@property(nonatomic,assign)NSInteger index; //选项卡ABCDE
+
+
 @property(nonatomic,copy)void(^handlerSlectNumberBtnCallBack)(void);
 
 @end

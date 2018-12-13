@@ -8,16 +8,20 @@
 
 #import "HHNumbersController.h"
 #import "HHNumbersCell.h"
+#import "HHNumbersBottomView.h"
 @interface HHNumbersController ()
-
 
 @property(nonatomic,strong)UIView *headerView;
 
 
 @property(nonatomic,strong)UIView *footerView;
 
+@property(nonatomic,strong)HHNumbersBottomView *bottomView;
 
 @property(nonatomic,strong)NSMutableArray *dataArr;
+
+@property(nonatomic,strong)HHNumbersCell *cell;
+
 
 @end
 static NSString *const HHNumbersCellID = @"HHNumbersCellID";
@@ -49,7 +53,9 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
     
     [self.tableView registerClass:[HHNumbersCell class] forCellReuseIdentifier:HHNumbersCellID];
     
+    [self.view addSubview:self.bottomView];
     
+    [self.bottomView setupPrice:10 withStakesNum:4 totalMoney:100];
     
     
     NSLog(@"%f-------",self.tableView.bottom);
@@ -58,7 +64,7 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
     
-    self.tableView.bottom = self.view.bottom;
+    self.tableView.bottom = self.view.bottom - 60;
 
     NSLog(@"%f---viewWillLayoutSubviews----",self.tableView.bottom);
 }
@@ -77,7 +83,17 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     HHNumbersCell *cell = [tableView dequeueReusableCellWithIdentifier:HHNumbersCellID];
+    
+    
+    NSDictionary *info = @{@"kIndexKey": @(indexPath.row)};
 
+    cell.handlerResetBtnCallBack = ^{
+    
+        [[NSNotificationCenter defaultCenter]postNotificationName:@"kResetNotification" object:nil userInfo:info];
+
+    };
+    
+    _cell = cell;
     
     return cell;
     
@@ -86,7 +102,7 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 250;
+    return 250 + 45 + 45 *3 + 90;
 }
 
 #pragma mark - SEL Methods
@@ -102,6 +118,13 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
     
     
 }
+- (void)confirmBtnOnClick{
+    
+
+    NSLog(@"%d=====confirmBtnOnClick====",_cell.select);
+    
+}
+
 #pragma mark - Setter && Getter Methods
 - (UIView *)headerView{
     if (!_headerView) {
@@ -114,7 +137,7 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
 - (UIView *)footerView{
     
     if (!_footerView) {
-        _footerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, Screen_Width, 45)];
+        _footerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, Screen_Width, 60)];
         
        UIButton * _footerButton = [[UIButton alloc]initWithFrame:CGRectMake(10, 10, Screen_Width -2 * 10, 45)];
         [_footerButton setTitle:@"添加新注单" forState:UIControlStateNormal];
@@ -125,6 +148,19 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
     return _footerView;
     
 }
+- (HHNumbersBottomView *)bottomView{
+    
+    if (!_bottomView) {
+        _bottomView = [[HHNumbersBottomView alloc]initWithFrame:CGRectMake(0, Screen_Height - kNavHeight - 60, Screen_Width, 60)];
+        WeakSelf;
+        _bottomView.handlerConfirmBtnCallBack = ^(UIButton *btn) {
+            [weakSelf confirmBtnOnClick];
+        };
+    }
+    return _bottomView;
+    
+}
+
 
 - (NSMutableArray *)dataArr{
     

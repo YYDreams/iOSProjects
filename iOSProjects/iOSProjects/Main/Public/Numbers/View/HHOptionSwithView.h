@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+
+//标签状态
+typedef NS_ENUM(NSInteger,HHOptionSwithViewStatus){
+    
+    HHOptionSwithViewStatusNotSelect, //未选择状态
+    HHOptionSwithViewStatusSelected, //已选状态
+    HHOptionSwithViewStatusCurrent, //当前状态
+};
+
+
 @interface HHOptionSwithView : UIView
 
 
@@ -17,6 +27,9 @@
 
 -(void)setSelectAtIndex:(NSInteger)index;
 
+
+//
+- (void)setOptionStatus:(HHOptionSwithViewStatus)status;
 
 
 @end

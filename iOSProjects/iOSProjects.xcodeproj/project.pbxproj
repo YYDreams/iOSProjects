@@ -20,6 +20,7 @@
 		3163171921C0E0110032E4D3 /* HHOptionSwithView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3163171821C0E0110032E4D3 /* HHOptionSwithView.m */; };
 		3163171C21C0F4550032E4D3 /* Test2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3163171B21C0F4550032E4D3 /* Test2ViewController.m */; };
 		3163171F21C0FFF60032E4D3 /* HHSelectNumbersView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3163171E21C0FFF60032E4D3 /* HHSelectNumbersView.m */; };
+		3166EB9621C229F900626D76 /* HHNumbersBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3166EB9521C229F900626D76 /* HHNumbersBottomView.m */; };
 		3195366021A67DFD00F6532D /* HHCapitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195365F21A67DFD00F6532D /* HHCapitalViewController.m */; };
 		3195366621A68D4700F6532D /* UICustomDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366421A68D4700F6532D /* UICustomDatePicker.m */; };
 		3195366721A68D4700F6532D /* FTFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3195366521A68D4700F6532D /* FTFilterView.m */; };
@@ -197,6 +198,8 @@
 		3163171B21C0F4550032E4D3 /* Test2ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Test2ViewController.m; sourceTree = "<group>"; };
 		3163171D21C0FFF60032E4D3 /* HHSelectNumbersView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHSelectNumbersView.h; sourceTree = "<group>"; };
 		3163171E21C0FFF60032E4D3 /* HHSelectNumbersView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHSelectNumbersView.m; sourceTree = "<group>"; };
+		3166EB9421C229F900626D76 /* HHNumbersBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNumbersBottomView.h; sourceTree = "<group>"; };
+		3166EB9521C229F900626D76 /* HHNumbersBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNumbersBottomView.m; sourceTree = "<group>"; };
 		3195365E21A67DFD00F6532D /* HHCapitalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCapitalViewController.h; sourceTree = "<group>"; };
 		3195365F21A67DFD00F6532D /* HHCapitalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCapitalViewController.m; sourceTree = "<group>"; };
 		3195366221A68D4700F6532D /* UICustomDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomDatePicker.h; sourceTree = "<group>"; };
@@ -585,6 +588,8 @@
 				3163171821C0E0110032E4D3 /* HHOptionSwithView.m */,
 				3163171D21C0FFF60032E4D3 /* HHSelectNumbersView.h */,
 				3163171E21C0FFF60032E4D3 /* HHSelectNumbersView.m */,
+				3166EB9421C229F900626D76 /* HHNumbersBottomView.h */,
+				3166EB9521C229F900626D76 /* HHNumbersBottomView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1923,6 +1928,7 @@
 				9CA0C6EA212A7330007107E9 /* RMStrikethroughLabel.m in Sources */,
 				9C2B9827212D04CA00958545 /* HHStyleCell.m in Sources */,
 				9CA0C6F2212A7330007107E9 /* UILabel+HHAddition.m in Sources */,
+				3166EB9621C229F900626D76 /* HHNumbersBottomView.m in Sources */,
 				9CA0C6DE212A7330007107E9 /* BaseViewModel.m in Sources */,
 				9C2B982B212D058800958545 /* BaseCell.m in Sources */,
 				313C5D5D21AD450000B392BF /* HHDropDownView.m in Sources */,
