@@ -11,7 +11,7 @@
 #import "HHOptionSwithView.h"
 
 #import "HHSelectNumbersView.h"
-
+#import "FSPlayAlertView.h"
 NSString * const kResetNotification = @"kResetNotification" ;
 
 @interface HHNumbersCell()<UIScrollViewDelegate>
@@ -71,6 +71,17 @@ NSString * const kResetNotification = @"kResetNotification" ;
         
         weakSelf.select = select;
     };
+ 
+    
+    
+}
+
+- (void)setModel:(FSNumbersModel *)model{
+    
+    _model = model;
+    
+    
+    
     
 }
 #pragma mark - SEL Methods
@@ -110,13 +121,19 @@ NSString * const kResetNotification = @"kResetNotification" ;
 
 #pragma mark - setupUI
 - (void)addSelectNumbersView{
+    HHSelectNumbersView *view;
     for (NSInteger i = 0; i < self.letterArr.count ; i++) {
         
-        HHSelectNumbersView *view = [[HHSelectNumbersView alloc]initWithFrame:CGRectMake(i * Screen_Width, 0, Screen_Width, _scrollView.height)];
+        view = [[HHSelectNumbersView alloc]initWithFrame:CGRectMake(i * Screen_Width, 0, Screen_Width, _scrollView.height)];
         view.index = i;
         view.backgroundColor =[UIColor hh_redomColor];
         [_scrollView addSubview:view];
     }
+    self.playView.handlerPlayMiniBtnCallBack = ^(NSInteger index) {
+      
+        [view reloadIndex:index];
+    };
+    
     
 }
 - (void)addRandomNumbersBtns{
@@ -231,6 +248,8 @@ NSString * const kResetNotification = @"kResetNotification" ;
 
 @property(nonatomic,strong)NSMutableArray *allBtns;
 
+@property(nonatomic,assign)BOOL select; //
+
 @end
 
 @implementation FSNumbersPlayView
@@ -246,9 +265,12 @@ NSString * const kResetNotification = @"kResetNotification" ;
     return self;
 }
 
+
+
 #pragma mark - setupSubView
 - (void)setupSubView{
     
+    _select = NO;
     [self addSubview:self.selectPlayBgView];
     
     [self.selectPlayBgView addSubview:self.playIntroduceBtn];
@@ -260,12 +282,20 @@ NSString * const kResetNotification = @"kResetNotification" ;
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(resetNotification) name:kResetNotification object:nil];
 }
 
+
 #warning
 #pragma mark - SEL Method
 - (void)resetNotification{
     
     NSLog(@"%s",__func__);
 
+    
+    for (UIButton *btn in self.allBtns) {
+        btn.selected = NO;
+        
+    }
+    
+    
     
 }
 
@@ -275,15 +305,26 @@ NSString * const kResetNotification = @"kResetNotification" ;
         button.selected = (button == btn)? YES : NO;
         
     }
+    _select = YES;
     if (_handlerPlayTypeBtnCallBack) {
-        _handlerPlayTypeBtnCallBack(YES);
+        _handlerPlayTypeBtnCallBack(_select);
     }
+
+        if (_select) {
+            
+            if (_handlerPlayMiniBtnCallBack) {
+                _handlerPlayMiniBtnCallBack(btn.tag);
+            }
+            
+    }
+    
     
 }
 - (void)playIntroduceBtnOnClick{
     
     NSLog(@"%s",__func__);
     
+    [FSPlayAlertView showPlayType:FSPlayTypeLoTo];
     
     if (_handlerPlayIntroduceBtnCallBack) {
         _handlerPlayIntroduceBtnCallBack();
@@ -318,8 +359,9 @@ NSString * const kResetNotification = @"kResetNotification" ;
         [self addSubview:btn];
     }
     
+    
     if (_handlerPlayTypeBtnCallBack) {
-        _handlerPlayTypeBtnCallBack(NO);
+        _handlerPlayTypeBtnCallBack(_select);
     }
 
 }

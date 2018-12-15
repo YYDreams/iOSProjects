@@ -9,6 +9,7 @@
 #import "HHNumbersController.h"
 #import "HHNumbersCell.h"
 #import "HHNumbersBottomView.h"
+#import "FSNumbersModel.h"
 @interface HHNumbersController ()
 
 @property(nonatomic,strong)UIView *headerView;
@@ -36,7 +37,12 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
     [self setupSubView];
     
     
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(resetNotification) name:@"kResetNotification" object:nil];
+
+}
+- (void)resetNotification{
     
+    [self.tableView reloadData];
 }
 
 #pragma mark - setupNav
@@ -63,7 +69,7 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
 }
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
-    
+    [UIColor blueColor]
     self.tableView.bottom = self.view.bottom - 60;
 
     NSLog(@"%f---viewWillLayoutSubviews----",self.tableView.bottom);
@@ -99,6 +105,13 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
     
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [UIView new];
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    return 20;
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
@@ -128,7 +141,7 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
 #pragma mark - Setter && Getter Methods
 - (UIView *)headerView{
     if (!_headerView) {
-        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, Screen_Width, 200)];
+        _headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, Screen_Width, 60)];
         _headerView.backgroundColor = [UIColor hh_redomColor];
     }
     return _headerView;
@@ -165,9 +178,18 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
 - (NSMutableArray *)dataArr{
     
     if (!_dataArr) {
+//        FSNumbersModel *model = [[FSNumbersModel alloc]init];
+        
         _dataArr = [NSMutableArray arrayWithObjects:@"", nil];
     }
     return _dataArr;
     
 }
+
+- (void)dealloc{
+    
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+    
+}
+
 @end

@@ -44,6 +44,18 @@
 #define  Success [resposeObject[@"code"] isEqualToString:@"200"]
 
 
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+
+#define SCREEN_MAX_LENGTH (MAX(Screen_Width, Screen_Height))
+#define SCREEN_MIN_LENGTH (MIN(Screen_Width, Screen_Height))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
 /*----------------------------------账号 相关----------------------------------*/
 
 

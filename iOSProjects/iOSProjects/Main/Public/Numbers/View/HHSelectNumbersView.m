@@ -24,6 +24,8 @@ static CGFloat const kPickerViewLabelWeight = 50;
 
 @property(nonatomic,strong)NSArray *dataArr;
 
+@property(nonatomic,assign)BOOL iscleanLeftData; //<#注释#>
+
 @end
 @implementation HHSelectNumbersView
 
@@ -43,7 +45,7 @@ static CGFloat const kPickerViewLabelWeight = 50;
 #pragma mark - setupSubView
 - (void)setupSubView{
     
-    
+    _iscleanLeftData = NO;
     [self addSubview:self.topView];
 
     [self.topView addSubview:self.label];
@@ -64,6 +66,16 @@ static CGFloat const kPickerViewLabelWeight = 50;
     
 }
 
+- (void)reloadIndex:(NSInteger)index{
+    
+    if (index == 3) {
+    _iscleanLeftData = YES;
+    }
+    
+    
+    [self.pickerView reloadAllComponents];
+    
+}
 #pragma mark -  Method
 
 - (void)defalutSelectedRow{
@@ -103,18 +115,38 @@ static CGFloat const kPickerViewLabelWeight = 50;
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     
-    return self.dataArr.count ;
+  
+    if (component == 0) {
+            
+        return  _iscleanLeftData ? 0 : self.dataArr.count;
+    }else{
+            return self.dataArr.count;
+    }
+    
+   
 }
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(nullable UIView *)view {
     UILabel* label = [[UILabel alloc] initWithFrame: CGRectMake(8, 0, 0, kPickerViewLabelWeight)];
     label.adjustsFontSizeToFitWidth = NO;
     label.font = [UIFont boldSystemFontOfSize:25];
     label.textAlignment = NSTextAlignmentCenter;
-    NSString *text = @"";
-    text = [NSString stringWithFormat:@"%zd",row];
-    if (text.length != 0) {
-        label.text = [self.dataArr objectAtIndex:row];
-    }
+
+    
+        if (component == 0) {
+            
+            if (_iscleanLeftData) {
+                
+                label.text = @"";
+
+            }else{
+                label.text = [self.dataArr objectAtIndex:row]; ;
+            }
+            
+        }else{
+            label.text = [self.dataArr objectAtIndex:row];
+
+        }
+    
     if (pickerView.subviews.firstObject) { //设置默认选择的颜色
         NSArray *subViewCache = [pickerView.subviews.firstObject valueForKey:@"subviewCache"];
         
