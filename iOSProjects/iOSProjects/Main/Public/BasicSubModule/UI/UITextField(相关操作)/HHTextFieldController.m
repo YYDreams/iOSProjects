@@ -7,10 +7,11 @@
 //
 
 #import "HHTextFieldController.h"
-
 #import "HHBoxTextField.h"
+#import "HHTextField.h"
 @interface HHTextFieldController ()
 
+@property(nonatomic,assign)NSInteger count; //
 @end
 
 @implementation HHTextFieldController
@@ -20,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(print) name:@"text" object:nil];
+    _count = 0;
 
     /***
      UITextField  输入支付密码
@@ -29,28 +30,48 @@
      
      */
     
-    [self setupPayPwd];
+    [self setupPayPwd]; //设置支付密码
+    
     
     
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
     [self test];
+    
+    _count++;
+    
 }
-
 - (void)test{
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:@"text" object:nil];
-    
+    HHTextField *t = [[HHTextField alloc]initWithFrame:CGRectMake(10, 100, Screen_Width- 20, 40)];
+    t.maxLength = 10;
+    t.placeholder =@"sfsfsfsfsfsfs";
+    if (_count == 2) {
+        t.limitStr = @"0123456789";
+
+    }
+    t.backgroundColor = [UIColor redColor];
+//
+    [self.view addSubview:t];
     
 }
-- (void)XXXX{
-    
-}
-- (void)print{
-    
-    NSLog(@"--------%@",[NSThread currentThread]);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)setupPayPwd{
     HHBoxTextField *boxTextField =  [[HHBoxTextField alloc] initWithFrame:CGRectMake(10.0, 50, 45 * 6 + 10 * 6, 45)];

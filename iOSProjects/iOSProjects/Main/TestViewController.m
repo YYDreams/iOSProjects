@@ -103,7 +103,7 @@
         
         for (int i = 0; i< 100; i++) {
             if (i >90) {
-                NSLog(@"%zd",i);
+                NSLog(@"%d",i);
             }
             
         }

@@ -24,16 +24,17 @@
 }
 
 - (void)setupControllers{
-    //控制器的名字HomeViewController  TestViewController
-    
-    NSArray *ControllerViews = @[@"Test2ViewController",@"CtrlEncapViewController",@"FTBuyLotteryLobbyViewController",@"HomeViewController",@"MoreViewController"];
+    //控制器的名字HomeViewController  TestViewController  FTBuyLotteryLobbyViewController  Test2ViewController
+    //BasicViewController 基础知识  ThirdPartyViewController 第三方
+    NSArray *ControllerViews = @[@"HHTextFieldController",@"CtrlEncapViewController",@"ThirdPartyViewController",@"HomeViewController",@"MoreViewController"];
     //TabBar图片
     NSArray *normalImageNames = @[@"home_nav_home_click", @"home_nav_farm_click", @"home_nav_bazaar_click", @"home_nav_treasure_click",@"home_nav_kits_click"];
     //TabBar选中的图片
     NSArray *selectImageNames = @[@"home_nav_home", @"home_nav_farm", @"home_nav_bazaar",@"home_nav_treasure", @"home_nav_kits"];
     
     //TabBarItem标题
-    NSArray *titles = @[@"基础知识",@"控件封装",@"第三方",@"须知知识",@"更多"];
+//    NSArray *titles = @[@"基础知识",@"控件封装",@"第三方",@"须知知识",@"更多"];
+    NSArray *titles = @[@"111",@"222",@"333",@"444",@"More"];
     
     
     for (int i = 0; i< ControllerViews.count; i++)
@@ -55,7 +56,7 @@
         
     }
     //默认选中第一个
-    self.selectedIndex = 0;
+    self.selectedIndex = 2;
     
     
     

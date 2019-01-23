@@ -9,79 +9,100 @@
 #import "HHTextField.h"
 
 
-@interface HHTextField ()
-
-@property (nonatomic, strong)UIView *bar;
+@interface HHTextField ()<UITextFieldDelegate>
 
 @end
 
 @implementation HHTextField
 
-- (void)drawRect:(CGRect)rect {
-    
-    [super drawRect:rect];
-    if (!_bar) {
-        _bar = [[UIView alloc] initWithFrame:CGRectMake(0,0, Screen_Width,44)];
+BOOL isHaveDian;
 
+#pragma mark - init
+
+- (instancetype)initWithFrame:(CGRect)frame{
+    
+    if (self = [super initWithFrame:frame]) {
+        
+        [self commonInit];
     }
-    _bar.backgroundColor = kBgColor;
+    return self;
+}
+
+#pragma mark - commonInit
+- (void)commonInit{
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(Screen_Width - 70, 7,60, 30)];
+    _placeHolderFontSize = 15;
+    _placeHolderColor = k9Color;
+}
+- (void)setLimitStr:(NSString *)limitStr{
     
-    [button setTitle:@"完成"forState:UIControlStateNormal];
-    
-    [button setTitleColor:kThemeColor forState:UIControlStateNormal];
-    
-    button.layer.borderColor = [UIColor colorWithHexString:@"62C6B2"].CGColor;
-    
-    button.layer.borderWidth =1;
-    
-    button.layer.cornerRadius =3;
-    
-    [_bar addSubview:button];
-    
-    [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    _limitStr = limitStr;
+    if (!kStringIsEmpty(limitStr)) {
+        self.delegate = self;
         
-        
-        
-    }];
+    }
     
-    [button addTarget:self action:@selector(print) forControlEvents:UIControlEventTouchUpInside];
-    self.inputAccessoryView.userInteractionEnabled = YES;
-    self.inputAccessoryView = _bar;
+}
+#pragma mark - setter && getter
+
+- (void)setPlaceHolderColor:(UIColor *)placeHolderColor{
+    
+    _placeHolderColor = placeHolderColor;
+    
+    [self setValue:placeHolderColor forKeyPath:@"_placeholderLabel.textColor"];
+    
+    
+}
+- (void)setPlaceHolderFontSize:(CGFloat)placeHolderFontSize{
+    
+    _placeHolderFontSize = placeHolderFontSize;
+    [self setValue:[UIFont systemFontOfSize:placeHolderFontSize] forKeyPath:@"_placeholderLabel.font"];
+    
 }
 
 
-- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event
-{
-    __block  UIView * view = [super hitTest:point withEvent:event];
-    if (view == nil) {
-        // 转换坐标系
-        
-        [self.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            
-            if ([obj isKindOfClass:[UIButton class]]) {
-                view = obj;
-                *stop = YES;
-            }
-        }];
-        CGPoint newPoint = [view convertPoint:point fromView:self];
-        // 判断触摸点是否在button上
-        if (CGRectContainsPoint(view.bounds, newPoint)) {
-            view = view;
-        }else{
-            return nil;
+- (void)setMaxLength:(NSInteger)maxLength{
+    _maxLength = maxLength;
+    
+    if (_maxLength != 0) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFieldTextDidChange) name:UITextFieldTextDidChangeNotification object:self];
+    }
+}
+- (void)textFieldTextDidChange{
+    
+    if(self.text.length >_maxLength){
+        self.text = [self.text substringToIndex:_maxLength];
+    }
+}
+
+#pragma mark - <UITextFieldDelegate>
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+
+    return [self validateLimitStr:string];
+}
+
+- (BOOL)validateLimitStr:(NSString*)limitStr {
+    BOOL res = YES;
+    NSCharacterSet* tmpSet = [NSCharacterSet characterSetWithCharactersInString:_limitStr];
+    int i = 0;
+    while (i < limitStr.length) {
+        NSString * string = [limitStr substringWithRange:NSMakeRange(i, 1)];
+        NSRange range = [string rangeOfCharacterFromSet:tmpSet];
+        if (range.length == 0) {
+            res = NO;
+            break;
         }
+        i++;
     }
-    return view;
+    return res;
+}
+#pragma mark - dealloc
+- (void)dealloc{
+    
+   if (_maxLength != 0) {
+        [[NSNotificationCenter defaultCenter]removeObserver:self];
+    }
+    
 }
 
-- (void) print {
-    
-    if (self.finishCallBack) {
-        self.finishCallBack();
-    }
-    
-    
-}
 @end

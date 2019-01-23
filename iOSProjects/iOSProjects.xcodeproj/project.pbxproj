@@ -15,6 +15,7 @@
 		313EC15B21A3E5C900CD5D30 /* DropDownArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 313EC15821A3E5C900CD5D30 /* DropDownArrow@2x.png */; };
 		313EC15C21A3E5C900CD5D30 /* NLDropDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 313EC15921A3E5C900CD5D30 /* NLDropDown.m */; };
 		314E3DA421BF85C0009F0BFA /* KZWSuspensionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 314E3DA321BF85C0009F0BFA /* KZWSuspensionButton.m */; };
+		315B55B621F85B50004CF4A2 /* HHMasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 315B55B521F85B50004CF4A2 /* HHMasonryViewController.m */; };
 		3163171321C0DCA00032E4D3 /* HHNumbersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3163171221C0DCA00032E4D3 /* HHNumbersController.m */; };
 		3163171621C0DDDB0032E4D3 /* HHNumbersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3163171521C0DDDB0032E4D3 /* HHNumbersCell.m */; };
 		3163171921C0E0110032E4D3 /* HHOptionSwithView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3163171821C0E0110032E4D3 /* HHOptionSwithView.m */; };
@@ -66,8 +67,6 @@
 		78F32C5521955D080013E6EC /* HHLotteryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78F32C5321955D080013E6EC /* HHLotteryListCell.xib */; };
 		78F32C5821956D350013E6EC /* HHLotteryListModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78F32C5721956D350013E6EC /* HHLotteryListModel.mm */; };
 		78F32C5B21956D470013E6EC /* HHLotteryListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F32C5A21956D470013E6EC /* HHLotteryListViewModel.m */; };
-		78F32C7C219573790013E6EC /* ddTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F32C7B219573790013E6EC /* ddTests.m */; };
-		78F32C87219573790013E6EC /* ddUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F32C86219573790013E6EC /* ddUITests.m */; };
 		803E5D0EE8F58F482A8D7048 /* libPods-iOSProjects.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7A9CD9799ACA0EF9409440 /* libPods-iOSProjects.a */; };
 		8DA0326605A4B5002362C7BE /* libPods-iOSProjectsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1115CD1249754BCEA1A7BE /* libPods-iOSProjectsTests.a */; };
 		9C03296D212EB88F00DDF393 /* HHTextFieldController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C032968212EB88F00DDF393 /* HHTextFieldController.m */; };
@@ -191,6 +190,8 @@
 		313EC15A21A3E5C900CD5D30 /* NLDropDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLDropDown.h; sourceTree = "<group>"; };
 		314E3DA221BF85C0009F0BFA /* KZWSuspensionButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZWSuspensionButton.h; sourceTree = "<group>"; };
 		314E3DA321BF85C0009F0BFA /* KZWSuspensionButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KZWSuspensionButton.m; sourceTree = "<group>"; };
+		315B55B421F85B50004CF4A2 /* HHMasonryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHMasonryViewController.h; sourceTree = "<group>"; };
+		315B55B521F85B50004CF4A2 /* HHMasonryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHMasonryViewController.m; sourceTree = "<group>"; };
 		3163171121C0DCA00032E4D3 /* HHNumbersController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNumbersController.h; sourceTree = "<group>"; };
 		3163171221C0DCA00032E4D3 /* HHNumbersController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNumbersController.m; sourceTree = "<group>"; };
 		3163171421C0DDDB0032E4D3 /* HHNumbersCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNumbersCell.h; sourceTree = "<group>"; };
@@ -294,11 +295,7 @@
 		78F32C5A21956D470013E6EC /* HHLotteryListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHLotteryListViewModel.m; sourceTree = "<group>"; };
 		78F32C60219573780013E6EC /* dd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F32C77219573790013E6EC /* ddTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ddTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		78F32C7B219573790013E6EC /* ddTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ddTests.m; sourceTree = "<group>"; };
-		78F32C7D219573790013E6EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78F32C82219573790013E6EC /* ddUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ddUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		78F32C86219573790013E6EC /* ddUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ddUITests.m; sourceTree = "<group>"; };
-		78F32C88219573790013E6EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85ACD4CEFE0457CE4A4C020C /* Pods-iOSProjects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjects.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjects/Pods-iOSProjects.debug.xcconfig"; sourceTree = "<group>"; };
 		9C032967212EB88F00DDF393 /* HHTextFieldController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHTextFieldController.h; sourceTree = "<group>"; };
 		9C032968212EB88F00DDF393 /* HHTextFieldController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHTextFieldController.m; sourceTree = "<group>"; };
@@ -560,6 +557,23 @@
 				313C5D5C21AD450000B392BF /* HHDropDownView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		315B55B221F85B31004CF4A2 /* ThirdPartySubModule */ = {
+			isa = PBXGroup;
+			children = (
+				315B55B321F85B31004CF4A2 /* MasonryExample */,
+			);
+			path = ThirdPartySubModule;
+			sourceTree = "<group>";
+		};
+		315B55B321F85B31004CF4A2 /* MasonryExample */ = {
+			isa = PBXGroup;
+			children = (
+				315B55B421F85B50004CF4A2 /* HHMasonryViewController.h */,
+				315B55B521F85B50004CF4A2 /* HHMasonryViewController.m */,
+			);
+			path = MasonryExample;
 			sourceTree = "<group>";
 		};
 		3163170D21C0DC810032E4D3 /* Numbers */ = {
@@ -852,24 +866,6 @@
 				7814438421A2A1D9008B091E /* HHBannerModel.mm */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		78F32C7A219573790013E6EC /* ddTests */ = {
-			isa = PBXGroup;
-			children = (
-				78F32C7B219573790013E6EC /* ddTests.m */,
-				78F32C7D219573790013E6EC /* Info.plist */,
-			);
-			path = ddTests;
-			sourceTree = "<group>";
-		};
-		78F32C85219573790013E6EC /* ddUITests */ = {
-			isa = PBXGroup;
-			children = (
-				78F32C86219573790013E6EC /* ddUITests.m */,
-				78F32C88219573790013E6EC /* Info.plist */,
-			);
-			path = ddUITests;
 			sourceTree = "<group>";
 		};
 		9C032964212EB88F00DDF393 /* UI */ = {
@@ -1224,8 +1220,6 @@
 				9CA0C5DF212A70D8007107E9 /* iOSProjects */,
 				9CA0C5F8212A70D8007107E9 /* iOSProjectsTests */,
 				9CA0C603212A70D8007107E9 /* iOSProjectsUITests */,
-				78F32C7A219573790013E6EC /* ddTests */,
-				78F32C85219573790013E6EC /* ddUITests */,
 				9CA0C5DE212A70D8007107E9 /* Products */,
 				EB4D9B1BEE795F103DEA78BF /* Pods */,
 				57394B1DF31F6BC348B5C69A /* Frameworks */,
@@ -1437,6 +1431,7 @@
 		9CA0C684212A732F007107E9 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				315B55B221F85B31004CF4A2 /* ThirdPartySubModule */,
 				3163170D21C0DC810032E4D3 /* Numbers */,
 				9C7E72ED212A906B00479B3D /* BasicSubModule */,
 				313EC15021A3E43100CD5D30 /* CtrlEncapSubModule */,
@@ -1911,7 +1906,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78F32C7C219573790013E6EC /* ddTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1919,7 +1913,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78F32C87219573790013E6EC /* ddUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2015,6 +2008,7 @@
 				788E896221997020007E7C74 /* FSTextView.m in Sources */,
 				9CA0C724212A7D35007107E9 /* TestViewController.m in Sources */,
 				31072A5C21B8C35F0086F4A5 /* SSCCacheManager.m in Sources */,
+				315B55B621F85B50004CF4A2 /* HHMasonryViewController.m in Sources */,
 				9C7E730F212AEE5200479B3D /* HHLoginView.m in Sources */,
 				31B9262221B91C300005F730 /* SSCBallView2.m in Sources */,
 				9CA0C6D5212A7330007107E9 /* AppDelegate.m in Sources */,
@@ -2333,7 +2327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5K6L588PAE;
+				DEVELOPMENT_TEAM = XWBASCRC3M;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSProjects/PrefixHeader.pch";
 				INFOPLIST_FILE = iOSProjects/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2353,7 +2347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5K6L588PAE;
+				DEVELOPMENT_TEAM = XWBASCRC3M;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOSProjects/PrefixHeader.pch";
 				INFOPLIST_FILE = iOSProjects/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

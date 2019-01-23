@@ -69,7 +69,7 @@ static NSString *const HHNumbersCellID = @"HHNumbersCellID";
 }
 - (void)viewWillLayoutSubviews{
     [super viewWillLayoutSubviews];
-    [UIColor blueColor]
+    
     self.tableView.bottom = self.view.bottom - 60;
 
     NSLog(@"%f---viewWillLayoutSubviews----",self.tableView.bottom);

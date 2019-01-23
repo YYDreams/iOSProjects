@@ -25,7 +25,7 @@
 // tabBar高度
 #define kTabBarHeight (iPhoneX ? (49.f+34.f) : 49.f)
 
-
+#define kRate ([UIScreen mainScreen].bounds.size.width >= 375 ? 1 : [UIScreen mainScreen].bounds.size.width/375.0)
 
 /*----------------------------------存储个人信息----------------------------------*/
 #define UserDataFilePath ([NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"user.plist"])
@@ -78,6 +78,10 @@
 
 #define WeakSelf __weak typeof(self) weakSelf = self
 
+
+
+//字符串是否为空
+#define kStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || (![str isKindOfClass:[NSString class]]) || [str length] < 1 ? YES : NO )
 
 //打印
 #if DEBUG

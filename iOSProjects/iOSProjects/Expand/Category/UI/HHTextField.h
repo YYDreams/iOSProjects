@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "RMFilterTextField.h"
 @interface HHTextField : UITextField
-@property(nonatomic,copy)void(^finishCallBack)(void);
+
+/** 占位文字颜色  */
+@property (nonatomic, strong) UIColor *placeHolderColor;
+
+/** 占位文字字体大小 */
+@property (nonatomic, assign) CGFloat placeHolderFontSize;
+
+/** 限制输入长度*/
+@property (nonatomic, assign) NSInteger maxLength;
+
+/** 限制输入字符*/
+@property(nonatomic, copy)NSString  *limitStr;
+
 @end
