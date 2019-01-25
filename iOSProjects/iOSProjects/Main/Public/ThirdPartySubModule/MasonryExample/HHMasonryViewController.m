@@ -8,7 +8,7 @@
 
 #import "HHMasonryViewController.h"
 
-
+#import "HHPickerComponent.h"
 @interface HHMasonryViewController ()
 
 @end
@@ -20,7 +20,12 @@
     [self setupSubView];
 
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [HHPickerComponent showSinglePickerWithToolBarTitle:@"XX" withData:@"222" withDefaultIndex:0 cancelHandler:nil withDoneHandler:^(NSInteger selectedIndex, NSString *selectedValue) {
+       
+    }];
+}
 
 - (void)setupSubView{
     
