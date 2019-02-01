@@ -21,5 +21,8 @@ typedef void(^BtnAction)(void);
 /** 字体颜色 默认黑色 */
 @property(nonatomic,strong) UIColor  *titleColor;
 
+/** 是否显示底部分割线  默认不隐藏*/
+@property(nonatomic,assign) BOOL lineHidden;
+
 - (instancetype)initWithToolbarTitle:(nullable NSString *)toolBarTitle cancelAction:(BtnAction)cancelAction doneAction:(BtnAction)doneAction;
 @end

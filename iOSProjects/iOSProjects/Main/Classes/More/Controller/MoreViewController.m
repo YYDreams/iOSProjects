@@ -18,8 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.titles = @[@"算法"];
-    self.classNames = @[@"HHAlgorithmController"];
+    self.titles = @[@"算法",@"动画"];
+    self.classNames = @[@"HHAlgorithmController",@"HHAnimationViewController"];
     
     
 }

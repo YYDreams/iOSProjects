@@ -66,6 +66,7 @@
 		31D2C40C21B0D69500D9D8B9 /* SSCHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40B21B0D69500D9D8B9 /* SSCHistoryModel.m */; };
 		31D2C40F21B0D83100D9D8B9 /* SSCHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40E21B0D83100D9D8B9 /* SSCHeaderView.m */; };
 		31D2C41221B0E15F00D9D8B9 /* SSCLatestPeriodsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C41121B0E15F00D9D8B9 /* SSCLatestPeriodsView.m */; };
+		31D7C54B2203027C00A35E09 /* HHAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D7C54A2203027C00A35E09 /* HHAnimationViewController.m */; };
 		31D7EBB221AD291A00B57F10 /* HHNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D7EBB121AD291A00B57F10 /* HHNavTitleView.m */; };
 		31DE1D9121BE4255004F2615 /* SSCFastBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE1D9021BE4255004F2615 /* SSCFastBottomView.m */; };
 		7814438221A28FA2008B091E /* HHDBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7814438121A28FA2008B091E /* HHDBManager.mm */; };
@@ -294,6 +295,8 @@
 		31D2C40E21B0D83100D9D8B9 /* SSCHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCHeaderView.m; sourceTree = "<group>"; };
 		31D2C41021B0E15F00D9D8B9 /* SSCLatestPeriodsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCLatestPeriodsView.h; sourceTree = "<group>"; };
 		31D2C41121B0E15F00D9D8B9 /* SSCLatestPeriodsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCLatestPeriodsView.m; sourceTree = "<group>"; };
+		31D7C5492203027C00A35E09 /* HHAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAnimationViewController.h; sourceTree = "<group>"; };
+		31D7C54A2203027C00A35E09 /* HHAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAnimationViewController.m; sourceTree = "<group>"; };
 		31D7EBB021AD291A00B57F10 /* HHNavTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNavTitleView.h; sourceTree = "<group>"; };
 		31D7EBB121AD291A00B57F10 /* HHNavTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNavTitleView.m; sourceTree = "<group>"; };
 		31DE1D8F21BE4255004F2615 /* SSCFastBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCFastBottomView.h; sourceTree = "<group>"; };
@@ -913,6 +916,15 @@
 			path = HHPicker;
 			sourceTree = "<group>";
 		};
+		31D7C5482203026700A35E09 /* Animation(动画) */ = {
+			isa = PBXGroup;
+			children = (
+				31D7C5492203027C00A35E09 /* HHAnimationViewController.h */,
+				31D7C54A2203027C00A35E09 /* HHAnimationViewController.m */,
+			);
+			path = "Animation(动画)";
+			sourceTree = "<group>";
+		};
 		57394B1DF31F6BC348B5C69A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1197,6 +1209,7 @@
 		9C7E72EE212A906C00479B3D /* MoreSubModule */ = {
 			isa = PBXGroup;
 			children = (
+				31D7C5482203026700A35E09 /* Animation(动画) */,
 				9C904CC2214E7C9800914B4F /* WeChatFloatWindow(微信浮窗) */,
 				9C7E72EF212A906C00479B3D /* Algorithm(算法) */,
 			);
@@ -1994,6 +2007,7 @@
 				31BA1E8F21B6503900317918 /* SSCBallsView.m in Sources */,
 				31AA4AC021B4CE7E00EE5302 /* NSUserDefaults+SSC.m in Sources */,
 				9CA0C71A212A7BC8007107E9 /* HHRefreshFactory.m in Sources */,
+				31D7C54B2203027C00A35E09 /* HHAnimationViewController.m in Sources */,
 				9CA0C6E5212A7330007107E9 /* MBProgressHUD+LYProgressHUD.m in Sources */,
 				9C904CD3214F790200914B4F /* HHAnimator.m in Sources */,
 				31CA5E4621F95E8100BD7F2C /* HHPickerComponent.m in Sources */,

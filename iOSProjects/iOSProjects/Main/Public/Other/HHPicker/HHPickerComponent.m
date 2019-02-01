@@ -43,11 +43,18 @@ static const CGFloat kPickerViewHeight = 260.0f;
     
     HHPickerComponent *pickerViewComponent = [[HHPickerComponent alloc]init];
     
+    __weak HHPickerComponent *weakSelf = pickerViewComponent;
     HHSinglePickerView *singlePickerView = [[HHSinglePickerView alloc]initWithToolBarTitle:toolBarTitle withData:data withDefaultIndex:defaultIndex cancelAction:^{
-       
+      
+            [weakSelf hide];
         
     } doneAction:^(NSInteger selectedIndex, NSString *selectedValue) {
-       
+     
+            [weakSelf hide];
+        NSLog(@"=====%s %d===%@",__func__,selectedIndex,selectedValue);
+        
+        
+        
     }];
     
     [pickerViewComponent show];
@@ -57,25 +64,61 @@ static const CGFloat kPickerViewHeight = 260.0f;
     return pickerViewComponent;
     
 }
+- (void)dealloc{
+    NSLog(@"HHPickerComponent=======dealloc");
+}
 
 - (void)show{
-    
+
     [[UIApplication sharedApplication].keyWindow addSubview:self];
+
     self.pickerView.frame = CGRectMake(0,  [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, kPickerViewHeight);
-    
-    [UIView animateWithDuration:0.25 animations:^{
+
+    [UIView animateWithDuration:0.33 animations:^{
+         [self.layer setOpacity:1];
         self.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.1];
         self.pickerView.frame = CGRectMake(0,  [UIScreen mainScreen].bounds.size.height - kPickerViewHeight, [UIScreen mainScreen].bounds.size.width, kPickerViewHeight);
 
     }];
+//    [[UIApplication sharedApplication].keyWindow addSubview:self];
+//    [self setCenter:[UIApplication sharedApplication].keyWindow.center];
+//    [[UIApplication sharedApplication].keyWindow bringSubviewToFront:self];
+//
+//    CGRect frameTool = self.toolBar.frame;
+//    frameTool.origin.y -= kPickerViewHeight;
+//
+//    CGRect framePicker =  self.pickerView.frame;
+//    framePicker.origin.y -= kPickerViewHeight;
+//    [UIView animateWithDuration:0.33 animations:^{
+//        [self.layer setOpacity:1];
+//        self.toolBar.frame = frameTool;
+//        self.pickerView.frame = framePicker;
+//    } completion:^(BOOL finished) {
+//    }];
+    
     
 }
 - (void)hide{
-    [UIView animateWithDuration:0.25 animations:^{
+//
+//    CGRect frameTool = self.toolBar.frame;
+//    frameTool.origin.y += kPickerViewHeight;
+//
+//    CGRect framePicker =  self.pickerView.frame;
+//    framePicker.origin.y += kPickerViewHeight;
+//    [UIView animateWithDuration:0.33 animations:^{
+//        [self.layer setOpacity:0];
+//        self.toolBar.frame = frameTool;
+//        self.pickerView.frame = framePicker;
+//    } completion:^(BOOL finished) {
+//        [self removeFromSuperview];
+//    }];
+    
+    [UIView animateWithDuration:0.33 animations:^{
+           [self.layer setOpacity:0];
         self.backgroundColor = [UIColor clearColor];
         self.pickerView.frame = CGRectMake(0,  [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, kPickerViewHeight);
 
-        
+
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
     }];

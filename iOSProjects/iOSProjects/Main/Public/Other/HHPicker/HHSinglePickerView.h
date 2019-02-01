@@ -12,6 +12,9 @@ typedef void(^HHPickerComponentCancelBlock)(void);
 /** 弹出单列数据的确定操作回调 */
 typedef void(^HHPickerComponentDoneBlock)(NSInteger selectedIndex,NSString *selectedValue);
 
+typedef void(^HHPickerComponentSelectedBlock)(NSString *selectedValue);
+
+
 @class HHPickerToolBar;
 @interface HHSinglePickerView : UIView
 

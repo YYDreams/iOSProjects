@@ -22,7 +22,7 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-    [HHPickerComponent showSinglePickerWithToolBarTitle:@"XX" withData:@"222" withDefaultIndex:0 cancelHandler:nil withDoneHandler:^(NSInteger selectedIndex, NSString *selectedValue) {
+    [HHPickerComponent showSinglePickerWithToolBarTitle:@"XX" withData:@[@"11",@"22",@"333",@"4444",@"42"] withDefaultIndex:10 cancelHandler:nil withDoneHandler:^(NSInteger selectedIndex, NSString *selectedValue) {
        
     }];
 }
