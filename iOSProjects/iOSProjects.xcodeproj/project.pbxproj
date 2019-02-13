@@ -66,6 +66,9 @@
 		31D2C40C21B0D69500D9D8B9 /* SSCHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40B21B0D69500D9D8B9 /* SSCHistoryModel.m */; };
 		31D2C40F21B0D83100D9D8B9 /* SSCHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40E21B0D83100D9D8B9 /* SSCHeaderView.m */; };
 		31D2C41221B0E15F00D9D8B9 /* SSCLatestPeriodsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C41121B0E15F00D9D8B9 /* SSCLatestPeriodsView.m */; };
+		31D5548C2213ED8900215EA0 /* HHScrollPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D5548B2213ED8900215EA0 /* HHScrollPageViewController.m */; };
+		31D5548F2213ED9D00215EA0 /* HHScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D5548E2213ED9D00215EA0 /* HHScrollPageView.m */; };
+		31D554922214222200215EA0 /* HHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D554912214222200215EA0 /* HHTestViewController.m */; };
 		31D7C54B2203027C00A35E09 /* HHAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D7C54A2203027C00A35E09 /* HHAnimationViewController.m */; };
 		31D7EBB221AD291A00B57F10 /* HHNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D7EBB121AD291A00B57F10 /* HHNavTitleView.m */; };
 		31DE1D9121BE4255004F2615 /* SSCFastBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE1D9021BE4255004F2615 /* SSCFastBottomView.m */; };
@@ -295,6 +298,12 @@
 		31D2C40E21B0D83100D9D8B9 /* SSCHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCHeaderView.m; sourceTree = "<group>"; };
 		31D2C41021B0E15F00D9D8B9 /* SSCLatestPeriodsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCLatestPeriodsView.h; sourceTree = "<group>"; };
 		31D2C41121B0E15F00D9D8B9 /* SSCLatestPeriodsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCLatestPeriodsView.m; sourceTree = "<group>"; };
+		31D5548A2213ED8900215EA0 /* HHScrollPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHScrollPageViewController.h; sourceTree = "<group>"; };
+		31D5548B2213ED8900215EA0 /* HHScrollPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHScrollPageViewController.m; sourceTree = "<group>"; };
+		31D5548D2213ED9D00215EA0 /* HHScrollPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHScrollPageView.h; sourceTree = "<group>"; };
+		31D5548E2213ED9D00215EA0 /* HHScrollPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHScrollPageView.m; sourceTree = "<group>"; };
+		31D554902214222200215EA0 /* HHTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHTestViewController.h; sourceTree = "<group>"; };
+		31D554912214222200215EA0 /* HHTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHTestViewController.m; sourceTree = "<group>"; };
 		31D7C5492203027C00A35E09 /* HHAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAnimationViewController.h; sourceTree = "<group>"; };
 		31D7C54A2203027C00A35E09 /* HHAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAnimationViewController.m; sourceTree = "<group>"; };
 		31D7EBB021AD291A00B57F10 /* HHNavTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNavTitleView.h; sourceTree = "<group>"; };
@@ -525,6 +534,7 @@
 		313EC15021A3E43100CD5D30 /* CtrlEncapSubModule */ = {
 			isa = PBXGroup;
 			children = (
+				31D554892213ED1400215EA0 /* HHScrollPageView */,
 				3195365A21A67DD000F6532D /* Capital */,
 				313EC15121A3E43100CD5D30 /* DropDown */,
 			);
@@ -914,6 +924,17 @@
 				31CA5E4821F95F0D00BD7F2C /* HHPickerToolBar.m */,
 			);
 			path = HHPicker;
+			sourceTree = "<group>";
+		};
+		31D554892213ED1400215EA0 /* HHScrollPageView */ = {
+			isa = PBXGroup;
+			children = (
+				31D5548A2213ED8900215EA0 /* HHScrollPageViewController.h */,
+				31D5548B2213ED8900215EA0 /* HHScrollPageViewController.m */,
+				31D5548D2213ED9D00215EA0 /* HHScrollPageView.h */,
+				31D5548E2213ED9D00215EA0 /* HHScrollPageView.m */,
+			);
+			path = HHScrollPageView;
 			sourceTree = "<group>";
 		};
 		31D7C5482203026700A35E09 /* Animation(动画) */ = {
@@ -1340,6 +1361,8 @@
 				9CA0C684212A732F007107E9 /* Public */,
 				9CA0C722212A7D35007107E9 /* TestViewController.h */,
 				9CA0C723212A7D35007107E9 /* TestViewController.m */,
+				31D554902214222200215EA0 /* HHTestViewController.h */,
+				31D554912214222200215EA0 /* HHTestViewController.m */,
 				9CA0C725212A7F70007107E9 /* Test1ViewController.h */,
 				9CA0C726212A7F70007107E9 /* Test1ViewController.m */,
 				3163171A21C0F4550032E4D3 /* Test2ViewController.h */,
@@ -2018,6 +2041,7 @@
 				9C4700ED21479CE300112B05 /* HHMultithreadingController.m in Sources */,
 				31C6F57F21B76DAB00788F0D /* SSCBallView1.m in Sources */,
 				78F32C5821956D350013E6EC /* HHLotteryListModel.mm in Sources */,
+				31D554922214222200215EA0 /* HHTestViewController.m in Sources */,
 				9C7E72FD212AB7E600479B3D /* UITextField+Category.m in Sources */,
 				9CA0C6E1212A7330007107E9 /* NSDictionary+HHAddition.m in Sources */,
 				9C7E72E1212A8D1100479B3D /* ThirdPartyViewController.m in Sources */,
@@ -2032,6 +2056,7 @@
 				31C6F58221B7D7B600788F0D /* SSCCellContentView1.m in Sources */,
 				9C904CD0214F78C800914B4F /* HHAnimatorView.m in Sources */,
 				3163171621C0DDDB0032E4D3 /* HHNumbersCell.m in Sources */,
+				31D5548F2213ED9D00215EA0 /* HHScrollPageView.m in Sources */,
 				9C904CC1214E21E300914B4F /* HHPrintLog.m in Sources */,
 				31BA1E8A21B6500E00317918 /* HHHistoryTableViewCell.m in Sources */,
 				31BA1E9A21B6713800317918 /* SSCBallViewModel.m in Sources */,
@@ -2064,6 +2089,7 @@
 				31CA5E3C21F9588000BD7F2C /* HHStyleViewModel.m in Sources */,
 				9CA0C6E8212A7330007107E9 /* NSString+HH.m in Sources */,
 				9CA0C5F0212A70D8007107E9 /* main.m in Sources */,
+				31D5548C2213ED8900215EA0 /* HHScrollPageViewController.m in Sources */,
 				9C7E72D8212A8CE900479B3D /* BasicViewController.m in Sources */,
 				7849E02F219D22E80062DC3D /* HHResultView.m in Sources */,
 				9CA0C6DF212A7330007107E9 /* HomeViewController.m in Sources */,
