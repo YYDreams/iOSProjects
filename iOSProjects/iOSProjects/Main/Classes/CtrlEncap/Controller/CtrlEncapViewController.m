@@ -20,8 +20,8 @@
     
     [super viewDidLoad];
     
-    self.titles = @[@"xxxxxxxx"];
-    self.classNames = @[@"HHScrollPageViewController"];
+    self.titles = @[@"业务逻辑补给站"];
+    self.classNames = @[@"HHBusinessLogicController"];
 }
 
 @end
