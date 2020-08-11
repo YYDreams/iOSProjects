@@ -66,12 +66,12 @@
 		31D2C40C21B0D69500D9D8B9 /* SSCHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40B21B0D69500D9D8B9 /* SSCHistoryModel.m */; };
 		31D2C40F21B0D83100D9D8B9 /* SSCHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C40E21B0D83100D9D8B9 /* SSCHeaderView.m */; };
 		31D2C41221B0E15F00D9D8B9 /* SSCLatestPeriodsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D2C41121B0E15F00D9D8B9 /* SSCLatestPeriodsView.m */; };
-		31D5548C2213ED8900215EA0 /* HHScrollPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D5548B2213ED8900215EA0 /* HHScrollPageViewController.m */; };
-		31D5548F2213ED9D00215EA0 /* HHScrollPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D5548E2213ED9D00215EA0 /* HHScrollPageView.m */; };
 		31D554922214222200215EA0 /* HHTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D554912214222200215EA0 /* HHTestViewController.m */; };
 		31D7C54B2203027C00A35E09 /* HHAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D7C54A2203027C00A35E09 /* HHAnimationViewController.m */; };
 		31D7EBB221AD291A00B57F10 /* HHNavTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D7EBB121AD291A00B57F10 /* HHNavTitleView.m */; };
 		31DE1D9121BE4255004F2615 /* SSCFastBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31DE1D9021BE4255004F2615 /* SSCFastBottomView.m */; };
+		780BB66224E2E5EA0023E81C /* HHBusinessLogicController.m in Sources */ = {isa = PBXBuildFile; fileRef = 780BB66124E2E5EA0023E81C /* HHBusinessLogicController.m */; };
+		780BB66524E2E9240023E81C /* HHCouponAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 780BB66424E2E9240023E81C /* HHCouponAlertView.m */; };
 		7814438221A28FA2008B091E /* HHDBManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7814438121A28FA2008B091E /* HHDBManager.mm */; };
 		7814438521A2A1D9008B091E /* HHBannerModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7814438421A2A1D9008B091E /* HHBannerModel.mm */; };
 		7849E02F219D22E80062DC3D /* HHResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7849E02E219D22E80062DC3D /* HHResultView.m */; };
@@ -298,10 +298,6 @@
 		31D2C40E21B0D83100D9D8B9 /* SSCHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCHeaderView.m; sourceTree = "<group>"; };
 		31D2C41021B0E15F00D9D8B9 /* SSCLatestPeriodsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCLatestPeriodsView.h; sourceTree = "<group>"; };
 		31D2C41121B0E15F00D9D8B9 /* SSCLatestPeriodsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCLatestPeriodsView.m; sourceTree = "<group>"; };
-		31D5548A2213ED8900215EA0 /* HHScrollPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHScrollPageViewController.h; sourceTree = "<group>"; };
-		31D5548B2213ED8900215EA0 /* HHScrollPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHScrollPageViewController.m; sourceTree = "<group>"; };
-		31D5548D2213ED9D00215EA0 /* HHScrollPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHScrollPageView.h; sourceTree = "<group>"; };
-		31D5548E2213ED9D00215EA0 /* HHScrollPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHScrollPageView.m; sourceTree = "<group>"; };
 		31D554902214222200215EA0 /* HHTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHTestViewController.h; sourceTree = "<group>"; };
 		31D554912214222200215EA0 /* HHTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHTestViewController.m; sourceTree = "<group>"; };
 		31D7C5492203027C00A35E09 /* HHAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAnimationViewController.h; sourceTree = "<group>"; };
@@ -311,6 +307,10 @@
 		31DE1D8F21BE4255004F2615 /* SSCFastBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCFastBottomView.h; sourceTree = "<group>"; };
 		31DE1D9021BE4255004F2615 /* SSCFastBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSCFastBottomView.m; sourceTree = "<group>"; };
 		4E7A9CD9799ACA0EF9409440 /* libPods-iOSProjects.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSProjects.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		780BB66024E2E5EA0023E81C /* HHBusinessLogicController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHBusinessLogicController.h; sourceTree = "<group>"; };
+		780BB66124E2E5EA0023E81C /* HHBusinessLogicController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHBusinessLogicController.m; sourceTree = "<group>"; };
+		780BB66324E2E9240023E81C /* HHCouponAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHCouponAlertView.h; sourceTree = "<group>"; };
+		780BB66424E2E9240023E81C /* HHCouponAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHCouponAlertView.m; sourceTree = "<group>"; };
 		7814438021A28FA2008B091E /* HHDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHDBManager.h; sourceTree = "<group>"; };
 		7814438121A28FA2008B091E /* HHDBManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HHDBManager.mm; sourceTree = "<group>"; };
 		7814438321A2A1D9008B091E /* HHBannerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHBannerModel.h; sourceTree = "<group>"; };
@@ -534,7 +534,7 @@
 		313EC15021A3E43100CD5D30 /* CtrlEncapSubModule */ = {
 			isa = PBXGroup;
 			children = (
-				31D554892213ED1400215EA0 /* HHScrollPageView */,
+				780BB65F24E2E5A00023E81C /* BusinessLogic */,
 				3195365A21A67DD000F6532D /* Capital */,
 				313EC15121A3E43100CD5D30 /* DropDown */,
 			);
@@ -926,17 +926,6 @@
 			path = HHPicker;
 			sourceTree = "<group>";
 		};
-		31D554892213ED1400215EA0 /* HHScrollPageView */ = {
-			isa = PBXGroup;
-			children = (
-				31D5548A2213ED8900215EA0 /* HHScrollPageViewController.h */,
-				31D5548B2213ED8900215EA0 /* HHScrollPageViewController.m */,
-				31D5548D2213ED9D00215EA0 /* HHScrollPageView.h */,
-				31D5548E2213ED9D00215EA0 /* HHScrollPageView.m */,
-			);
-			path = HHScrollPageView;
-			sourceTree = "<group>";
-		};
 		31D7C5482203026700A35E09 /* Animation(动画) */ = {
 			isa = PBXGroup;
 			children = (
@@ -954,6 +943,17 @@
 				9EF864A1E906D65BCBE80235 /* libPods-iOSProjectsUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		780BB65F24E2E5A00023E81C /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				780BB66024E2E5EA0023E81C /* HHBusinessLogicController.h */,
+				780BB66124E2E5EA0023E81C /* HHBusinessLogicController.m */,
+				780BB66324E2E9240023E81C /* HHCouponAlertView.h */,
+				780BB66424E2E9240023E81C /* HHCouponAlertView.m */,
+			);
+			path = BusinessLogic;
 			sourceTree = "<group>";
 		};
 		7814437F21A28F85008B091E /* DB */ = {
@@ -2023,6 +2023,7 @@
 				31D2C40621B0CF3600D9D8B9 /* HHHistoryTableView.m in Sources */,
 				9CA0C6EE212A7330007107E9 /* UIBarButtonItem+HHAddition.m in Sources */,
 				7814438521A2A1D9008B091E /* HHBannerModel.mm in Sources */,
+				780BB66224E2E5EA0023E81C /* HHBusinessLogicController.m in Sources */,
 				31C2883B21AE998800AF7EA8 /* SSCViewController.m in Sources */,
 				31BA1E9D21B672DB00317918 /* SSCBallCellModel.m in Sources */,
 				31CB1CBD21C3568B0087BF28 /* FSPlayAlertView.m in Sources */,
@@ -2056,7 +2057,6 @@
 				31C6F58221B7D7B600788F0D /* SSCCellContentView1.m in Sources */,
 				9C904CD0214F78C800914B4F /* HHAnimatorView.m in Sources */,
 				3163171621C0DDDB0032E4D3 /* HHNumbersCell.m in Sources */,
-				31D5548F2213ED9D00215EA0 /* HHScrollPageView.m in Sources */,
 				9C904CC1214E21E300914B4F /* HHPrintLog.m in Sources */,
 				31BA1E8A21B6500E00317918 /* HHHistoryTableViewCell.m in Sources */,
 				31BA1E9A21B6713800317918 /* SSCBallViewModel.m in Sources */,
@@ -2076,6 +2076,7 @@
 				31C6F58521B7D7C600788F0D /* SSCCellContentView2.m in Sources */,
 				9C03296D212EB88F00DDF393 /* HHTextFieldController.m in Sources */,
 				31C2884821AEA2D300AF7EA8 /* SSCStructSuperView.m in Sources */,
+				780BB66524E2E9240023E81C /* HHCouponAlertView.m in Sources */,
 				788E896221997020007E7C74 /* FSTextView.m in Sources */,
 				9CA0C724212A7D35007107E9 /* TestViewController.m in Sources */,
 				31072A5C21B8C35F0086F4A5 /* SSCCacheManager.m in Sources */,
@@ -2089,7 +2090,6 @@
 				31CA5E3C21F9588000BD7F2C /* HHStyleViewModel.m in Sources */,
 				9CA0C6E8212A7330007107E9 /* NSString+HH.m in Sources */,
 				9CA0C5F0212A70D8007107E9 /* main.m in Sources */,
-				31D5548C2213ED8900215EA0 /* HHScrollPageViewController.m in Sources */,
 				9C7E72D8212A8CE900479B3D /* BasicViewController.m in Sources */,
 				7849E02F219D22E80062DC3D /* HHResultView.m in Sources */,
 				9CA0C6DF212A7330007107E9 /* HomeViewController.m in Sources */,
