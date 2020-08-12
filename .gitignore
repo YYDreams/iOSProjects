@@ -1,4 +1,3 @@
-# Xcode
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
@@ -7,6 +6,8 @@ build/
 DerivedData/
 
 ## Various settings
+*.xcuserstate
+*.DS_Store
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -27,6 +28,7 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
+
 
 # CocoaPods
 #
@@ -52,7 +54,7 @@ Carthage/Build
 
 fastlane/report.xml
 fastlane/Preview.html
-fastlane/screenshots/**/*.png
+fastlane/screenshots
 fastlane/test_output
 
 # Code Injection
@@ -60,4 +62,32 @@ fastlane/test_output
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
 
-iOSInjectionProject/
+i# Xcode
+.DS_Store
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+*.xccheckout
+*.xcworkspace
+!default.xcworkspace
+project.xcworkspace
+UserInterfaceState.xcuserstate
+project.xcworkspace/
+UserInterface.xcuserstate 
+#CocoaPods
+Pods
+!Podfile
+!Podfile.lockOSInjectionProject/
+Podfile.lock
