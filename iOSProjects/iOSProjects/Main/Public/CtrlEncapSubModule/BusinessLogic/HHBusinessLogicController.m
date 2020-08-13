@@ -49,16 +49,17 @@
 
 /** 优惠券*/
 - (void)addCouponView {
-    HHCouponAlertView *view = [HHCouponAlertView couponPopViewWithTitle:@"优惠券" doneHandler:^(HHCouponModel * _Nonnull couponModel) {
-       
+    HHCouponAlertView *view = [HHCouponAlertView couponPopViewWithTitle:@"优惠券" sureHandler:^(HHCouponModel * _Nonnull couponModel, HHCouponAlertView * _Nonnull view) {
+      
         
-    } closeHandler:^(HHCouponAlertView * _Nonnull view) {
-       
+    } closeHandler:^(HHCouponModel * _Nonnull couponModel, HHCouponAlertView * _Nonnull view) {
+      
     }];
     
     
+    
 
-    [self.view addSubview:view];
+//    [self.view addSubview:view];
 }
 
 

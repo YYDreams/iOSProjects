@@ -210,7 +210,7 @@ static CGFloat const orginXY = 0.0;
         NSString *text  = (i < self.textArr.count ? self.textArr[i]: @"");
         label.text = ((self.secureTextEntry && 0 != text.length)? secureTextEntry: text);
         
-        NSLog("-----------%@",label.text);
+        NSLog(@"-----------%@",label.text);
     }
     
     if (self.editFinish && self.textArr.count >0) {

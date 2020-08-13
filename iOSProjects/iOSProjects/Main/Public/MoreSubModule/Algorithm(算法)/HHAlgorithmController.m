@@ -11,6 +11,8 @@
 typedef NS_ENUM(NSInteger,HHAlgorithmBtnType){
     
     HHAlgorithmBtnTypeBubbleSort,  //冒泡排序
+    HHAlgorithmBtnTypeBubbleSort1,  //冒泡排序优化
+    HHAlgorithmBtnTypeBubbleSort2,  //冒泡排序优化
     HHAlgorithmBtnTypeSelectSort,  //选择排序
     HHAlgorithmBtnTypeInserSort,   //插入排序
     HHAlgorithmBtnTypeFastSort,    //快速排序
@@ -18,6 +20,10 @@ typedef NS_ENUM(NSInteger,HHAlgorithmBtnType){
     HHAlgorithmBtnTypeMergingSort, //归并排序
     HHAlgorithmBtnTypeRadixSort,   //基数排序
 };
+
+#define TICK   NSDate *startTime = [NSDate date]
+#define TOCK   NSLog(@"Time: %f", -[startTime timeIntervalSinceNow])
+
 
 @interface HHAlgorithmController ()
 
@@ -29,6 +35,8 @@ typedef NS_ENUM(NSInteger,HHAlgorithmBtnType){
 
 @property(nonatomic, strong)NSMutableArray *sortArr; //
 
+
+@property (nonatomic, strong) UIScrollView *scrollView;
 
 @property(nonatomic, strong)UITextView *inputTextView; // 实现Label
 
@@ -58,42 +66,64 @@ NSInteger numberLength(NSNumber *number) {
 
 - (void)setupSubView{
     
-    NSArray *titles  = @[@"冒泡排序",@"选择排序",@"插入排序",@"快速排序",@"希尔排序",@"归并排序",@"基数排序",@"堆排序"];
+    NSArray *titles  = @[@"冒泡排序",@"冒泡排序优化1",@"冒泡排序优化2",@"选择排序",@"插入排序",@"快速排序",@"希尔排序",@"归并排序",@"基数排序",@"堆排序"];
     
     int totalloc = 4; //一行的列数
+    
     CGFloat btnW =  80;
     CGFloat bthH = 40;
     CGFloat btnY = 0;
     CGFloat margin = (Screen_Width- btnW * totalloc)/(totalloc + 1);
+    
+    UIButton *btn;
+    
     for (int i = 0; i < titles.count; i++) {
         
         CGFloat btnX = margin + ((margin + btnW) * (i % totalloc));
         btnY = margin + ((margin + bthH) * (i / totalloc));
         
-        UIButton *btn = [UIButton buttontitle:[titles safeObjectAtIndex:i] frame:CGRectMake(btnX, btnY, btnW, bthH) target:self action:@selector(btnOnClick:)];
+        
+        btn = [UIButton buttontitle:[titles safeObjectAtIndex:i] frame:CGRectMake(btnX, btnY, btnW, bthH) target:self action:@selector(btnOnClick:)];
         btn.backgroundColor = [UIColor hh_redomColor];
+        btn.titleLabel.font = [UIFont systemFontOfSize:12];
         btn.tag = i ;
         [self.view addSubview:btn];
         
+        
+        
+        
     }
     
-
+      
+    
+    NSString * s =  [self.sortArr componentsJoinedByString:@","];
     
     self.sortBeforeLabel = [UILabel labelText:@"" fontSize:10 textColor:[UIColor blackColor] textAlignment:1];
     self.sortBeforeLabel.backgroundColor = [UIColor orangeColor];
     self.sortBeforeLabel.numberOfLines = 0;
-    self.sortBeforeLabel.frame = CGRectMake(10, 130, (Screen_Width - 3  * 10)/2, 140);
-    self.sortBeforeLabel.text = [NSString stringWithFormat:@"排序前: %@",self.sortArr];
+    self.sortBeforeLabel.text = [NSString stringWithFormat:@"排序前: %@",s];
     [self.view addSubview:self.sortBeforeLabel];
+    [self.sortBeforeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(12);
+        make.right.mas_equalTo(-12);
+        make.top.mas_equalTo(btn.mas_bottom).mas_offset(12);
+        
+    }];
     
     
     
     self.sortAfterLabel = [UILabel labelText:@"" fontSize:10 textColor:[UIColor blackColor] textAlignment:1];
     self.sortAfterLabel.backgroundColor = [UIColor orangeColor];
     self.sortAfterLabel.numberOfLines = 0;
-    self.sortAfterLabel.frame = CGRectMake(CGRectGetMaxX(self.sortBeforeLabel.frame) + 10, self.sortBeforeLabel.y, self.sortBeforeLabel.width - 10, 140);
-    
+
     [self.view addSubview:self.sortAfterLabel];
+    [self.sortAfterLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+         make.left.mas_equalTo(12);
+         make.right.mas_equalTo(-12);
+         make.top.mas_equalTo(self.sortBeforeLabel.mas_bottom).mas_offset(12);
+        
+         
+     }];
     
      UITextView *textView = [[UITextView alloc] init];
     [self.view addSubview:textView];
@@ -103,9 +133,10 @@ NSInteger numberLength(NSNumber *number) {
     textView.selectable = NO;
     textView.scrollEnabled = YES;
     [textView mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.edges.mas_equalTo(UIEdgeInsetsMake(300, 0, 0, 0));
-        
+        make.top.mas_equalTo(self.sortAfterLabel.mas_bottom).mas_offset(12);
+        make.left.mas_equalTo(12);
+        make.right.mas_equalTo(-12);
+        make.bottom.mas_equalTo(self.view);
     }];
     textView.textColor = [UIColor redColor];
     textView.font = kFont(10);
@@ -115,41 +146,45 @@ NSInteger numberLength(NSNumber *number) {
 }
 
 - (void)btnOnClick:(UIButton *)sender{
-    
 
-    if (sender.tag == HHAlgorithmBtnTypeBubbleSort) {//冒泡排序
-        
-        [self bubbleSortWithArray:self.sortArr];
-        
-        
-    }else if (sender.tag == HHAlgorithmBtnTypeSelectSort){//选择排序
-        
-        [self selectSortWithArray:self.sortArr];
-        
-    }else if (sender.tag == HHAlgorithmBtnTypeInserSort){//插入排序
-        
-        [self inserSortWithArray:self.sortArr];
-
-        
-    }else if (sender.tag == HHAlgorithmBtnTypeFastSort){//快速排序
-        
-        [self fastSortWithArray:self.sortArr];
-        
-    }else if (sender.tag == HHAlgorithmBtnTypeShellSort){ //希尔排序
-        
-        [self shellSortWithArray:self.sortArr];
-        
-    }else if (sender.tag == HHAlgorithmBtnTypeMergingSort){//归并排序
-        
-        [self mergingSortWithArray:self.sortArr];
-        
-    }else if (sender.tag == HHAlgorithmBtnTypeRadixSort){//基数排序
-        
-        [self radixSortWithArray:self.sortArr];
+    switch (sender.tag) {
+        case HHAlgorithmBtnTypeBubbleSort: //冒泡排序
+            [self bubbleSortWithArray:self.sortArr];
+            break;
+        case HHAlgorithmBtnTypeBubbleSort1: //冒泡排序优化
+            [self bubbleSortWithArray1:self.sortArr];
+            break;
+        case HHAlgorithmBtnTypeBubbleSort2: //冒泡排序优化
+            [self bubbleSortWithArray2:self.sortArr];
+            break;
+            
+        case HHAlgorithmBtnTypeSelectSort: //选择排序
+            [self selectSortWithArray:self.sortArr];
+            break;
+        case HHAlgorithmBtnTypeInserSort://插入排序
+            [self inserSortWithArray:self.sortArr];
+            break;
+            
+        case HHAlgorithmBtnTypeFastSort://快速排序
+            [self fastSortWithArray:self.sortArr];
+            break;
+        case HHAlgorithmBtnTypeShellSort://希尔排序
+            [self shellSortWithArray:self.sortArr];
+            break;
+        case HHAlgorithmBtnTypeMergingSort://归并排序
+            [self mergingSortWithArray:self.sortArr];
+            break;
+            
+        case HHAlgorithmBtnTypeRadixSort://基数排序
+            [self radixSortWithArray:self.sortArr];
+            break;
+            
+        default:
+            break;
     }
     
-    NSLog(@"%@ ---- %li",sender.titleLabel.text,(long)sender.tag);
-    
+   
+        
 }
 
 
@@ -159,11 +194,40 @@ NSInteger numberLength(NSNumber *number) {
  1.每一趟比较数组中相邻元素的大小
  2.如果i元素小于i-1元素，就调换两个元素的位置
  3.重复n-1趟的比较
+ 
+ 
 
  */
+
+//随机生成
+//求随机数 从[min, max] 里 选择 (count)个数
+- (NSArray *)randomSelectCount:(NSInteger)count min:(NSInteger)min max:(NSInteger)max {
+    
+    NSMutableSet *numbersSet = [NSMutableSet set];
+    while (numbersSet.count < count) {
+        long x = arc4random() % (max - min + 1) + min;
+        [numbersSet addObject:@(x)];
+    }
+    
+    NSMutableArray *numbers = [NSMutableArray array];
+    for (NSNumber *num in numbersSet) {
+        [numbers addObject:num];
+    }
+//     按从小到大的顺序排列
+//    [numbers sortUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+//       return [obj1 integerValue] > [obj2 integerValue];
+//    }];
+    return numbers;
+    
+}
+
+
+
 - (void)bubbleSortWithArray:(NSMutableArray *)array{
 
        //1.循环控制比较次数
+    
+    TICK;
   for (int i = 0; i < array.count; i++) {
       //2.两两比较
     for (int j = 0; j < array.count - 1- i; j++) {
@@ -179,8 +243,93 @@ NSInteger numberLength(NSNumber *number) {
             
         }
     }
+      
 }
-        self.sortAfterLabel.text = [NSString stringWithFormat:@"冒泡排序后：%@",self.sortArr];
+
+    TOCK;
+ 
+    NSString * s =  [self.sortArr componentsJoinedByString:@","];
+
+    self.sortAfterLabel.text = [NSString stringWithFormat:@"冒泡后：%@", s];
+    
+}
+
+//冒泡优化2
+//如果序列尾部已经局部有序，可以记录最后1次交换的位置，减少比较次数
+- (void)bubbleSortWithArray2:(NSMutableArray *)array{
+
+   //1.循环控制比较次数
+    
+    TICK;
+    for (NSInteger end = array.count - 1; end >0 ; end-- ) {
+        
+        //sortEndIndex的初始值在数组完全有序的时候有用
+        int sortEndIndex = 0;
+
+        //2.两两比较
+        for (int begin = 1; begin <= end; begin++) {
+            
+            
+            //3.交换位置
+            if ([array[begin] intValue]  < [array[begin -1] intValue]) { //降序排序
+                
+                int temp = [array[begin] intValue];
+                
+                array[begin]  = array[begin - 1];
+                
+                array[begin - 1]  =  [NSNumber numberWithInt:temp];
+                
+                sortEndIndex  = begin;
+            }
+        }
+        end = sortEndIndex;
+    }
+    
+    
+    TOCK;
+    
+    NSString * s =  [self.sortArr componentsJoinedByString:@","];
+    
+    self.sortAfterLabel.text = [NSString stringWithFormat:@"冒泡后：%@", s];
+
+}
+
+//冒泡优化1
+- (void)bubbleSortWithArray1:(NSMutableArray *)array{
+
+       //1.循环控制比较次数
+    
+    TICK;
+    for (int i = 0; i < array.count; i++) {
+        //2.两两比较
+        BOOL sorted = true;
+        for (int j = 0; j < array.count - 1- i; j++) {
+            //3.交换位置
+            if ([array[j] intValue]  < [array[j +1] intValue]) { //降序排序
+                //if ([array[j + 1] intValue]  < [array[j ] intValue]) { //升序排序
+                
+                int temp = [array[j] intValue];
+                
+                array[j]  = array[j + 1];
+                
+                array[j+ 1]  =  [NSNumber numberWithInt:temp];
+                
+                sorted = false;
+            }
+        }
+        if (sorted)break;
+        
+    }
+
+    TOCK;
+    
+    NSString * s =  [self.sortArr componentsJoinedByString:@","];
+
+    self.sortAfterLabel.text = [NSString stringWithFormat:@"冒泡后：%@", s];
+    
+    
+    
+    
     
     self.inputTextView.text = @"   冒泡排序实现思路: \n\
 1.每一趟比较数组中相邻元素的大小  \n\
@@ -316,8 +465,7 @@ NSInteger numberLength(NSNumber *number) {
 
 - (void)radixSortWithArray:(NSMutableArray *)array{
     
-//    _sortArr = [NSMutableArray arrayWithArray:@[@"12",@"29",@"36",@"17",@"54",@"81"]];
-
+    
     NSMutableArray *buckt = [self createBucket];
 
     
@@ -363,7 +511,7 @@ NSInteger numberLength(NSNumber *number) {
         NSString *str  = numberArr[numberArr.count - digit];
         
         
-        NSLog("strstr:------%zd",[str integerValue]);
+        NSLog(@"strstr:------%zd",[str integerValue]);
         
         return [str integerValue];
         
@@ -416,16 +564,14 @@ NSInteger numberLength(NSNumber *number) {
     
     return maxNumber;
 }
-
 - (NSMutableArray *)sortArr{
-    
     if (!_sortArr) {
-        _sortArr = [NSMutableArray arrayWithArray:@[@"12",@"29",@"36",@"17",@"54",@"81"]];
-
-//        _sortArr = [NSMutableArray arrayWithArray:@[@"2",@"9",@"6",@"7",@"4",@"1"]];
+        NSArray *randomArr =  [self randomSelectCount:50 min:10 max:500];
+        _sortArr = [NSMutableArray arrayWithArray:randomArr];
     }
     return _sortArr;
     
 }
+
 
 @end

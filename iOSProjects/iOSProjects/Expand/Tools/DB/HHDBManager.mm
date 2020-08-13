@@ -45,7 +45,7 @@
         NSString *documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
         NSString *filePath = [documentsPath stringByAppendingPathComponent:@"flower.sqlite"];
 
-        NSLog("filePath:%@",filePath);
+        NSLog(@"filePath:%@",filePath);
         WCTDatabase *database = [[WCTDatabase alloc]initWithPath:filePath];
         self.database = database;
         if (![database isTableExists:self.tableName]) {

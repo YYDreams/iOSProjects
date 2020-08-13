@@ -249,7 +249,7 @@
 }
 - (void)loadImageFormNetwork{
     
-    NSLog("%@---",[NSThread currentThread]);
+    NSLog(@"%@---",[NSThread currentThread]);
     NSURL *url = [NSURL URLWithString:@"http://upload-images.jianshu.io/upload_images/1658521-929b88123cf7156c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"];
     UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:url]];
     [self performSelectorOnMainThread:@selector(updateImage:) withObject:image waitUntilDone:YES];
@@ -258,7 +258,7 @@
 - (void)updateImage:(UIImage *)image{
     
     
-    NSLog("----%@---",[NSThread currentThread]);
+    NSLog(@"----%@---",[NSThread currentThread]);
     
     self.imgView.image = image;
     
@@ -633,7 +633,7 @@
             
         });
         
-        NSLog("%@---############---",[NSThread currentThread]);
+        NSLog(@"%@---############---",[NSThread currentThread]);
             if (self.ticketSurplusCount <= 0) {
                 
                   NSLog(@"不好意思。。票买完了。。。。");
