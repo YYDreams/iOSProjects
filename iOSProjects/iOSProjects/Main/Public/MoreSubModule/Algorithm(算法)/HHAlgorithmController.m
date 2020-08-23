@@ -228,23 +228,27 @@ NSInteger numberLength(NSNumber *number) {
        //1.循环控制比较次数
     
     TICK;
-  for (int i = 0; i < array.count; i++) {
+  for (NSInteger end = array.count - 1; end >0 ; end-- ) {
+  
+
       //2.两两比较
-    for (int j = 0; j < array.count - 1- i; j++) {
-        //3.交换位置
-        if ([array[j] intValue]  < [array[j +1] intValue]) { //降序排序
-            //if ([array[j + 1] intValue]  < [array[j ] intValue]) { //升序排序
-            
-            int temp = [array[j] intValue];
-            
-            array[j]  = array[j + 1];
-            
-            array[j+ 1]  =  [NSNumber numberWithInt:temp];
-            
-        }
-    }
-      
-}
+      for (int begin = 1; begin <= end; begin++) {
+          
+          
+          //3.交换位置
+          if ([array[begin] intValue]  < [array[begin -1] intValue]) { //降序排序
+              
+              int temp = [array[begin] intValue];
+              
+              array[begin]  = array[begin - 1];
+              
+              array[begin - 1]  =  [NSNumber numberWithInt:temp];
+              
+          }
+      }
+  }
+  
+
 
     TOCK;
  
@@ -252,6 +256,62 @@ NSInteger numberLength(NSNumber *number) {
 
     self.sortAfterLabel.text = [NSString stringWithFormat:@"冒泡后：%@", s];
     
+}
+//冒泡优化1
+- (void)bubbleSortWithArray1:(NSMutableArray *)array{
+
+       //1.循环控制比较次数
+    
+    TICK;
+    for (NSInteger end = array.count - 1; end >0 ; end-- ) {
+        //2.两两比较
+        BOOL sorted = true;
+        for (int begin = 1; begin <= end; begin++) {
+            //3.交换位置
+            if ([array[begin] intValue]  < [array[begin -1] intValue]) { //降序排序
+                
+               int temp = [array[begin] intValue];
+                   
+                   array[begin]  = array[begin - 1];
+                   
+                   array[begin - 1]  =  [NSNumber numberWithInt:temp];
+                
+                sorted = false;
+            }
+        }
+        if (sorted)break;
+        
+    }
+
+    TOCK;
+    
+    NSString * s =  [self.sortArr componentsJoinedByString:@","];
+
+    self.sortAfterLabel.text = [NSString stringWithFormat:@"冒泡后：%@", s];
+    
+    
+    
+    
+    
+    self.inputTextView.text = @"   冒泡排序实现思路: \n\
+1.每一趟比较数组中相邻元素的大小  \n\
+2.如果i元素小于i-1元素，就调换两个元素的位置 \n\
+3.重复n-1趟的比较 \n\
+                             \n\
+                                    //1.循环控制比较次数 \n\
+                              for (int i = 0; i < array.count; i++) { \n\
+                                  //2.两两比较 \n\
+                                  for (int j = 0; j < array.count - 1- i; j++) { \n\
+                                      //3.交换位置 \n\
+                                      if ([array[j] intValue]  < [array[j +1] intValue]) { //降序排序 \n\
+                                          //if ([array[j + 1] intValue]  < [array[j ] intValue]) { //升序排序 \n\
+                                          int temp = [array[j] intValue]; \n\
+                                          array[j]  = array[j + 1]; \n\
+                                          array[j+ 1]  =  [NSNumber numberWithInt:temp]; \n\
+                                      }\n\
+                                  }\n\
+    };\n\
+    ";
 }
 
 //冒泡优化2
@@ -294,63 +354,7 @@ NSInteger numberLength(NSNumber *number) {
 
 }
 
-//冒泡优化1
-- (void)bubbleSortWithArray1:(NSMutableArray *)array{
 
-       //1.循环控制比较次数
-    
-    TICK;
-    for (int i = 0; i < array.count; i++) {
-        //2.两两比较
-        BOOL sorted = true;
-        for (int j = 0; j < array.count - 1- i; j++) {
-            //3.交换位置
-            if ([array[j] intValue]  < [array[j +1] intValue]) { //降序排序
-                //if ([array[j + 1] intValue]  < [array[j ] intValue]) { //升序排序
-                
-                int temp = [array[j] intValue];
-                
-                array[j]  = array[j + 1];
-                
-                array[j+ 1]  =  [NSNumber numberWithInt:temp];
-                
-                sorted = false;
-            }
-        }
-        if (sorted)break;
-        
-    }
-
-    TOCK;
-    
-    NSString * s =  [self.sortArr componentsJoinedByString:@","];
-
-    self.sortAfterLabel.text = [NSString stringWithFormat:@"冒泡后：%@", s];
-    
-    
-    
-    
-    
-    self.inputTextView.text = @"   冒泡排序实现思路: \n\
-1.每一趟比较数组中相邻元素的大小  \n\
-2.如果i元素小于i-1元素，就调换两个元素的位置 \n\
-3.重复n-1趟的比较 \n\
-                             \n\
-                                    //1.循环控制比较次数 \n\
-                              for (int i = 0; i < array.count; i++) { \n\
-                                  //2.两两比较 \n\
-                                  for (int j = 0; j < array.count - 1- i; j++) { \n\
-                                      //3.交换位置 \n\
-                                      if ([array[j] intValue]  < [array[j +1] intValue]) { //降序排序 \n\
-                                          //if ([array[j + 1] intValue]  < [array[j ] intValue]) { //升序排序 \n\
-                                          int temp = [array[j] intValue]; \n\
-                                          array[j]  = array[j + 1]; \n\
-                                          array[j+ 1]  =  [NSNumber numberWithInt:temp]; \n\
-                                      }\n\
-                                  }\n\
-    };\n\
-    ";
-}
 - (void)selectSortWithArray:(NSMutableArray *)array{
     
     
@@ -566,7 +570,7 @@ NSInteger numberLength(NSNumber *number) {
 }
 - (NSMutableArray *)sortArr{
     if (!_sortArr) {
-        NSArray *randomArr =  [self randomSelectCount:50 min:10 max:500];
+        NSArray *randomArr =  [self randomSelectCount:200 min:10 max:500];
         _sortArr = [NSMutableArray arrayWithArray:randomArr];
     }
     return _sortArr;

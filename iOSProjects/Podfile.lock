@@ -52,7 +52,7 @@ DEPENDENCIES:
   - YYModel
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - DZNEmptyDataSet
     - GHConsole
@@ -88,6 +88,6 @@ SPEC CHECKSUMS:
   WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 1ab094e62083c29ba197f895054afadd7f02e414
+PODFILE CHECKSUM: 44e0f60309a557e40c37cbb88007d1e395e62d59
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.8.4

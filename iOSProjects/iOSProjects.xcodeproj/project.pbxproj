@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03BB13EB70461F3907E7176B /* libPods-iOSProjectsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EF864A1E906D65BCBE80235 /* libPods-iOSProjectsUITests.a */; };
+		1C1B10AE24EBA8EF00B34DB4 /* HHPageRequestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1B10AD24EBA8EF00B34DB4 /* HHPageRequestTool.m */; };
 		31072A5C21B8C35F0086F4A5 /* SSCCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31072A5B21B8C35F0086F4A5 /* SSCCacheManager.m */; };
 		31072A5F21B8CC960086F4A5 /* PlayType.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31072A5E21B8CC950086F4A5 /* PlayType.plist */; };
 		313C5D5D21AD450000B392BF /* HHDropDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 313C5D5C21AD450000B392BF /* HHDropDownView.m */; };
@@ -183,6 +184,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C1B10AC24EBA8EF00B34DB4 /* HHPageRequestTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHPageRequestTool.h; sourceTree = "<group>"; };
+		1C1B10AD24EBA8EF00B34DB4 /* HHPageRequestTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHPageRequestTool.m; sourceTree = "<group>"; };
 		293B11C67471E551C0F0F5E9 /* Pods-iOSProjectsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSProjectsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSProjectsUITests/Pods-iOSProjectsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2F1115CD1249754BCEA1A7BE /* libPods-iOSProjectsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSProjectsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31072A5A21B8C35F0086F4A5 /* SSCCacheManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSCCacheManager.h; sourceTree = "<group>"; };
@@ -1624,6 +1627,8 @@
 				7814437F21A28F85008B091E /* DB */,
 				9CA0C718212A7BC7007107E9 /* HHRefreshFactory.h */,
 				9CA0C719212A7BC7007107E9 /* HHRefreshFactory.m */,
+				1C1B10AC24EBA8EF00B34DB4 /* HHPageRequestTool.h */,
+				1C1B10AD24EBA8EF00B34DB4 /* HHPageRequestTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -2105,6 +2110,7 @@
 				78F32C5421955D080013E6EC /* HHLotteryListCell.m in Sources */,
 				9CA0C721212A7CCE007107E9 /* HHConstUrl.m in Sources */,
 				31BA1E8B21B6500E00317918 /* SSCNavTitleView.m in Sources */,
+				1C1B10AE24EBA8EF00B34DB4 /* HHPageRequestTool.m in Sources */,
 				7814438221A28FA2008B091E /* HHDBManager.mm in Sources */,
 				9CA0C6E9212A7330007107E9 /* RMCollectionViewFlowLayout.m in Sources */,
 				31BA1E9621B66FE200317918 /* SSCRandomManager.m in Sources */,

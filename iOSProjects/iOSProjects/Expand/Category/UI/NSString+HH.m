@@ -35,6 +35,7 @@
     return uuid;
 }
 
+
 - (BOOL)isEmptyString
 {
     if (self == nil || self == NULL)
